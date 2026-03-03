@@ -114,25 +114,25 @@ class HomeScreen extends StatelessWidget {
               /// CARD DESTINATION
               const _DestinationCard(
                 image: "imgs/pho_co_hoi_an.jpg",
-                title: "Phố cổ Hội An",
+                title: "Hoi An Ancient Town",
                 rating: "4.9",
-                location: "Quảng Nam, Việt Nam",
+                location: "Quang Nam, Viet Nam",
               ),
               const SizedBox(height: 10),
 
               const _DestinationCard(
                 image: "imgs/my_khe_beach.jpg",
-                title: "Bãi Biển Mỹ Khê",
+                title: "My Khe Beach",
                 rating: "4.9",
-                location: "Đà Nẵng, Việt Nam",
+                location: "Da Nang, Viet Nam",
               ),
               const SizedBox(height: 10),
 
               const _DestinationCard(
                 image: "imgs/son_tra.jpg",
-                title: "Bán đảo Sơn Trà",
+                title: "Son Tra Peninsula",
                 rating: "4.9",
-                location: "Đà Nẵng, Việt Nam",
+                location: "Da Nang, Viet Nam",
               ),
               const SizedBox(height: 10),
 
