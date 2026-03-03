@@ -417,7 +417,7 @@ class _DestinationCardState extends State<_DestinationCard> {
                   children: [
                     const Icon(
                       Icons.location_on,
-                      color: Colors.white70,
+                      color: Colors.red,
                       size: 14,
                     ),
                     const SizedBox(width: 4),
