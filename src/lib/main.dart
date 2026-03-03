@@ -1,14 +1,28 @@
 import 'package:flutter/material.dart';
+import 'screens/home_screen.dart';
 
 void main() {
-  runApp(
-    MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: ManHinh1(),
-    ),
-  );
+  runApp(const MyApp());
 }
 
+/// ==================
+/// ROOT APP
+/// ==================
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return const MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ManHinh1(),
+    );
+  }
+}
+
+/// ==================
+/// WELCOME SCREEN
+/// ==================
 class ManHinh1 extends StatelessWidget {
   const ManHinh1({super.key});
 
@@ -31,26 +45,28 @@ class ManHinh1 extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 40),
+                  const SizedBox(height: 40),
 
                   /// TITLE
-                  Text(
+                  const Text(
                     "Discover",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
-                  Text(
+                  const Text(
                     "Amazing",
                     style: TextStyle(
                       fontSize: 28,
                       fontWeight: FontWeight.bold,
+                      color: Colors.white,
                     ),
                   ),
 
                   Container(
-                    padding: EdgeInsets.symmetric(
+                    padding: const EdgeInsets.symmetric(
                       horizontal: 12,
                       vertical: 6,
                     ),
@@ -58,7 +74,7 @@ class ManHinh1 extends StatelessWidget {
                       color: Colors.orange,
                       borderRadius: BorderRadius.circular(15),
                     ),
-                    child: Text(
+                    child: const Text(
                       " Destinations ",
                       style: TextStyle(
                         color: Colors.white,
@@ -68,29 +84,22 @@ class ManHinh1 extends StatelessWidget {
                     ),
                   ),
 
-                  SizedBox(height: 15),
+                  const SizedBox(height: 15),
 
-                  Text(
+                  const Text(
                     "We believe traveling around the world shouldn't be hard.",
-                    style: TextStyle(
-                      color: const Color.fromARGB(255, 0, 0, 0),
-                    ),
+                    style: TextStyle(color: Colors.white),
                   ),
 
-                  Spacer(),
+                  const Spacer(),
 
-                  /// NÚT ĐĂNG NHẬP
+                  /// NÚT LET'S START
                   SizedBox(
                     width: double.infinity,
                     height: 55,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color.fromARGB(
-                          255,
-                          255,
-                          115,
-                          0,
-                        ),
+                        backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
                             30,
@@ -98,66 +107,19 @@ class ManHinh1 extends StatelessWidget {
                         ),
                       ),
                       onPressed: () {
-                        Navigator.push(
+                        Navigator.pushReplacement(
                           context,
                           MaterialPageRoute(
-                            builder: (context) {
-                              return ManHinhLogin();
-                            },
+                            builder: (context) =>
+                                const HomeScreen(),
                           ),
                         );
                       },
-                      child: Text(
-                        " Đăng nhập ",
+                      child: const Text(
+                        "Let's Start",
                         style: TextStyle(
                           color: Colors.white,
-                          fontSize: 16,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  SizedBox(height: 15),
-
-                  /// NÚT ĐĂNG KÝ
-                  SizedBox(
-                    width: double.infinity,
-                    height: 55,
-                    child: OutlinedButton(
-                      style: OutlinedButton.styleFrom(
-                        side: BorderSide(
-                          color: const Color.fromARGB(
-                            255,
-                            255,
-                            153,
-                            0,
-                          ),
-                        ),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            30,
-                          ),
-                        ),
-                      ),
-                      onPressed: () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) {
-                              return ManHinhDangKy();
-                            },
-                          ),
-                        );
-                      },
-                      child: Text(
-                        "Đăng ký",
-                        style: TextStyle(
-                          color: const Color.fromARGB(
-                            255,
-                            255,
-                            111,
-                            0,
-                          ),
+                          fontSize: 18,
                         ),
                       ),
                     ),
@@ -167,50 +129,6 @@ class ManHinh1 extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    );
-  }
-}
-
-/// ==================
-/// TRANG LOGIN
-/// ==================
-class ManHinhLogin extends StatelessWidget {
-  const ManHinhLogin({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Trang Đăng Nhập")),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text("Quay lại"),
-        ),
-      ),
-    );
-  }
-}
-
-/// ==================
-/// TRANG ĐĂNG KÝ
-/// ==================
-class ManHinhDangKy extends StatelessWidget {
-  const ManHinhDangKy({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text("Trang Đăng Ký")),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          child: Text("Quay lại"),
-        ),
       ),
     );
   }
