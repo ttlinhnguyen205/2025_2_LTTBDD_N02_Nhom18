@@ -28,7 +28,7 @@ class HomeScreen extends StatelessWidget {
                       CircleAvatar(
                         radius: 18,
                         backgroundImage: AssetImage(
-                          "imgs/avatar.jpg",
+                          "imgs/guest.jpg",
                         ),
                       ),
                     ],
@@ -99,18 +99,24 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              /// CITY LIST
+              ///Destination List
               SizedBox(
                 height: 90,
                 child: ListView(
                   scrollDirection: Axis.horizontal,
                   children: const [
-                    _CityItem("imgs/city6.jpg", "Hue"),
-                    _CityItem("imgs/city1.jpg", "Abuja"),
-                    _CityItem("imgs/city2.jpg", "NewYork"),
-                    _CityItem("imgs/city3.jpg", "Sydney"),
-                    _CityItem("imgs/city4.jpg", "Toronto"),
-                    _CityItem("imgs/city5.jpg", "London"),
+                    _CityItem("imgs/hue.jpg", "Đại nội Huế"),
+                    _CityItem("imgs/tam_coc.jpg", "Tam Cốc"),
+                    _CityItem("imgs/sapa.jpg", "Sa Pa"),
+                    _CityItem(
+                      "imgs/phu_quoc.jpg",
+                      "Đảo Phú Quốc",
+                    ),
+                    _CityItem("imgs/Abuja.jpg", "Abuja"),
+                    _CityItem("imgs/NewYork.jpg", "NewYork"),
+                    _CityItem("imgs/Sydney.jpg", "Sydney"),
+                    _CityItem("imgs/Toronto.jpg", "Toronto"),
+                    _CityItem("imgs/London.jpg", "London"),
                   ],
                 ),
               ),
@@ -130,6 +136,20 @@ class HomeScreen extends StatelessWidget {
               const SizedBox(height: 20),
 
               /// CARD DESTINATION
+              const _DestinationCard(
+                image: "imgs/pho_co_hoi_an.jpg",
+                title: "Phố cổ Hội An",
+                rating: "4.9",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/my_khe_beach.jpg",
+                title: "Bãi Biển Mỹ Khê",
+                rating: "4.9",
+              ),
+              const SizedBox(height: 10),
+
               const _DestinationCard(
                 image: "imgs/island.jpg",
                 title: "Lush Islands",
