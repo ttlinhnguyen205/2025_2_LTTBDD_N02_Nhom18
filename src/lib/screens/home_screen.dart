@@ -99,30 +99,6 @@ class HomeScreen extends StatelessWidget {
 
               const SizedBox(height: 20),
 
-              ///Destination List
-              SizedBox(
-                height: 90,
-                child: ListView(
-                  scrollDirection: Axis.horizontal,
-                  children: const [
-                    _CityItem("imgs/hue.jpg", "Đại nội Huế"),
-                    _CityItem("imgs/tam_coc.jpg", "Tam Cốc"),
-                    _CityItem("imgs/sapa.jpg", "Sa Pa"),
-                    _CityItem(
-                      "imgs/phu_quoc.jpg",
-                      "Đảo Phú Quốc",
-                    ),
-                    _CityItem("imgs/Abuja.jpg", "Abuja"),
-                    _CityItem("imgs/NewYork.jpg", "NewYork"),
-                    _CityItem("imgs/Sydney.jpg", "Sydney"),
-                    _CityItem("imgs/Toronto.jpg", "Toronto"),
-                    _CityItem("imgs/London.jpg", "London"),
-                  ],
-                ),
-              ),
-
-              const SizedBox(height: 20),
-
               /// FILTER
               Row(
                 children: [
@@ -140,6 +116,7 @@ class HomeScreen extends StatelessWidget {
                 image: "imgs/pho_co_hoi_an.jpg",
                 title: "Phố cổ Hội An",
                 rating: "4.9",
+                location: "Quảng Nam, Việt Nam",
               ),
               const SizedBox(height: 10),
 
@@ -147,6 +124,119 @@ class HomeScreen extends StatelessWidget {
                 image: "imgs/my_khe_beach.jpg",
                 title: "Bãi Biển Mỹ Khê",
                 rating: "4.9",
+                location: "Đà Nẵng, Việt Nam",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/son_tra.jpg",
+                title: "Bán đảo Sơn Trà",
+                rating: "4.9",
+                location: "Đà Nẵng, Việt Nam",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/bali.jpg",
+                title: "Bali",
+                rating: "4.9",
+                location: "Bali, Indonesia",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/gardens_by_the_bay.jpg",
+                title: "Gardens By The Bay",
+                rating: "4.8",
+                location: "Singapore",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/night_safari.jpg",
+                title: "Night Safari",
+                rating: "4.7",
+                location: "Singapore",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/river_wonders.jpg",
+                title: "River Wonders",
+                rating: "4.6",
+                location: "Singapore",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/pulau_ubin.jpg",
+                title: "Pulau Ubin",
+                rating: "4.6",
+                location: "Singapore",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/merlion_park.jpg",
+                title: "Merlion Park",
+                rating: "4.7",
+                location: "Singapore",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/namsan_tower.jpg",
+                title: "N Seoul Tower (Namsan Tower)",
+                rating: "4.7",
+                location: "Seoul, South Korea",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/cheonggyecheon.jpg",
+                title: "Cheonggyecheon Stream",
+                rating: "4.6",
+                location: "Seoul, South Korea",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/haeundae_beach.jpg",
+                title: "Haeundae Beach",
+                rating: "4.7",
+                location: "Busan, South Korea",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/bukchon_hanok.jpg",
+                title: "Bukchon Hanok Village",
+                rating: "4.6",
+                location: "Seoul, South Korea",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/mount_fuji.jpg",
+                title: "Mount Fuji",
+                rating: "4.8",
+                location: "Honshu, Japan",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/tokyo_tower.jpg",
+                title: "Tokyo Tower",
+                rating: "4.6",
+                location: "Tokyo, Japan",
+              ),
+              const SizedBox(height: 10),
+
+              const _DestinationCard(
+                image: "imgs/kinkakuji.jpg",
+                title: "Kinkaku-ji (Golden Pavilion)",
+                rating: "4.8",
+                location: "Kyoto, Japan",
               ),
               const SizedBox(height: 10),
 
@@ -154,6 +244,7 @@ class HomeScreen extends StatelessWidget {
                 image: "imgs/island.jpg",
                 title: "Lush Islands",
                 rating: "4.5",
+                location: "Bali, Indonesia",
               ),
 
               const SizedBox(height: 20),
@@ -226,51 +317,38 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-/// ================= CITY ITEM =================
-class _CityItem extends StatelessWidget {
-  final String image;
-  final String name;
-
-  const _CityItem(this.image, this.name);
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(right: 15),
-      child: Column(
-        children: [
-          CircleAvatar(
-            radius: 30,
-            backgroundImage: AssetImage(image),
-          ),
-          const SizedBox(height: 5),
-          Text(name),
-        ],
-      ),
-    );
-  }
-}
-
 /// ================= DESTINATION CARD =================
-class _DestinationCard extends StatelessWidget {
+class _DestinationCard extends StatefulWidget {
   final String image;
   final String title;
   final String rating;
+  final String location;
 
   const _DestinationCard({
     required this.image,
     required this.title,
     required this.rating,
+    required this.location,
   });
+
+  @override
+  State<_DestinationCard> createState() =>
+      _DestinationCardState();
+}
+
+class _DestinationCardState extends State<_DestinationCard> {
+  bool isFavorite = false;
 
   @override
   Widget build(BuildContext context) {
     return Container(
+      width: 230,
       height: 220,
+      margin: const EdgeInsets.only(right: 15),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
         image: DecorationImage(
-          image: AssetImage(image),
+          image: AssetImage(widget.image),
           fit: BoxFit.cover,
         ),
       ),
@@ -282,34 +360,94 @@ class _DestinationCard extends StatelessWidget {
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
             colors: [
-              Colors.black.withOpacity(0.6),
+              Colors.black.withOpacity(0.7),
+              Colors.black.withOpacity(0.2),
               Colors.transparent,
             ],
           ),
         ),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.end,
+        child: Stack(
           children: [
-            Text(
-              title,
-              style: const TextStyle(
-                color: Colors.white,
-                fontSize: 20,
-                fontWeight: FontWeight.bold,
+            /// ❤️ HEART BUTTON (top right)
+            Positioned(
+              top: 0,
+              right: 0,
+              child: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    isFavorite = !isFavorite;
+                  });
+                },
+                child: Container(
+                  padding: const EdgeInsets.all(8),
+                  decoration: BoxDecoration(
+                    color: Colors.black.withOpacity(0.4),
+                    shape: BoxShape.circle,
+                  ),
+                  child: Icon(
+                    isFavorite
+                        ? Icons.favorite
+                        : Icons.favorite_border,
+                    color: isFavorite
+                        ? Colors.red
+                        : Colors.white,
+                    size: 20,
+                  ),
+                ),
               ),
             ),
-            Row(
+
+            /// TEXT CONTENT (bottom)
+            Column(
+              mainAxisAlignment: MainAxisAlignment.end,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                const Icon(
-                  Icons.star,
-                  color: Colors.orange,
-                  size: 18,
-                ),
-                const SizedBox(width: 5),
                 Text(
-                  rating,
-                  style: const TextStyle(color: Colors.white),
+                  widget.title,
+                  style: const TextStyle(
+                    color: Colors.white,
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+
+                const SizedBox(height: 8),
+
+                Row(
+                  children: [
+                    const Icon(
+                      Icons.location_on,
+                      color: Colors.white70,
+                      size: 14,
+                    ),
+                    const SizedBox(width: 4),
+                    Expanded(
+                      child: Text(
+                        widget.location,
+                        style: const TextStyle(
+                          color: Colors.white70,
+                          fontSize: 12,
+                        ),
+                        overflow: TextOverflow.ellipsis,
+                      ),
+                    ),
+
+                    const SizedBox(width: 8),
+
+                    const Icon(
+                      Icons.star,
+                      color: Colors.orange,
+                      size: 16,
+                    ),
+                    const SizedBox(width: 4),
+                    Text(
+                      widget.rating,
+                      style: const TextStyle(
+                        color: Colors.white,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
