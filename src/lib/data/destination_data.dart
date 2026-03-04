@@ -100,7 +100,7 @@ final List<Destination> destinations = [
 
   Destination(
     id: "14",
-    image: "imgs/nui_phu_si.png",
+    image: "imgs/nui_phu_si.jpg",
     title: "Mount Fuji",
     rating: "4.8",
     location: "Honshu, Japan",

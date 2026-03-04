@@ -14,9 +14,9 @@ class _MainNavigationState extends State<MainNavigation> {
 
   final List<Widget> _screens = const [
     HomeScreen(),
-    Center(child: Text("Chat")),
-    Center(child: Text("Schedule")),
     SavedScreen(),
+    Center(child: Text("Chat")),
+    Center(child: Text("Gropp 8")),
     Center(child: Text("Profile")),
   ];
 
@@ -39,11 +39,27 @@ class _MainNavigationState extends State<MainNavigation> {
           });
         },
         items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Home"),
-          BottomNavigationBarItem(icon: Icon(Icons.chat), label: "Chat"),
-          BottomNavigationBarItem(icon: Icon(Icons.calendar_month), label: "Schedule"),
-          BottomNavigationBarItem(icon: Icon(Icons.favorite), label: "Saved"),
-          BottomNavigationBarItem(icon: Icon(Icons.person), label: "Profile"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: "Home",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.favorite),
+            label: "Saved",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.chat),
+            label: "Chat",
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.info),
+            label: "Group 8",
+          ),
+
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: "Profile",
+          ),
         ],
       ),
     );
