@@ -49,12 +49,12 @@ class HomeScreen extends StatelessWidget {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Where do you wanna go?",
+                "Where do you\nwanna go?",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   height: 1.1,
-                  color: Color.fromARGB(255, 13, 8, 80),
+                  color: Color.fromARGB(255, 12, 3, 134),
                 ),
               ),
             ),
