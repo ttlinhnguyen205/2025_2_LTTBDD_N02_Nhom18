@@ -66,7 +66,9 @@ class HomeScreen extends StatelessWidget {
                 Expanded(
                   child: Container(
                     height: 50,
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: Colors.grey),
@@ -75,7 +77,10 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Icon(Icons.search, color: Colors.grey),
                         SizedBox(width: 10),
-                        Text("Search", style: TextStyle(color: Colors.grey)),
+                        Text(
+                          "Search",
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
                   ),
@@ -272,4 +277,34 @@ class _DestinationCardState extends State<DestinationCard> {
       ),
     );
   }
+}
+
+/// FILTER CHIP
+Widget _chip(String text, bool selected) {
+  return Padding(
+    padding: const EdgeInsets.only(right: 10),
+    child: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 18,
+        vertical: 10,
+      ),
+      decoration: BoxDecoration(
+        color: selected ? Colors.black : Colors.white,
+        borderRadius: BorderRadius.circular(25),
+        boxShadow: [
+          if (selected)
+            const BoxShadow(
+              color: Colors.black26,
+              blurRadius: 10,
+            ),
+        ],
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: selected ? Colors.white : Colors.grey,
+        ),
+      ),
+    ),
+  );
 }
