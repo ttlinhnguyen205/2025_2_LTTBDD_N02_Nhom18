@@ -102,7 +102,8 @@ class HomeScreen extends StatelessWidget {
               /// FILTER
               Row(
                 children: [
-                  _chip("Popular", true),
+                  _chip("All", true),
+                  _chip("Popular", false),
                   _chip("Lake", false),
                   _chip("Beach", false),
                   _chip("Mountain", false),
