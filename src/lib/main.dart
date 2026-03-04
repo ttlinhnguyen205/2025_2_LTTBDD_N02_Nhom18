@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'screens/home_screen.dart';
+import 'screens/main_navigation.dart';
 
 void main() {
   runApp(const MyApp());
@@ -101,9 +101,7 @@ class ManHinh1 extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(
-                            30,
-                          ),
+                          borderRadius: BorderRadius.circular(30),
                         ),
                       ),
                       onPressed: () {
@@ -111,7 +109,7 @@ class ManHinh1 extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                const HomeScreen(),
+                                const MainNavigation(), 
                           ),
                         );
                       },
