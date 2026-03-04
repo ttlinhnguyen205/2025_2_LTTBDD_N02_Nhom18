@@ -64,24 +64,35 @@ class HomeScreen extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Container(
-                    height: 50,
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 15,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: Colors.grey),
-                    ),
-                    child: const Row(
-                      children: [
-                        Icon(Icons.search, color: Colors.grey),
-                        SizedBox(width: 10),
-                        Text(
-                          "Search",
-                          style: TextStyle(color: Colors.grey),
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const SearchScreen(),
                         ),
-                      ],
+                      );
+                    },
+                    child: Container(
+                      height: 50,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.grey),
+                      ),
+                      child: const Row(
+                        children: [
+                          Icon(Icons.search, color: Colors.grey),
+                          SizedBox(width: 10),
+                          Text(
+                            "Search",
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
