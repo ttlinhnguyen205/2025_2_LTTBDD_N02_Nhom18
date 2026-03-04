@@ -13,8 +13,6 @@ class HomeScreen extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
           children: [
-            const SizedBox(height: 10),
-
             /// HEADER
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -26,14 +24,16 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(width: 10),
                     CircleAvatar(
                       radius: 18,
-                      backgroundImage: AssetImage("imgs/guest.jpg"),
+                      backgroundImage: AssetImage(
+                        "imgs/guest.jpg",
+                      ),
                     ),
                   ],
                 ),
               ],
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
 
             /// TITLE
             const Align(
@@ -64,7 +64,9 @@ class HomeScreen extends StatelessWidget {
                 Expanded(
                   child: Container(
                     height: 50,
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 15,
+                    ),
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       border: Border.all(color: Colors.grey),
@@ -73,7 +75,10 @@ class HomeScreen extends StatelessWidget {
                       children: [
                         Icon(Icons.search, color: Colors.grey),
                         SizedBox(width: 10),
-                        Text("Search", style: TextStyle(color: Colors.grey)),
+                        Text(
+                          "Search",
+                          style: TextStyle(color: Colors.grey),
+                        ),
                       ],
                     ),
                   ),
@@ -121,13 +126,11 @@ class HomeScreen extends StatelessWidget {
 class DestinationCard extends StatefulWidget {
   final Destination destination;
 
-  const DestinationCard({
-    super.key,
-    required this.destination,
-  });
+  const DestinationCard({super.key, required this.destination});
 
   @override
-  State<DestinationCard> createState() => _DestinationCardState();
+  State<DestinationCard> createState() =>
+      _DestinationCardState();
 }
 
 class _DestinationCardState extends State<DestinationCard> {
@@ -140,8 +143,9 @@ class _DestinationCardState extends State<DestinationCard> {
   }
 
   void _loadFavorite() async {
-    bool result =
-        await FavoriteService.isFavorite(widget.destination.id);
+    bool result = await FavoriteService.isFavorite(
+      widget.destination.id,
+    );
 
     setState(() {
       isFavorite = result;
@@ -174,8 +178,8 @@ class _DestinationCardState extends State<DestinationCard> {
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
             colors: [
-              Colors.black.withValues(alpha:0.7),
-              Colors.black.withValues(alpha:0.2),
+              Colors.black.withValues(alpha: 0.7),
+              Colors.black.withValues(alpha: 0.2),
               Colors.transparent,
             ],
           ),
@@ -197,7 +201,9 @@ class _DestinationCardState extends State<DestinationCard> {
                     isFavorite
                         ? Icons.favorite
                         : Icons.favorite_border,
-                    color: isFavorite ? Colors.red : Colors.white,
+                    color: isFavorite
+                        ? Colors.red
+                        : Colors.white,
                   ),
                 ),
               ),
@@ -218,8 +224,11 @@ class _DestinationCardState extends State<DestinationCard> {
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    const Icon(Icons.location_on,
-                        color: Colors.red, size: 14),
+                    const Icon(
+                      Icons.location_on,
+                      color: Colors.red,
+                      size: 14,
+                    ),
                     const SizedBox(width: 4),
                     Expanded(
                       child: Text(
@@ -232,8 +241,11 @@ class _DestinationCardState extends State<DestinationCard> {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    const Icon(Icons.star,
-                        color: Colors.orange, size: 16),
+                    const Icon(
+                      Icons.star,
+                      color: Colors.orange,
+                      size: 16,
+                    ),
                     const SizedBox(width: 4),
                     Text(
                       item.rating,

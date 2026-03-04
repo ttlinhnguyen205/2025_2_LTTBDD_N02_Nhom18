@@ -43,19 +43,6 @@ class _SavedScreenState extends State<SavedScreen> {
           children: [
             const SizedBox(height: 10),
 
-            /// HEADER
-            Center(
-              child: Text(
-                "Favorite Places",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            ),
-
-            const SizedBox(height: 25),
-
             /// TITLE
             const Align(
               alignment: Alignment.centerLeft,
@@ -123,7 +110,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                         ),
                                     child: Image.asset(
                                       item.image,
-                                      height: 140,
+                                      height: 160,
                                       width: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
@@ -177,7 +164,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                             FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 6),
+                                    const SizedBox(height: 8),
                                     Row(
                                       children: [
                                         const Icon(
@@ -198,6 +185,24 @@ class _SavedScreenState extends State<SavedScreen> {
                                             overflow:
                                                 TextOverflow
                                                     .ellipsis,
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                    Row(
+                                      children: [
+                                        const Icon(
+                                          Icons.star,
+                                          size: 12,
+                                          color: Colors.orange,
+                                        ),
+                                        const SizedBox(width: 4),
+                                        Text(
+                                          item.rating,
+                                          style: const TextStyle(
+                                            fontSize: 12,
+                                            fontWeight:
+                                                FontWeight.w600,
                                           ),
                                         ),
                                       ],
