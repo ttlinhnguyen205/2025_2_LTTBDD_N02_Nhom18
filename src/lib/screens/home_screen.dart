@@ -40,7 +40,7 @@ class HomeScreen extends StatelessWidget {
               alignment: Alignment.centerLeft,
               child: Text(
                 "Hi Guest,",
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Colors.black),
               ),
             ),
             const SizedBox(height: 5),
@@ -49,14 +49,14 @@ class HomeScreen extends StatelessWidget {
               child: Text(
                 "Where do you\nwanna go?",
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
-                  height: 1.3,
+                  height: 1.1,
+                  color: Color.fromARGB(255, 13, 8, 80),
                 ),
               ),
             ),
-
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
 
             /// SEARCH
             Row(
@@ -98,6 +98,18 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
+            /// FILTER
+            Row(
+              children: [
+                _chip("Popular", true),
+                _chip("Lake", false),
+                _chip("Beach", false),
+                _chip("Mountain", false),
+              ],
+            ),
+
+            const SizedBox(height: 20),
+
             /// LIST DESTINATION
             Expanded(
               child: ListView.builder(
@@ -119,9 +131,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////
 /// DESTINATION CARD
-////////////////////////////////////////////////////////
 
 class DestinationCard extends StatefulWidget {
   final Destination destination;
@@ -263,4 +273,34 @@ class _DestinationCardState extends State<DestinationCard> {
       ),
     );
   }
+}
+
+/// FILTER CHIP
+Widget _chip(String text, bool selected) {
+  return Padding(
+    padding: const EdgeInsets.only(right: 10),
+    child: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 18,
+        vertical: 10,
+      ),
+      decoration: BoxDecoration(
+        color: selected ? Colors.black : Colors.white,
+        borderRadius: BorderRadius.circular(25),
+        boxShadow: [
+          if (selected)
+            const BoxShadow(
+              color: Colors.black26,
+              blurRadius: 10,
+            ),
+        ],
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: selected ? Colors.white : Colors.grey,
+        ),
+      ),
+    ),
+  );
 }
