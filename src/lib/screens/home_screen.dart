@@ -16,6 +16,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
 
+            /// HEADER
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -35,13 +36,13 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
 
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
                 "Hi Guest,",
-                style: TextStyle(color: Colors.grey),
+                style: TextStyle(color: Colors.black),
               ),
             ),
             const SizedBox(height: 5),
@@ -50,48 +51,32 @@ class HomeScreen extends StatelessWidget {
               child: Text(
                 "Where do you wanna go?",
                 style: TextStyle(
-                  fontSize: 28,
+                  fontSize: 40,
                   fontWeight: FontWeight.bold,
-                  height: 1.3,
+                  height: 1.1,
+                  color: Color.fromARGB(255, 13, 8, 80),
                 ),
               ),
             ),
-
-            const SizedBox(height: 20),
+            const SizedBox(height: 10),
 
             /// SEARCH
             Row(
               children: [
                 Expanded(
-                  child: GestureDetector(
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) =>
-                              const SearchScreen(),
-                        ),
-                      );
-                    },
-                    child: Container(
-                      height: 50,
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: 15,
-                      ),
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: Colors.grey),
-                      ),
-                      child: const Row(
-                        children: [
-                          Icon(Icons.search, color: Colors.grey),
-                          SizedBox(width: 10),
-                          Text(
-                            "Search",
-                            style: TextStyle(color: Colors.grey),
-                          ),
-                        ],
-                      ),
+                  child: Container(
+                    height: 50,
+                    padding: const EdgeInsets.symmetric(horizontal: 15),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      border: Border.all(color: Colors.grey),
+                    ),
+                    child: const Row(
+                      children: [
+                        Icon(Icons.search, color: Colors.grey),
+                        SizedBox(width: 10),
+                        Text("Search", style: TextStyle(color: Colors.grey)),
+                      ],
                     ),
                   ),
                 ),
@@ -105,6 +90,18 @@ class HomeScreen extends StatelessWidget {
                   ),
                   child: const Icon(Icons.tune),
                 ),
+              ],
+            ),
+
+            const SizedBox(height: 20),
+
+            /// FILTER
+            Row(
+              children: [
+                _chip("Popular", true),
+                _chip("Lake", false),
+                _chip("Beach", false),
+                _chip("Mountain", false),
               ],
             ),
 
@@ -130,6 +127,10 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
+
+////////////////////////////////////////////////////////
+/// DESTINATION CARD
+////////////////////////////////////////////////////////
 
 class DestinationCard extends StatefulWidget {
   final Destination destination;
