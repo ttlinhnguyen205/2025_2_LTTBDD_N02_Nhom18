@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/destination.dart';
 import '../data/destination_data.dart';
 import '../services/favorite_service.dart';
+import 'search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -15,7 +16,6 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
 
-            /// HEADER
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -26,7 +26,9 @@ class HomeScreen extends StatelessWidget {
                     SizedBox(width: 10),
                     CircleAvatar(
                       radius: 18,
-                      backgroundImage: AssetImage("imgs/guest.jpg"),
+                      backgroundImage: AssetImage(
+                        "imgs/guest.jpg",
+                      ),
                     ),
                   ],
                 ),
@@ -35,7 +37,6 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// TITLE
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -47,7 +48,7 @@ class HomeScreen extends StatelessWidget {
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Where do you\nwanna go?",
+                "Where do you wanna go?",
                 style: TextStyle(
                   fontSize: 28,
                   fontWeight: FontWeight.bold,
@@ -62,19 +63,35 @@ class HomeScreen extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: Container(
-                    height: 50,
-                    padding: const EdgeInsets.symmetric(horizontal: 15),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      border: Border.all(color: Colors.grey),
-                    ),
-                    child: const Row(
-                      children: [
-                        Icon(Icons.search, color: Colors.grey),
-                        SizedBox(width: 10),
-                        Text("Search", style: TextStyle(color: Colors.grey)),
-                      ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) =>
+                              const SearchScreen(),
+                        ),
+                      );
+                    },
+                    child: Container(
+                      height: 50,
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: 15,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        border: Border.all(color: Colors.grey),
+                      ),
+                      child: const Row(
+                        children: [
+                          Icon(Icons.search, color: Colors.grey),
+                          SizedBox(width: 10),
+                          Text(
+                            "Search",
+                            style: TextStyle(color: Colors.grey),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ),
@@ -114,20 +131,14 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////
-/// DESTINATION CARD
-////////////////////////////////////////////////////////
-
 class DestinationCard extends StatefulWidget {
   final Destination destination;
 
-  const DestinationCard({
-    super.key,
-    required this.destination,
-  });
+  const DestinationCard({super.key, required this.destination});
 
   @override
-  State<DestinationCard> createState() => _DestinationCardState();
+  State<DestinationCard> createState() =>
+      _DestinationCardState();
 }
 
 class _DestinationCardState extends State<DestinationCard> {
@@ -140,8 +151,9 @@ class _DestinationCardState extends State<DestinationCard> {
   }
 
   void _loadFavorite() async {
-    bool result =
-        await FavoriteService.isFavorite(widget.destination.id);
+    bool result = await FavoriteService.isFavorite(
+      widget.destination.id,
+    );
 
     setState(() {
       isFavorite = result;
@@ -174,8 +186,8 @@ class _DestinationCardState extends State<DestinationCard> {
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
             colors: [
-              Colors.black.withValues(alpha:0.7),
-              Colors.black.withValues(alpha:0.2),
+              Colors.black.withValues(alpha: 0.7),
+              Colors.black.withValues(alpha: 0.2),
               Colors.transparent,
             ],
           ),
@@ -197,7 +209,9 @@ class _DestinationCardState extends State<DestinationCard> {
                     isFavorite
                         ? Icons.favorite
                         : Icons.favorite_border,
-                    color: isFavorite ? Colors.red : Colors.white,
+                    color: isFavorite
+                        ? Colors.red
+                        : Colors.white,
                   ),
                 ),
               ),
@@ -218,8 +232,11 @@ class _DestinationCardState extends State<DestinationCard> {
                 const SizedBox(height: 8),
                 Row(
                   children: [
-                    const Icon(Icons.location_on,
-                        color: Colors.red, size: 14),
+                    const Icon(
+                      Icons.location_on,
+                      color: Colors.red,
+                      size: 14,
+                    ),
                     const SizedBox(width: 4),
                     Expanded(
                       child: Text(
@@ -232,8 +249,11 @@ class _DestinationCardState extends State<DestinationCard> {
                       ),
                     ),
                     const SizedBox(width: 8),
-                    const Icon(Icons.star,
-                        color: Colors.orange, size: 16),
+                    const Icon(
+                      Icons.star,
+                      color: Colors.orange,
+                      size: 16,
+                    ),
                     const SizedBox(width: 4),
                     Text(
                       item.rating,

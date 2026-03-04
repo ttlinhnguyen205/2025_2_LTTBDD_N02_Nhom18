@@ -5,9 +5,6 @@ void main() {
   runApp(const MyApp());
 }
 
-/// ==================
-/// ROOT APP
-/// ==================
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
@@ -20,9 +17,6 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/// ==================
-/// WELCOME SCREEN
-/// ==================
 class ManHinh1 extends StatelessWidget {
   const ManHinh1({super.key});
 
@@ -31,7 +25,6 @@ class ManHinh1 extends StatelessWidget {
     return Scaffold(
       body: Stack(
         children: [
-          /// ẢNH NỀN FULL
           SizedBox.expand(
             child: Image.asset(
               'imgs/login.jpg',
@@ -47,7 +40,6 @@ class ManHinh1 extends StatelessWidget {
                 children: [
                   const SizedBox(height: 40),
 
-                  /// TITLE
                   const Text(
                     "Discover",
                     style: TextStyle(
@@ -93,7 +85,6 @@ class ManHinh1 extends StatelessWidget {
 
                   const Spacer(),
 
-                  /// NÚT LET'S START
                   SizedBox(
                     width: double.infinity,
                     height: 55,
@@ -101,7 +92,9 @@ class ManHinh1 extends StatelessWidget {
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.orange,
                         shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.circular(30),
+                          borderRadius: BorderRadius.circular(
+                            30,
+                          ),
                         ),
                       ),
                       onPressed: () {
@@ -109,7 +102,7 @@ class ManHinh1 extends StatelessWidget {
                           context,
                           MaterialPageRoute(
                             builder: (context) =>
-                                const MainNavigation(), 
+                                const MainNavigation(),
                           ),
                         );
                       },
