@@ -8,6 +8,14 @@ final List<Destination> destinations = [
     rating: "4.9",
     location: "Quang Nam, Viet Nam",
     description: "",
+
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "2",
@@ -16,6 +24,14 @@ final List<Destination> destinations = [
     rating: "4.9",
     location: "Da Nang, Viet Nam",
     description: "",
+
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "3",
@@ -24,6 +40,14 @@ final List<Destination> destinations = [
     rating: "4.9",
     location: "Da Nang, Viet Nam",
     description: "",
+
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "4",
@@ -32,6 +56,13 @@ final List<Destination> destinations = [
     rating: "4.9",
     location: "Bali, Indonesia",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "5",
@@ -40,6 +71,14 @@ final List<Destination> destinations = [
     rating: "4.8",
     location: "Singapore",
     description: "",
+
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "6",
@@ -48,6 +87,14 @@ final List<Destination> destinations = [
     rating: "4.7",
     location: "Singapore",
     description: "",
+
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "7",
@@ -56,6 +103,13 @@ final List<Destination> destinations = [
     rating: "4.6",
     location: "Singapore",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
   Destination(
     id: "8",
@@ -64,6 +118,13 @@ final List<Destination> destinations = [
     rating: "4.6",
     location: "Singapore",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -73,6 +134,13 @@ final List<Destination> destinations = [
     rating: "4.7",
     location: "Singapore",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -82,6 +150,13 @@ final List<Destination> destinations = [
     rating: "4.7",
     location: "Seoul, South Korea",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -91,6 +166,13 @@ final List<Destination> destinations = [
     rating: "4.6",
     location: "Seoul, South Korea",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -100,6 +182,13 @@ final List<Destination> destinations = [
     rating: "4.7",
     location: "Busan, South Korea",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -109,6 +198,13 @@ final List<Destination> destinations = [
     rating: "4.6",
     location: "Seoul, South Korea",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -118,6 +214,13 @@ final List<Destination> destinations = [
     rating: "4.8",
     location: "Honshu, Japan",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -127,6 +230,13 @@ final List<Destination> destinations = [
     rating: "4.6",
     location: "Tokyo, Japan",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -137,6 +247,13 @@ final List<Destination> destinations = [
     rating: "4.8",
     location: "Kyoto, Japan",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 
   Destination(
@@ -146,5 +263,12 @@ final List<Destination> destinations = [
     rating: "4.5",
     location: "Bali, Indonesia",
     description: "",
+    review: "",
+    gallery: [
+      "imgs/anh1.jpg",
+      "imgs/anh2.jpg",
+      "imgs/anh3.jpg",
+      "imgs/anh4.jpg",
+    ],
   ),
 ];
