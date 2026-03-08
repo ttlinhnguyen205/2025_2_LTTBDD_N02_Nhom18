@@ -7,6 +7,7 @@ final List<Destination> destinations = [
     title: "Hoi An Ancient Town",
     rating: "4.9",
     location: "Quang Nam, Viet Nam",
+    description: "",
   ),
   Destination(
     id: "2",
@@ -14,6 +15,7 @@ final List<Destination> destinations = [
     title: "My Khe Beach",
     rating: "4.9",
     location: "Da Nang, Viet Nam",
+    description: "",
   ),
   Destination(
     id: "3",
@@ -21,6 +23,7 @@ final List<Destination> destinations = [
     title: "Son Tra Peninsula",
     rating: "4.9",
     location: "Da Nang, Viet Nam",
+    description: "",
   ),
   Destination(
     id: "4",
@@ -28,6 +31,7 @@ final List<Destination> destinations = [
     title: "Bali",
     rating: "4.9",
     location: "Bali, Indonesia",
+    description: "",
   ),
   Destination(
     id: "5",
@@ -35,6 +39,7 @@ final List<Destination> destinations = [
     title: "Gardens By The Bay",
     rating: "4.8",
     location: "Singapore",
+    description: "",
   ),
   Destination(
     id: "6",
@@ -42,6 +47,7 @@ final List<Destination> destinations = [
     title: "Night Safari",
     rating: "4.7",
     location: "Singapore",
+    description: "",
   ),
   Destination(
     id: "7",
@@ -49,6 +55,7 @@ final List<Destination> destinations = [
     title: "River Wonders",
     rating: "4.6",
     location: "Singapore",
+    description: "",
   ),
   Destination(
     id: "8",
@@ -56,6 +63,7 @@ final List<Destination> destinations = [
     title: "Pulau Ubin",
     rating: "4.6",
     location: "Singapore",
+    description: "",
   ),
 
   Destination(
@@ -64,6 +72,7 @@ final List<Destination> destinations = [
     title: "Merlion Park",
     rating: "4.7",
     location: "Singapore",
+    description: "",
   ),
 
   Destination(
@@ -72,6 +81,7 @@ final List<Destination> destinations = [
     title: "N Seoul Tower (Namsan Tower)",
     rating: "4.7",
     location: "Seoul, South Korea",
+    description: "",
   ),
 
   Destination(
@@ -80,6 +90,7 @@ final List<Destination> destinations = [
     title: "Cheonggyecheon Stream",
     rating: "4.6",
     location: "Seoul, South Korea",
+    description: "",
   ),
 
   Destination(
@@ -88,6 +99,7 @@ final List<Destination> destinations = [
     title: "Haeundae Beach",
     rating: "4.7",
     location: "Busan, South Korea",
+    description: "",
   ),
 
   Destination(
@@ -96,6 +108,7 @@ final List<Destination> destinations = [
     title: "Bukchon Hanok Village",
     rating: "4.6",
     location: "Seoul, South Korea",
+    description: "",
   ),
 
   Destination(
@@ -104,6 +117,7 @@ final List<Destination> destinations = [
     title: "Mount Fuji",
     rating: "4.8",
     location: "Honshu, Japan",
+    description: "",
   ),
 
   Destination(
@@ -112,6 +126,7 @@ final List<Destination> destinations = [
     title: "Tokyo Tower",
     rating: "4.6",
     location: "Tokyo, Japan",
+    description: "",
   ),
 
   Destination(
@@ -121,6 +136,7 @@ final List<Destination> destinations = [
     title: "Kinkaku-ji (Golden Pavilion)",
     rating: "4.8",
     location: "Kyoto, Japan",
+    description: "",
   ),
 
   Destination(
@@ -129,5 +145,6 @@ final List<Destination> destinations = [
     title: "Lush Islands",
     rating: "4.5",
     location: "Bali, Indonesia",
+    description: "",
   ),
 ];

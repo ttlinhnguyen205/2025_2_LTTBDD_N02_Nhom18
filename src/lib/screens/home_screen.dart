@@ -3,6 +3,7 @@ import '../models/destination.dart';
 import '../data/destination_data.dart';
 import '../services/favorite_service.dart';
 import 'search_screen.dart';
+import 'destination_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -128,10 +129,27 @@ class HomeScreen extends StatelessWidget {
               child: ListView.builder(
                 itemCount: destinations.length,
                 itemBuilder: (context, index) {
+                  final destination = destinations[index];
+
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 15),
-                    child: DestinationCard(
-                      destination: destinations[index],
+
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                DestinationDetailScreen(
+                                  destination: destination,
+                                ),
+                          ),
+                        );
+                      },
+
+                      child: DestinationCard(
+                        destination: destination,
+                      ),
                     ),
                   );
                 },
@@ -143,10 +161,6 @@ class HomeScreen extends StatelessWidget {
     );
   }
 }
-
-////////////////////////////////////////////////////////
-/// DESTINATION CARD
-////////////////////////////////////////////////////////
 
 class DestinationCard extends StatefulWidget {
   final Destination destination;
