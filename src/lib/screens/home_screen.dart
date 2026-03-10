@@ -144,10 +144,7 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-////////////////////////////////////////////////////////
 /// DESTINATION CARD
-////////////////////////////////////////////////////////
-
 class DestinationCard extends StatefulWidget {
   final Destination destination;
 

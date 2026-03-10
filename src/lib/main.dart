@@ -23,74 +23,110 @@ class ManHinh1 extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       body: Stack(
         children: [
-          SizedBox.expand(
-            child: Image.asset(
-              'imgs/login.jpg',
-              fit: BoxFit.cover,
-            ),
-          ),
-
-          SafeArea(
+          /// PHẦN NỘI DUNG BÊN DƯỚI
+          Align(
+            alignment: Alignment.bottomCenter,
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.fromLTRB(
+                25,
+                200,
+                25,
+                40,
+              ),
               child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const SizedBox(height: 40),
-
-                  const Text(
-                    "Discover",
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-                  const Text(
-                    "Amazing",
-                    style: TextStyle(
-                      fontSize: 28,
-                      fontWeight: FontWeight.bold,
-                      color: Colors.white,
-                    ),
-                  ),
-
-                  Container(
-                    padding: const EdgeInsets.symmetric(
-                      horizontal: 12,
-                      vertical: 6,
-                    ),
-                    decoration: BoxDecoration(
-                      color: Colors.orange,
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: const Text(
-                      " Destinations ",
+                  /// TITLE
+                  RichText(
+                    textAlign: TextAlign.center,
+                    text: const TextSpan(
                       style: TextStyle(
-                        color: Colors.white,
-                        fontSize: 24,
+                        fontSize: 26,
                         fontWeight: FontWeight.bold,
+                        color: Colors.black,
                       ),
+                      children: [
+                        TextSpan(
+                          text:
+                              "Life is short and the\nworld is ",
+                        ),
+                        TextSpan(
+                          text: "wide",
+                          style: TextStyle(color: Colors.orange),
+                        ),
+                      ],
                     ),
                   ),
 
                   const SizedBox(height: 15),
 
+                  /// DESCRIPTION
                   const Text(
-                    "We believe traveling around the world shouldn't be hard.",
-                    style: TextStyle(color: Colors.white),
+                    "At Friends tours and travel, we customize reliable and trustworthy educational tours to destinations all over the world",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.grey,
+                      fontSize: 14,
+                    ),
                   ),
 
-                  const Spacer(),
+                  const SizedBox(height: 20),
 
+                  /// DOT INDICATOR
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Container(
+                        width: 22,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          color: Colors.blue,
+                          borderRadius: BorderRadius.circular(
+                            10,
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(width: 6),
+
+                      Container(
+                        width: 6,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(
+                            10,
+                          ),
+                        ),
+                      ),
+
+                      const SizedBox(width: 6),
+
+                      Container(
+                        width: 6,
+                        height: 6,
+                        decoration: BoxDecoration(
+                          color: Colors.grey,
+                          borderRadius: BorderRadius.circular(
+                            10,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+
+                  const SizedBox(height: 30),
+
+                  /// BUTTON
                   SizedBox(
                     width: double.infinity,
                     height: 55,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: Colors.orange,
+                        backgroundColor: const Color(0xff38A9C7),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
                             30,
@@ -107,15 +143,46 @@ class ManHinh1 extends StatelessWidget {
                         );
                       },
                       child: const Text(
-                        "Let's Start",
+                        "Get Started",
                         style: TextStyle(
-                          color: Colors.white,
                           fontSize: 18,
+                          color: Colors.white,
                         ),
                       ),
                     ),
                   ),
                 ],
+              ),
+            ),
+          ),
+
+          /// ẢNH PHÍA TRÊN
+          Positioned(
+            top: 0,
+            left: 0,
+            right: 0,
+            child: ClipRRect(
+              borderRadius: const BorderRadius.only(
+                bottomLeft: Radius.circular(40),
+                bottomRight: Radius.circular(40),
+              ),
+              child: Image.asset(
+                'imgs/login3.png',
+                height: 420,
+                fit: BoxFit.cover,
+              ),
+            ),
+          ),
+
+          /// SKIP
+          Positioned(
+            top: 50,
+            right: 20,
+            child: Text(
+              "Skip",
+              style: TextStyle(
+                color: Colors.grey[600],
+                fontSize: 16,
               ),
             ),
           ),
