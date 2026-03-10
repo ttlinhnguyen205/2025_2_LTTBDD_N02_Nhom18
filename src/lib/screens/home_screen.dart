@@ -189,7 +189,10 @@ class _DestinationCardState extends State<DestinationCard> {
 
   void _toggleFavorite() async {
     await FavoriteService.toggleFavorite(widget.destination.id);
-    _loadFavorite();
+
+    setState(() {
+      isFavorite = !isFavorite;
+    });
   }
 
   @override

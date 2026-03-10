@@ -83,7 +83,12 @@ class ManHinh1 extends StatelessWidget {
                         width: 22,
                         height: 6,
                         decoration: BoxDecoration(
-                          color: Colors.blue,
+                          color: const Color.fromARGB(
+                            255,
+                            22,
+                            15,
+                            125,
+                          ),
                           borderRadius: BorderRadius.circular(
                             10,
                           ),
@@ -126,7 +131,12 @@ class ManHinh1 extends StatelessWidget {
                     height: 55,
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
-                        backgroundColor: const Color(0xff38A9C7),
+                        backgroundColor: const Color.fromARGB(
+                          255,
+                          22,
+                          15,
+                          125,
+                        ),
                         shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(
                             30,
@@ -168,7 +178,7 @@ class ManHinh1 extends StatelessWidget {
               ),
               child: Image.asset(
                 'imgs/login3.png',
-                height: 420,
+                height: 500,
                 fit: BoxFit.cover,
               ),
             ),
