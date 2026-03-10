@@ -16,7 +16,7 @@ class _MainNavigationState extends State<MainNavigation> {
     HomeScreen(),
     SavedScreen(),
     Center(child: Text("Chat")),
-    Center(child: Text("Gropp 8")),
+    Center(child: Text("Group 8")),
     Center(child: Text("Profile")),
   ];
 
@@ -24,10 +24,9 @@ class _MainNavigationState extends State<MainNavigation> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: IndexedStack(
-        index: _currentIndex,
-        children: _screens,
-      ),
+
+      body: _screens[_currentIndex],
+
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
         currentIndex: _currentIndex,
@@ -55,7 +54,6 @@ class _MainNavigationState extends State<MainNavigation> {
             icon: Icon(Icons.info),
             label: "Group 8",
           ),
-
           BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: "Profile",
