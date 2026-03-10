@@ -3,6 +3,7 @@ import '../models/destination.dart';
 import '../data/destination_data.dart';
 import '../services/favorite_service.dart';
 import 'search_screen.dart';
+import 'destination_detail_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -16,7 +17,6 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
 
-            /// HEADER
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: const [
@@ -51,16 +51,15 @@ class HomeScreen extends StatelessWidget {
               child: Text(
                 "Where do you wanna go?",
                 style: TextStyle(
-                  fontSize: 40,
+                  fontSize: 30,
                   fontWeight: FontWeight.bold,
                   height: 1.1,
-                  color: Color.fromARGB(255, 13, 8, 80),
+                  color: Color.fromARGB(255, 12, 3, 134),
                 ),
               ),
             ),
             const SizedBox(height: 10),
 
-            /// SEARCH
             Row(
               children: [
                 Expanded(
@@ -111,7 +110,6 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// FILTER
             Row(
               children: [
                 _chip("Popular", true),
@@ -123,15 +121,31 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// LIST DESTINATION
             Expanded(
               child: ListView.builder(
                 itemCount: destinations.length,
                 itemBuilder: (context, index) {
+                  final destination = destinations[index];
+
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 15),
-                    child: DestinationCard(
-                      destination: destinations[index],
+
+                    child: GestureDetector(
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) =>
+                                DestinationDetailScreen(
+                                  destination: destination,
+                                ),
+                          ),
+                        );
+                      },
+
+                      child: DestinationCard(
+                        destination: destination,
+                      ),
                     ),
                   );
                 },
@@ -144,7 +158,6 @@ class HomeScreen extends StatelessWidget {
   }
 }
 
-/// DESTINATION CARD
 class DestinationCard extends StatefulWidget {
   final Destination destination;
 
@@ -287,7 +300,6 @@ class _DestinationCardState extends State<DestinationCard> {
   }
 }
 
-/// FILTER CHIP
 Widget _chip(String text, bool selected) {
   return Padding(
     padding: const EdgeInsets.only(right: 10),
