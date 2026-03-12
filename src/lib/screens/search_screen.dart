@@ -18,12 +18,12 @@ class _SearchScreenState extends State<SearchScreen> {
   void search(String keyword) {
     setState(() {
       filteredList = destinations.where((item) {
-        return item.title
-                .toLowerCase()
-                .contains(keyword.toLowerCase()) ||
-            item.location
-                .toLowerCase()
-                .contains(keyword.toLowerCase());
+        return item.title.toLowerCase().contains(
+              keyword.toLowerCase(),
+            ) ||
+            item.location.toLowerCase().contains(
+              keyword.toLowerCase(),
+            );
       }).toList();
     });
   }
@@ -31,36 +31,72 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: const Color(0xffF5F6FA),
       appBar: AppBar(
-        title: const Text("Search"),
+        backgroundColor: Colors.white,
+        elevation: 0,
+        iconTheme: const IconThemeData(color: Colors.black),
+        title: const Text(
+          "Search Destination",
+          style: TextStyle(
+            color: Colors.black,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
       ),
       body: Padding(
         padding: const EdgeInsets.all(20),
         child: Column(
           children: [
-            TextField(
-              controller: controller,
-              onChanged: search,
-              decoration: const InputDecoration(
-                hintText: "Search destination...",
-                border: OutlineInputBorder(),
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(15),
+                boxShadow: const [
+                  BoxShadow(
+                    color: Colors.black12,
+                    blurRadius: 10,
+                  ),
+                ],
+              ),
+              child: TextField(
+                controller: controller,
+                onChanged: search,
+                decoration: const InputDecoration(
+                  hintText: "Search destination...",
+                  prefixIcon: Icon(Icons.search),
+                  border: InputBorder.none,
+                  contentPadding: EdgeInsets.symmetric(
+                    vertical: 15,
+                  ),
+                ),
               ),
             ),
             const SizedBox(height: 20),
+            Align(
+              alignment: Alignment.centerLeft,
+              child: Text(
+                "Popular destinations",
+                style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: Colors.grey[800],
+                ),
+              ),
+            ),
+            const SizedBox(height: 15),
             Expanded(
               child: filteredList.isEmpty
-                  ? const Center(
-                      child: Text("No results found"),
-                    )
+                  ? const Center(child: Text("No results found"))
                   : ListView.builder(
                       itemCount: filteredList.length,
                       itemBuilder: (context, index) {
                         return Padding(
-                          padding:
-                              const EdgeInsets.only(bottom: 15),
+                          padding: const EdgeInsets.only(
+                            bottom: 20,
+                          ),
                           child: DestinationCard(
-                            destination:
-                                filteredList[index],
+                            destination: filteredList[index],
                           ),
                         );
                       },

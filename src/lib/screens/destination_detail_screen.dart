@@ -1,13 +1,28 @@
 import 'package:flutter/material.dart';
 import '../models/destination.dart';
 
-class DestinationDetailScreen extends StatelessWidget {
+class DestinationDetailScreen extends StatefulWidget {
   final Destination destination;
 
   const DestinationDetailScreen({
     super.key,
     required this.destination,
   });
+
+  @override
+  State<DestinationDetailScreen> createState() =>
+      _DestinationDetailScreenState();
+}
+
+class _DestinationDetailScreenState
+    extends State<DestinationDetailScreen> {
+  late String selectedImage;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedImage = widget.destination.image;
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,7 +34,7 @@ class DestinationDetailScreen extends StatelessWidget {
             Stack(
               children: [
                 Image.asset(
-                  destination.image,
+                  selectedImage,
                   height: 320,
                   width: double.infinity,
                   fit: BoxFit.cover,
@@ -60,8 +75,15 @@ class DestinationDetailScreen extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: destination.gallery.map((img) {
-                  return _smallImage(img);
+                children: widget.destination.gallery.map((img) {
+                  return GestureDetector(
+                    onTap: () {
+                      setState(() {
+                        selectedImage = img;
+                      });
+                    },
+                    child: _smallImage(img),
+                  );
                 }).toList(),
               ),
             ),
@@ -78,7 +100,7 @@ class DestinationDetailScreen extends StatelessWidget {
                 children: [
                   /// TITLE
                   Text(
-                    destination.title,
+                    widget.destination.title,
                     style: const TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
@@ -97,7 +119,7 @@ class DestinationDetailScreen extends StatelessWidget {
 
                       const SizedBox(width: 4),
 
-                      Text(destination.location),
+                      Text(widget.destination.location),
 
                       const Spacer(),
 
@@ -108,7 +130,7 @@ class DestinationDetailScreen extends StatelessWidget {
 
                       const SizedBox(width: 4),
 
-                      Text(destination.rating),
+                      Text(widget.destination.rating),
                     ],
                   ),
 
@@ -162,7 +184,7 @@ class DestinationDetailScreen extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   Text(
-                    destination.description,
+                    widget.destination.description,
                     style: const TextStyle(
                       color: Colors.grey,
                       height: 1.5,
@@ -183,7 +205,7 @@ class DestinationDetailScreen extends StatelessWidget {
                   const SizedBox(height: 8),
 
                   Text(
-                    destination.review,
+                    widget.destination.review,
                     style: const TextStyle(
                       color: Colors.grey,
                       height: 1.5,
