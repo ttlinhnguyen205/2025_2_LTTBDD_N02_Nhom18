@@ -20,6 +20,24 @@ final List<Destination> destinations = [
     ],
   ),
   Destination(
+    id: "17",
+    image: "imgs/sapa.jpg",
+    title: "Sa Pa",
+    rating: "4.7",
+    location: "Lao Cai, Vietnam",
+    description:
+        "Sa Pa is a famous mountain town in northern Vietnam known for its breathtaking rice terraces, cool climate, and rich ethnic culture. Visitors can enjoy trekking through villages, exploring Fansipan Mountain – the highest peak in Indochina, and experiencing the unique traditions of local ethnic groups.",
+
+    review:
+        "Sa Pa is a stunning destination with beautiful landscapes and friendly local people. The rice terraces and mountain views are unforgettable.",
+    gallery: [
+      "imgs/sapa1.png",
+      "imgs/sapa2.jpg",
+      "imgs/sapa3.jpg",
+      "imgs/sapa4.jpg",
+    ],
+  ),
+  Destination(
     id: "2",
     image: "imgs/my_khe_beach.jpg",
     title: "My Khe Beach",
@@ -31,10 +49,28 @@ final List<Destination> destinations = [
     review:
         "Clean beach with soft sand and amazing sunrise views. Great place to relax and enjoy the sea.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/my_khe_beach1.jpg",
+      "imgs/my_khe_beach2.jpg",
+      "imgs/my_khe_beach3.jpg",
+      "imgs/my_khe_beach4.jpg",
+    ],
+  ),
+  Destination(
+    id: "19",
+    image: "imgs/ta_xua.jpg",
+    title: "Ta Xua",
+    rating: "4.6",
+    location: "Son La, Vietnam",
+    description:
+        "Ta Xua is a famous mountain destination in northern Vietnam known for its sea of clouds and breathtaking mountain landscapes. It is a popular place for trekking, cloud hunting, and enjoying the peaceful nature of the highlands.",
+
+    review:
+        "Ta Xua is an amazing place to see the sea of clouds. The scenery is magical and perfect for adventure lovers.",
+    gallery: [
+      "imgs/ta_xua1.jpg",
+      "imgs/ta_xua2.jpg",
+      "imgs/ta_xua3.jpg",
+      "imgs/ta_xua4.jpeg",
     ],
   ),
   Destination(
@@ -49,10 +85,28 @@ final List<Destination> destinations = [
     review:
         "A peaceful place with breathtaking views of the sea and mountains. Perfect for nature lovers and photographers.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/son_tra1.jpg",
+      "imgs/son_tra2.jpg",
+      "imgs/son_tra3.jpg",
+      "imgs/son_tra4.jpg",
+    ],
+  ),
+  Destination(
+    id: "18",
+    image: "imgs/tam_dao.jpg",
+    title: "Tam Dao",
+    rating: "4.5",
+    location: "Vinh Phuc, Vietnam",
+    description:
+        "Tam Dao is a beautiful mountain town located about 80 km from Hanoi. It is famous for its cool climate, misty landscapes, and scenic views. Visitors can explore attractions such as Tam Dao Church, Silver Waterfall, and enjoy the peaceful atmosphere of the mountains.",
+
+    review:
+        "Tam Dao is a perfect getaway from the busy city. The cool weather and mountain scenery make it a relaxing place to visit.",
+    gallery: [
+      "imgs/tam_dao1.jpg",
+      "imgs/tam_dao2.jpg",
+      "imgs/tam_dao3.jpg",
+      "imgs/tam_dao4.jpg",
     ],
   ),
   Destination(
@@ -67,10 +121,10 @@ final List<Destination> destinations = [
     review:
         "Amazing island with beautiful beaches and friendly people. Great destination for vacation and cultural experiences.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/bali1.jpg",
+      "imgs/bali2.jpg",
+      "imgs/bali3.jpg",
+      "imgs/bali4.jpg",
     ],
   ),
   Destination(
@@ -85,10 +139,10 @@ final List<Destination> destinations = [
     review:
         "Incredible garden with unique architecture and stunning night light shows. A must-visit place in Singapore.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/gardens_by_the_bay1.jpg",
+      "imgs/gardens_by_the_bay2.jpg",
+      "imgs/gardens_by_the_bay3.jpg",
+      "imgs/gardens_by_the_bay4.jpg",
     ],
   ),
   Destination(
@@ -103,10 +157,10 @@ final List<Destination> destinations = [
     review:
         "A unique experience to see wild animals at night. Fun and educational for families and travelers.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/night_safari1.jpg",
+      "imgs/night_safari2.jpg",
+      "imgs/night_safari3.jpg",
+      "imgs/night_safari4.jpg",
     ],
   ),
   Destination(
@@ -121,10 +175,10 @@ final List<Destination> destinations = [
     review:
         "Interesting park with many rare animals including giant pandas. Great place for families.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/river_wonders1.jpg",
+      "imgs/river_wonders2.jpg",
+      "imgs/river_wonders3.jpg",
+      "imgs/river_wonders4.jpg",
     ],
   ),
   Destination(
@@ -139,10 +193,10 @@ final List<Destination> destinations = [
     review:
         "A peaceful escape from the busy city. Perfect for cycling and enjoying nature.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/pulau_ubin1.jpg",
+      "imgs/pulau_ubin2.jpg",
+      "imgs/pulau_ubin3.jpg",
+      "imgs/pulau_ubin4.jpg",
     ],
   ),
 
@@ -158,10 +212,10 @@ final List<Destination> destinations = [
     review:
         "Great place for photos and sightseeing. The view of Marina Bay is fantastic.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/merlion_park1.jpg",
+      "imgs/merlion_park2.jpg",
+      "imgs/merlion_park3.jpeg",
+      "imgs/merlion_park4.jpg",
     ],
   ),
 
@@ -177,10 +231,10 @@ final List<Destination> destinations = [
     review:
         "A romantic spot with amazing views of Seoul, especially beautiful at night.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/namsan_tower1.jpg",
+      "imgs/namsan_tower2.jpg",
+      "imgs/namsan_tower3.jpg",
+      "imgs/namsan_tower4.jpg",
     ],
   ),
 
@@ -196,10 +250,10 @@ final List<Destination> destinations = [
     review:
         "A peaceful walking path with beautiful lights at night. Great place to relax in Seoul.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/cheonggyecheon1.jpg",
+      "imgs/cheonggyecheon2.jpg",
+      "imgs/cheonggyecheon3.jpg",
+      "imgs/cheonggyecheon4.png",
     ],
   ),
 
@@ -215,10 +269,10 @@ final List<Destination> destinations = [
     review:
         "Beautiful beach with clear water and vibrant surroundings. Perfect for summer vacation.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/haeundae_beach1.jpg",
+      "imgs/haeundae_beach2.jpg",
+      "imgs/haeundae_beach3.jpg",
+      "imgs/haeundae_beach4.jpg",
     ],
   ),
 
@@ -234,10 +288,10 @@ final List<Destination> destinations = [
     review:
         "A charming village with beautiful traditional houses. Great place to experience Korean culture.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/bukchon_hanok1.jpg",
+      "imgs/bukchon_hanok2.jpg",
+      "imgs/bukchon_hanok3.jpg",
+      "imgs/bukchon_hanok4.jpg",
     ],
   ),
 
@@ -253,10 +307,10 @@ final List<Destination> destinations = [
     review:
         "Magnificent mountain with stunning views. One of the most iconic places in Japan.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/nui_phu_si1.jpg",
+      "imgs/nui_phu_si2.jpg",
+      "imgs/nui_phu_si3.jpg",
+      "imgs/nui_phu_si4.jpg",
     ],
   ),
 
@@ -272,10 +326,10 @@ final List<Destination> destinations = [
     review:
         "A classic Tokyo attraction with great city views, especially beautiful at night.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/tokyo_tower1.jpeg",
+      "imgs/tokyo_tower2.jpg",
+      "imgs/tokyo_tower3.jpg",
+      "imgs/tokyo_tower4.jpg",
     ],
   ),
 
@@ -292,29 +346,10 @@ final List<Destination> destinations = [
     review:
         "Absolutely stunning temple with a golden exterior. A must-see spot in Kyoto.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
-    ],
-  ),
-
-  Destination(
-    id: "17",
-    image: "imgs/island.jpg",
-    title: "Lush Islands",
-    rating: "4.5",
-    location: "Bali, Indonesia",
-    description:
-        "Lush Islands in Bali are known for their tropical forests, clear water, and peaceful beaches. They offer a perfect escape for nature lovers.",
-
-    review:
-        "Beautiful tropical scenery with relaxing beaches and fresh air. Perfect for a quiet getaway.",
-    gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/kinkakuji1.jpg",
+      "imgs/kinkakuji2.jpg",
+      "imgs/kinkakuji3.jpeg",
+      "imgs/kinkakuji4.jpg",
     ],
   ),
 ];

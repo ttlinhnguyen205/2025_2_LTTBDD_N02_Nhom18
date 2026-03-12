@@ -166,7 +166,6 @@ class ManHinh1 extends StatelessWidget {
             ),
           ),
 
-          /// ẢNH PHÍA TRÊN
           Positioned(
             top: 0,
             left: 0,
