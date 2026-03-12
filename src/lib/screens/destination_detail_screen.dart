@@ -60,15 +60,9 @@ class DestinationDetailScreen extends StatelessWidget {
               ),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  _smallImage(destination.image),
-
-                  _smallImage("imgs/anh2.jpg"),
-
-                  _smallImage("imgs/anh3.jpg"),
-
-                  _smallImage("imgs/anh4.jpg"),
-                ],
+                children: destination.gallery.map((img) {
+                  return _smallImage(img);
+                }).toList(),
               ),
             ),
 
@@ -156,33 +150,41 @@ class DestinationDetailScreen extends StatelessWidget {
 
                   const SizedBox(height: 25),
 
-                  /// TABS
-                  const Row(
-                    children: [
-                      Text(
-                        "Description",
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-
-                      SizedBox(width: 20),
-
-                      Text(
-                        "Review",
-                        style: TextStyle(color: Colors.grey),
-                      ),
-                    ],
-                  ),
-
-                  const SizedBox(height: 10),
-
                   /// DESCRIPTION
                   const Text(
-                    "Mount Fuji is Japan's highest and most iconic mountain. "
-                    "It is a sacred symbol of beauty, often depicted with its "
-                    "snow-capped peak and stunning seasonal landscapes.",
+                    "Description",
                     style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  Text(
+                    destination.description,
+                    style: const TextStyle(
+                      color: Colors.grey,
+                      height: 1.5,
+                    ),
+                  ),
+
+                  const SizedBox(height: 20),
+
+                  /// REVIEW
+                  const Text(
+                    "Review",
+                    style: TextStyle(
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+
+                  const SizedBox(height: 8),
+
+                  Text(
+                    destination.review,
+                    style: const TextStyle(
                       color: Colors.grey,
                       height: 1.5,
                     ),
