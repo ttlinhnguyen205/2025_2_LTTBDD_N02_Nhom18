@@ -47,7 +47,7 @@ class DestinationDetailScreen extends StatelessWidget {
             /// GALLERY
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 20),
-              padding: const EdgeInsets.symmetric(vertical: 10),
+              padding: const EdgeInsets.symmetric(vertical: 0),
               decoration: BoxDecoration(
                 color: Colors.white,
                 borderRadius: BorderRadius.circular(20),
@@ -206,13 +206,13 @@ class DestinationDetailScreen extends StatelessWidget {
 ////////////////////////////////////////////////////
 
 Widget _smallImage(String img) {
-  return ClipRRect(
-    borderRadius: BorderRadius.circular(10),
-    child: Image.asset(
-      img,
-      height: 50,
-      width: 60,
-      fit: BoxFit.cover,
+  return Container(
+    height: 80,
+    width: 120,
+    margin: const EdgeInsets.symmetric(vertical: 10),
+    child: ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Image.asset(img, fit: BoxFit.cover),
     ),
   );
 }

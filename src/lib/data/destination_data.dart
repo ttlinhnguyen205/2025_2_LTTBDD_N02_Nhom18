@@ -13,10 +13,10 @@ final List<Destination> destinations = [
     review:
         "Beautiful ancient town with charming lantern streets and delicious food. Perfect place for walking at night and taking photos.",
     gallery: [
-      "imgs/anh1.jpg",
-      "imgs/anh2.jpg",
-      "imgs/anh3.jpg",
-      "imgs/anh4.jpg",
+      "imgs/pho_co_hoi_an.jpg",
+      "imgs/hoian2.png",
+      "imgs/hoian3.png",
+      "imgs/hoian4.png",
     ],
   ),
   Destination(
