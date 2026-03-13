@@ -43,7 +43,7 @@ class _SavedScreenState extends State<SavedScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-            
+
             const Text(
               "Favorite Places",
               style: TextStyle(
@@ -105,7 +105,7 @@ class _SavedScreenState extends State<SavedScreen> {
                             crossAxisCount: 2,
                             crossAxisSpacing: 15,
                             mainAxisSpacing: 20,
-                            childAspectRatio: 0.85,
+                            childAspectRatio: 0.95,
                           ),
                       itemBuilder: (context, index) {
                         final item = favoriteList[index];

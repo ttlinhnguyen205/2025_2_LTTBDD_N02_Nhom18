@@ -3,110 +3,316 @@ import 'package:flutter/material.dart';
 class GroupScreen extends StatelessWidget {
   const GroupScreen({super.key});
 
+  /// APP COLORS
+  static const Color primary = Color(0xff1F1A8A);
+  static const Color lightBlue = Color(0xffEEF1FF);
+  static const Color border = Color(0xffEAEAEA);
+  static const Color text = Color(0xff222222);
+  static const Color subtitle = Color(0xff888888);
+
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
+    return Scaffold(
+      backgroundColor: Colors.white,
 
-            const SizedBox(height: 20),
+      body: SingleChildScrollView(
+        child: Padding(
+          padding: const EdgeInsets.all(16),
 
-            const Text(
-              "Group 8",
-              style: TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              /// HEADER
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(24),
 
-            const SizedBox(height: 20),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(22),
+                  color: primary,
+                ),
 
-            /// GROUP IMAGE
-            const CircleAvatar(
-              radius: 60,
-              backgroundImage: AssetImage("imgs/group.jpg"),
-            ),
+                child: const Column(
+                  children: [
+                    Icon(
+                      Icons.groups_rounded,
+                      color: Colors.white,
+                      size: 40,
+                    ),
 
-            const SizedBox(height: 20),
+                    SizedBox(height: 10),
 
-            const Text(
-              "Travel App Project",
-              style: TextStyle(
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
+                    Text(
+                      "Group 18",
+                      style: TextStyle(
+                        fontSize: 26,
+                        fontWeight: FontWeight.bold,
+                        color: Colors.white,
+                      ),
+                    ),
 
-            const Text(
-              "Mobile Programming",
-              style: TextStyle(color: Colors.grey),
-            ),
+                    SizedBox(height: 6),
 
-            const SizedBox(height: 30),
+                    Text(
+                      "Mobile Programming Project",
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 14,
+                      ),
+                    ),
 
-            /// MEMBERS
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Members",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+                    SizedBox(height: 6),
+
+                    Text(
+                      "2 Members",
+                      style: TextStyle(
+                        color: Colors.white70,
+                        fontSize: 12,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ),
 
-            const SizedBox(height: 10),
+              const SizedBox(height: 30),
 
-            _member("Nguyễn Thị Thùy Linh", "23010633"),
-            _member("Nguyễn Anh Quân", "23010375"),
+              /// TEAM TITLE
+              const Row(
+                children: [
+                  Icon(Icons.people, size: 22, color: primary),
+                  SizedBox(width: 8),
 
-            const SizedBox(height: 30),
+                  Text(
+                    "Team Members",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: text,
+                    ),
+                  ),
+                ],
+              ),
 
-            /// INSTRUCTOR
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Instructor",
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
+              const SizedBox(height: 16),
+
+              /// MEMBER CARDS
+              Row(
+                children: [
+                  Expanded(
+                    child: _memberCard(
+                      name: "Nguyễn Thị Thùy Linh",
+                      id: "23010633",
+                      image: "imgs/linh.png",
+                    ),
+                  ),
+
+                  const SizedBox(width: 14),
+
+                  Expanded(
+                    child: _memberCard(
+                      name: "Nguyễn Anh Quân",
+                      id: "23010375",
+                      image: "imgs/quan.png",
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 30),
+
+              /// ABOUT PROJECT
+              const Row(
+                children: [
+                  Icon(Icons.info_outline, color: primary),
+                  SizedBox(width: 8),
+
+                  Text(
+                    "About Project",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: text,
+                    ),
+                  ),
+                ],
+              ),
+
+              const SizedBox(height: 12),
+
+              Container(
+                padding: const EdgeInsets.all(16),
+
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.grey.shade50,
+                  border: Border.all(color: border),
+                ),
+
+                child: const Text(
+                  "This project is a mobile application built using Flutter. "
+                  "It demonstrates UI design, navigation, and mobile app "
+                  "development concepts learned in the Mobile Programming course.",
+
+                  style: TextStyle(
+                    fontSize: 14,
+                    height: 1.5,
+                    color: text,
+                  ),
                 ),
               ),
-            ),
 
-            const SizedBox(height: 10),
+              const SizedBox(height: 30),
 
-            const ListTile(
-              leading: Icon(Icons.school),
-              title: Text("Dr. ABC"),
-              subtitle: Text("Mobile Programming"),
-            ),
+              /// INSTRUCTOR
+              const Row(
+                children: [
+                  Icon(Icons.school, color: primary),
+                  SizedBox(width: 8),
 
-            const Spacer(),
+                  Text(
+                    "Instructor",
+                    style: TextStyle(
+                      fontSize: 22,
+                      fontWeight: FontWeight.bold,
+                      color: text,
+                    ),
+                  ),
+                ],
+              ),
 
-            const Text(
-              "University Name",
-              style: TextStyle(color: Colors.grey),
-            ),
+              const SizedBox(height: 12),
 
-            const SizedBox(height: 10),
-          ],
+              Container(
+                padding: const EdgeInsets.all(16),
+
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(16),
+                  color: Colors.grey.shade50,
+                  border: Border.all(color: border),
+                ),
+
+                child: const Row(
+                  children: [
+                    CircleAvatar(
+                      radius: 26,
+                      backgroundColor: lightBlue,
+
+                      child: Icon(Icons.school, color: primary),
+                    ),
+
+                    SizedBox(width: 14),
+
+                    Column(
+                      crossAxisAlignment:
+                          CrossAxisAlignment.start,
+                      children: [
+                        Text(
+                          "Dr. Nguyễn Xuân Quế",
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 16,
+                            color: text,
+                          ),
+                        ),
+
+                        SizedBox(height: 4),
+
+                        Text(
+                          "Mobile Programming Lecturer",
+                          style: TextStyle(
+                            color: subtitle,
+                            fontSize: 13,
+                          ),
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+
+              const SizedBox(height: 30),
+            ],
+          ),
         ),
       ),
     );
   }
-}
 
-Widget _member(String name, String role) {
-  return ListTile(
-    leading: const CircleAvatar(
-      child: Icon(Icons.person),
-    ),
-    title: Text(name),
-    subtitle: Text(role),
-  );
+  /// MEMBER CARD
+  Widget _memberCard({
+    required String name,
+    required String id,
+    required String image,
+  }) {
+    return Container(
+      padding: const EdgeInsets.all(18),
+
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(18),
+        color: Colors.white,
+        border: Border.all(color: border),
+
+        boxShadow: const [
+          BoxShadow(
+            blurRadius: 12,
+            color: Colors.black12,
+            offset: Offset(0, 6),
+          ),
+        ],
+      ),
+
+      child: Column(
+        children: [
+          CircleAvatar(
+            radius: 34,
+            backgroundImage: AssetImage(image),
+          ),
+
+          const SizedBox(height: 12),
+
+          Text(
+            name,
+            textAlign: TextAlign.center,
+
+            style: const TextStyle(
+              fontWeight: FontWeight.bold,
+              fontSize: 14,
+              color: text,
+            ),
+          ),
+
+          const SizedBox(height: 4),
+
+          Text(
+            id,
+
+            style: const TextStyle(
+              color: subtitle,
+              fontSize: 13,
+            ),
+          ),
+
+          const SizedBox(height: 8),
+
+          Container(
+            padding: const EdgeInsets.symmetric(
+              horizontal: 10,
+              vertical: 4,
+            ),
+
+            decoration: BoxDecoration(
+              color: lightBlue,
+              borderRadius: BorderRadius.circular(20),
+            ),
+
+            child: const Text(
+              "UI Design & Flutter Developer",
+
+              style: TextStyle(fontSize: 11, color: primary),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
 }
