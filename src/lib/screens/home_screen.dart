@@ -6,14 +6,32 @@ import '../services/favorite_service.dart';
 import 'search_screen.dart';
 import 'destination_detail_screen.dart';
 
-class HomeScreen extends StatelessWidget {
+class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  @override
+  State<HomeScreen> createState() => _HomeScreenState();
+}
+
+class _HomeScreenState extends State<HomeScreen> {
+  String selectedCategory = "popular";
+
+  List<Destination> get filteredDestinations {
+    if (selectedCategory == "popular") {
+      return destinations;
+    }
+
+    return destinations
+        .where((d) => d.category == selectedCategory)
+        .toList();
+  }
 
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
+
         child: Column(
           children: [
             const SizedBox(height: 10),
@@ -30,7 +48,6 @@ class HomeScreen extends StatelessWidget {
 
                     const SizedBox(width: 10),
 
-                    /// AVATAR ICON
                     CircleAvatar(
                       radius: 18,
                       backgroundColor: Colors.grey.shade200,
@@ -140,14 +157,59 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
-            /// CATEGORY
-            Row(
-              children: [
-                _chip("popular".tr(), true),
-                _chip("lake".tr(), false),
-                _chip("beach".tr(), false),
-                _chip("mountain".tr(), false),
-              ],
+            /// CATEGORY SCROLL
+            SizedBox(
+              height: 70,
+
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+
+                children: [
+                  _categoryItem(
+                    Icons.star,
+                    "popular".tr(),
+                    selectedCategory == "popular",
+                    () {
+                      setState(() {
+                        selectedCategory = "popular";
+                      });
+                    },
+                  ),
+
+                  _categoryItem(
+                    Icons.water,
+                    "lake".tr(),
+                    selectedCategory == "lake",
+                    () {
+                      setState(() {
+                        selectedCategory = "lake";
+                      });
+                    },
+                  ),
+
+                  _categoryItem(
+                    Icons.beach_access,
+                    "beach".tr(),
+                    selectedCategory == "beach",
+                    () {
+                      setState(() {
+                        selectedCategory = "beach";
+                      });
+                    },
+                  ),
+
+                  _categoryItem(
+                    Icons.terrain,
+                    "mountain".tr(),
+                    selectedCategory == "mountain",
+                    () {
+                      setState(() {
+                        selectedCategory = "mountain";
+                      });
+                    },
+                  ),
+                ],
+              ),
             ),
 
             const SizedBox(height: 20),
@@ -155,10 +217,11 @@ class HomeScreen extends StatelessWidget {
             /// DESTINATION LIST
             Expanded(
               child: ListView.builder(
-                itemCount: destinations.length,
+                itemCount: filteredDestinations.length,
 
                 itemBuilder: (context, index) {
-                  final destination = destinations[index];
+                  final destination =
+                      filteredDestinations[index];
 
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 15),
@@ -283,6 +346,7 @@ class _DestinationCardState extends State<DestinationCard> {
                     isFavorite
                         ? Icons.favorite
                         : Icons.favorite_border,
+
                     color: isFavorite
                         ? Colors.red
                         : Colors.white,
@@ -295,9 +359,11 @@ class _DestinationCardState extends State<DestinationCard> {
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
+
               children: [
                 Text(
                   item.title.tr(),
+
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -320,10 +386,12 @@ class _DestinationCardState extends State<DestinationCard> {
                     Expanded(
                       child: Text(
                         item.location.tr(),
+
                         style: const TextStyle(
                           color: Colors.white70,
                           fontSize: 12,
                         ),
+
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
@@ -340,6 +408,7 @@ class _DestinationCardState extends State<DestinationCard> {
 
                     Text(
                       item.rating,
+
                       style: const TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w600,
@@ -356,34 +425,62 @@ class _DestinationCardState extends State<DestinationCard> {
   }
 }
 
-Widget _chip(String text, bool selected) {
+Widget _categoryItem(
+  IconData icon,
+  String text,
+  bool selected,
+  VoidCallback onTap,
+) {
   return Padding(
-    padding: const EdgeInsets.only(right: 10),
+    padding: const EdgeInsets.only(right: 15),
 
-    child: Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 18,
-        vertical: 10,
-      ),
+    child: GestureDetector(
+      onTap: onTap,
 
-      decoration: BoxDecoration(
-        color: selected ? Colors.black : Colors.white,
-        borderRadius: BorderRadius.circular(25),
+      child: Column(
+        children: [
+          AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
 
-        boxShadow: [
-          if (selected)
-            const BoxShadow(
-              color: Colors.black26,
-              blurRadius: 10,
+            width: 50,
+            height: 50,
+
+            decoration: BoxDecoration(
+              color: selected
+                  ? const Color(0xff1F1A8A)
+                  : Colors.white,
+
+              shape: BoxShape.circle,
+
+              boxShadow: [
+                BoxShadow(
+                  color: Colors.black.withValues(alpha: 0.15),
+                  blurRadius: 6,
+                  offset: const Offset(0, 3),
+                ),
+              ],
             ),
-        ],
-      ),
 
-      child: Text(
-        text,
-        style: TextStyle(
-          color: selected ? Colors.white : Colors.grey,
-        ),
+            child: Icon(
+              icon,
+              color: selected ? Colors.white : Colors.grey,
+            ),
+          ),
+
+          const SizedBox(height: 6),
+
+          Text(
+            text,
+
+            style: TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.w500,
+              color: selected
+                  ? const Color(0xff1F1A8A)
+                  : Colors.grey,
+            ),
+          ),
+        ],
       ),
     ),
   );

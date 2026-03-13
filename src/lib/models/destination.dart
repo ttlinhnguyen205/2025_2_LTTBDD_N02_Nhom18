@@ -7,6 +7,7 @@ class Destination {
   final String description;
   final String review;
   final List<String> gallery;
+  final String category;
 
   Destination({
     required this.id,
@@ -17,5 +18,6 @@ class Destination {
     required this.description,
     required this.review,
     required this.gallery,
+    required this.category,
   });
 }

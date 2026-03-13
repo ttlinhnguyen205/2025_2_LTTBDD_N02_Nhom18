@@ -9,6 +9,7 @@ final List<Destination> destinations = [
     location: "hoi_an_location",
     description: "hoi_an_description",
     review: "hoi_an_review",
+    category: "popular",
     gallery: [
       "imgs/pho_co_hoi_an.jpg",
       "imgs/hoian2.png",
@@ -24,6 +25,7 @@ final List<Destination> destinations = [
     location: "bay_mau_forest_location",
     description: "bay_mau_forest_description",
     review: "bay_mau_forest_review",
+    category: "lake",
     gallery: [
       "imgs/rung_dua_7_mau1.jpg",
       "imgs/rung_dua_7_mau2.jpg",
@@ -40,6 +42,7 @@ final List<Destination> destinations = [
     location: "ba_na_hills_location",
     description: "ba_na_hills_description",
     review: "ba_na_hills_review",
+    category: "mountain",
     gallery: [
       "imgs/ba_na_hills1.jpg",
       "imgs/ba_na_hills2.jpg",
@@ -56,6 +59,7 @@ final List<Destination> destinations = [
     location: "lo_lo_chai_location",
     description: "lo_lo_chai_description",
     review: "lo_lo_chai_review",
+    category: "mountain",
     gallery: [
       "imgs/lo_lo_chai1.jpg",
       "imgs/lo_lo_chai2.jpg",
@@ -72,6 +76,7 @@ final List<Destination> destinations = [
     location: "sapa_location",
     description: "sapa_description",
     review: "sapa_review",
+    category: "mountain",
     gallery: [
       "imgs/sapa1.png",
       "imgs/sapa2.jpg",
@@ -87,6 +92,7 @@ final List<Destination> destinations = [
     location: "my_khe_location",
     description: "my_khe_description",
     review: "my_khe_review",
+    category: "beach",
     gallery: [
       "imgs/my_khe_beach1.jpg",
       "imgs/my_khe_beach2.jpg",
@@ -103,6 +109,7 @@ final List<Destination> destinations = [
     location: "ta_xua_location",
     description: "ta_xua_description",
     review: "ta_xua_review",
+    category: "mountain",
     gallery: [
       "imgs/ta_xua1.jpg",
       "imgs/ta_xua2.jpg",
@@ -119,6 +126,7 @@ final List<Destination> destinations = [
     location: "son_tra_location",
     description: "son_tra_description",
     review: "son_tra_review",
+    category: "mountain",
     gallery: [
       "imgs/son_tra1.jpg",
       "imgs/son_tra2.jpg",
@@ -135,6 +143,7 @@ final List<Destination> destinations = [
     location: "tam_dao_location",
     description: "tam_dao_description",
     review: "tam_dao_review",
+    category: "mountain",
     gallery: [
       "imgs/tam_dao1.jpg",
       "imgs/tam_dao2.jpg",
@@ -151,6 +160,7 @@ final List<Destination> destinations = [
     location: "bali_location",
     description: "bali_description",
     review: "bali_review",
+    category: "beach",
     gallery: [
       "imgs/bali1.jpg",
       "imgs/bali2.jpg",
@@ -167,6 +177,7 @@ final List<Destination> destinations = [
     location: "gardens_location",
     description: "gardens_description",
     review: "gardens_review",
+    category: "popular",
     gallery: [
       "imgs/gardens_by_the_bay1.jpg",
       "imgs/gardens_by_the_bay2.jpg",
@@ -182,6 +193,7 @@ final List<Destination> destinations = [
     location: "night_safari_location",
     description: "night_safari_description",
     review: "night_safari_review",
+    category: "popular",
     gallery: [
       "imgs/night_safari1.jpg",
       "imgs/night_safari2.jpg",
@@ -198,6 +210,7 @@ final List<Destination> destinations = [
     location: "river_wonders_location",
     description: "river_wonders_description",
     review: "river_wonders_review",
+    category: "popular",
     gallery: [
       "imgs/river_wonders1.jpg",
       "imgs/river_wonders2.jpg",
@@ -214,6 +227,7 @@ final List<Destination> destinations = [
     location: "pulau_ubin_location",
     description: "pulau_ubin_description",
     review: "pulau_ubin_review",
+    category: "popular",
     gallery: [
       "imgs/pulau_ubin1.jpg",
       "imgs/pulau_ubin2.jpg",
@@ -230,6 +244,7 @@ final List<Destination> destinations = [
     location: "merlion_location",
     description: "merlion_description",
     review: "merlion_review",
+    category: "popular",
     gallery: [
       "imgs/merlion_park1.jpg",
       "imgs/merlion_park2.jpg",
@@ -246,6 +261,7 @@ final List<Destination> destinations = [
     location: "namsan_location",
     description: "namsan_description",
     review: "namsan_review",
+    category: "popular",
     gallery: [
       "imgs/namsan_tower1.jpg",
       "imgs/namsan_tower2.jpg",
@@ -262,6 +278,7 @@ final List<Destination> destinations = [
     location: "cheonggyecheon_location",
     description: "cheonggyecheon_description",
     review: "cheonggyecheon_review",
+    category: "popular",
     gallery: [
       "imgs/cheonggyecheon1.jpg",
       "imgs/cheonggyecheon2.jpg",
@@ -278,6 +295,7 @@ final List<Destination> destinations = [
     location: "haeundae_location",
     description: "haeundae_description",
     review: "haeundae_review",
+    category: "popular",
     gallery: [
       "imgs/haeundae_beach1.jpg",
       "imgs/haeundae_beach2.jpg",
@@ -294,6 +312,7 @@ final List<Destination> destinations = [
     location: "bukchon_location",
     description: "bukchon_description",
     review: "bukchon_review",
+    category: "popular",
     gallery: [
       "imgs/bukchon_hanok1.jpg",
       "imgs/bukchon_hanok2.jpg",
@@ -310,6 +329,7 @@ final List<Destination> destinations = [
     location: "fuji_location",
     description: "fuji_description",
     review: "fuji_review",
+    category: "popular",
     gallery: [
       "imgs/nui_phu_si1.jpg",
       "imgs/nui_phu_si2.jpg",
@@ -326,6 +346,7 @@ final List<Destination> destinations = [
     location: "tokyo_tower_location",
     description: "tokyo_tower_description",
     review: "tokyo_tower_review",
+    category: "popular",
     gallery: [
       "imgs/tokyo_tower1.jpeg",
       "imgs/tokyo_tower2.jpg",
@@ -342,6 +363,7 @@ final List<Destination> destinations = [
     location: "kinkakuji_location",
     description: "kinkakuji_description",
     review: "kinkakuji_review",
+    category: "popular",
     gallery: [
       "imgs/kinkakuji1.jpg",
       "imgs/kinkakuji2.jpg",
