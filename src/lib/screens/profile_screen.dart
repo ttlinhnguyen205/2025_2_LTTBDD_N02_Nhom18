@@ -1,18 +1,19 @@
 import 'package:flutter/material.dart';
 
-class ProfileScreen extends StatelessWidget {
+class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
 
-  static const Color primary = Color(0xff1F1A8A);
-  static const Color accent = Color(0xffFF8A00);
-  static const Color light = Color(0xffEEF1FF);
-  static const Color border = Color(0xffEAEAEA);
-  static const Color subtitle = Color(0xff888888);
+  @override
+  State<ProfileScreen> createState() => _ProfileScreenState();
+}
+
+class _ProfileScreenState extends State<ProfileScreen> {
+  String selectedLanguage = "English";
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: light,
+      backgroundColor: const Color(0xffEEF1FF),
 
       body: SafeArea(
         child: Column(
@@ -27,7 +28,7 @@ class ProfileScreen extends StatelessWidget {
 
             const SizedBox(height: 10),
 
-            /// USER NAME
+            /// NAME
             const Text(
               "Guest User",
               style: TextStyle(
@@ -40,30 +41,7 @@ class ProfileScreen extends StatelessWidget {
 
             const Text(
               "You are browsing as a guest",
-              style: TextStyle(color: subtitle),
-            ),
-
-            const SizedBox(height: 20),
-
-            /// LOGIN BUTTON
-            ElevatedButton(
-              style: ElevatedButton.styleFrom(
-                backgroundColor: primary,
-                padding: const EdgeInsets.symmetric(
-                  horizontal: 30,
-                  vertical: 12,
-                ),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(20),
-                ),
-              ),
-              onPressed: () {
-                // sau này mở màn login
-              },
-              child: const Text(
-                "Login / Sign Up",
-                style: TextStyle(color: Colors.white),
-              ),
+              style: TextStyle(color: Colors.grey),
             ),
 
             const SizedBox(height: 30),
@@ -80,11 +58,57 @@ class ProfileScreen extends StatelessWidget {
 
                 child: ListView(
                   padding: const EdgeInsets.all(20),
-                  children: const [
-                    _MenuItem(Icons.favorite, "Saved Places"),
-                    _MenuItem(Icons.group, "About Group"),
-                    _MenuItem(Icons.settings, "Settings"),
-                    _MenuItem(Icons.info, "About App"),
+
+                  children: [
+                    /// LANGUAGE SWITCH
+                    Container(
+                      margin: const EdgeInsets.only(bottom: 15),
+
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(15),
+                        border: Border.all(
+                          color: const Color(0xffEAEAEA),
+                        ),
+                      ),
+
+                      child: ListTile(
+                        leading: const Icon(Icons.language),
+
+                        title: const Text("Language"),
+
+                        trailing: DropdownButton<String>(
+                          value: selectedLanguage,
+
+                          underline: const SizedBox(),
+
+                          items: const [
+                            DropdownMenuItem(
+                              value: "English",
+                              child: Text("English"),
+                            ),
+
+                            DropdownMenuItem(
+                              value: "Vietnamese",
+                              child: Text("Tiếng Việt"),
+                            ),
+                          ],
+
+                          onChanged: (value) {
+                            setState(() {
+                              selectedLanguage = value!;
+                            });
+                          },
+                        ),
+                      ),
+                    ),
+
+                    const _MenuItem(
+                      Icons.favorite,
+                      "Saved Places",
+                    ),
+                    const _MenuItem(Icons.group, "About Group"),
+                    const _MenuItem(Icons.settings, "Settings"),
+                    const _MenuItem(Icons.info, "About App"),
                   ],
                 ),
               ),
