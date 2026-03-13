@@ -19,7 +19,7 @@ class _SavedScreenState extends State<SavedScreen> {
     _loadFavorites();
   }
 
-  void _loadFavorites() async {
+  Future<void> _loadFavorites() async {
     List<String> ids = await FavoriteService.getFavorites();
 
     setState(() {
@@ -36,24 +36,43 @@ class _SavedScreenState extends State<SavedScreen> {
 
   @override
   Widget build(BuildContext context) {
-    _loadFavorites();
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 20),
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
 
-            /// TITLE
-            const Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "Favorite Places",
-                style: TextStyle(
-                  fontSize: 20,
-                  fontWeight: FontWeight.bold,
-                ),
+            /// HEADER
+            const Text(
+              "Favorite Places",
+              style: TextStyle(
+                fontSize: 26,
+                fontWeight: FontWeight.bold,
               ),
+            ),
+
+            const SizedBox(height: 5),
+
+            Text(
+              "You saved ${favoriteList.length} destinations",
+              style: const TextStyle(
+                color: Colors.grey,
+                fontSize: 14,
+              ),
+            ),
+
+            const SizedBox(height: 20),
+
+            /// FILTER CHIP
+            Row(
+              children: [
+                _chip("All", true),
+                _chip("Beach", false),
+                _chip("Mountain", false),
+                _chip("City", false),
+              ],
             ),
 
             const SizedBox(height: 20),
@@ -62,9 +81,24 @@ class _SavedScreenState extends State<SavedScreen> {
             Expanded(
               child: favoriteList.isEmpty
                   ? const Center(
-                      child: Text(
-                        "No favorites yet",
-                        style: TextStyle(color: Colors.grey),
+                      child: Column(
+                        mainAxisAlignment:
+                            MainAxisAlignment.center,
+                        children: [
+                          Icon(
+                            Icons.favorite_border,
+                            size: 60,
+                            color: Colors.grey,
+                          ),
+                          SizedBox(height: 10),
+                          Text(
+                            "No favorites yet",
+                            style: TextStyle(
+                              fontSize: 16,
+                              color: Colors.grey,
+                            ),
+                          ),
+                        ],
                       ),
                     )
                   : GridView.builder(
@@ -87,8 +121,8 @@ class _SavedScreenState extends State<SavedScreen> {
                             ),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withValues(
-                                  alpha: 0.05,
+                                color: Colors.black.withOpacity(
+                                  0.05,
                                 ),
                                 blurRadius: 10,
                                 offset: const Offset(0, 5),
@@ -111,7 +145,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                         ),
                                     child: Image.asset(
                                       item.image,
-                                      height: 160,
+                                      height: 140,
                                       width: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
@@ -165,7 +199,9 @@ class _SavedScreenState extends State<SavedScreen> {
                                             FontWeight.bold,
                                       ),
                                     ),
-                                    const SizedBox(height: 8),
+
+                                    const SizedBox(height: 6),
+
                                     Row(
                                       children: [
                                         const Icon(
@@ -190,6 +226,9 @@ class _SavedScreenState extends State<SavedScreen> {
                                         ),
                                       ],
                                     ),
+
+                                    const SizedBox(height: 4),
+
                                     Row(
                                       children: [
                                         const Icon(
@@ -222,4 +261,27 @@ class _SavedScreenState extends State<SavedScreen> {
       ),
     );
   }
+}
+
+Widget _chip(String text, bool selected) {
+  return Padding(
+    padding: const EdgeInsets.only(right: 10),
+    child: Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 16,
+        vertical: 8,
+      ),
+      decoration: BoxDecoration(
+        color: selected ? Colors.black : Colors.white,
+        borderRadius: BorderRadius.circular(20),
+        border: Border.all(color: Colors.grey.shade300),
+      ),
+      child: Text(
+        text,
+        style: TextStyle(
+          color: selected ? Colors.white : Colors.grey,
+        ),
+      ),
+    ),
+  );
 }

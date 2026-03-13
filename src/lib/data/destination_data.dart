@@ -74,6 +74,42 @@ final List<Destination> destinations = [
     ],
   ),
   Destination(
+    id: "20",
+    image: "imgs/rung_dua_7_mau.jpg",
+    title: "Bay Mau Coconut Forest",
+    rating: "4.6",
+    location: "Hoi An, Quang Nam, Vietnam",
+    description:
+        "Bay Mau Coconut Forest, also known as the Seven-acre Coconut Forest, is a famous eco-tourism destination near Hoi An. Visitors can ride basket boats through the lush coconut palm forest, watch traditional performances, and experience the unique river culture of central Vietnam.",
+
+    review:
+        "A fun and unique experience! Riding the basket boat through the coconut forest and watching the local performances was unforgettable.",
+    gallery: [
+      "imgs/rung_dua_7_mau1.jpg",
+      "imgs/rung_dua_7_mau2.jpg",
+      "imgs/rung_dua_7_mau3.jpg",
+      "imgs/rung_dua_7_mau4.jpg",
+    ],
+  ),
+  Destination(
+    id: "21",
+    image: "imgs/ba_na_hills.jpg",
+    title: "Ba Na Hills",
+    rating: "4.7",
+    location: "Da Nang, Vietnam",
+    description:
+        "Ba Na Hills is one of the most famous tourist destinations in Vietnam. Located on the Ba Na mountain range near Da Nang, it is known for its cool climate, the Golden Bridge held by giant stone hands, and the world-class cable car system. Visitors can also explore the French Village and enjoy beautiful mountain scenery.",
+
+    review:
+        "Ba Na Hills is a magical place with stunning views. The Golden Bridge and the cable car ride are unforgettable experiences.",
+    gallery: [
+      "imgs/ba_na_hills1.jpg",
+      "imgs/ba_na_hills2.jpg",
+      "imgs/ba_na_hills3.jpg",
+      "imgs/ba_na_hills4.jpg",
+    ],
+  ),
+  Destination(
     id: "3",
     image: "imgs/son_tra.jpg",
     title: "Son Tra Peninsula",
