@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class ProfileScreen extends StatefulWidget {
   const ProfileScreen({super.key});
@@ -29,9 +30,9 @@ class _ProfileScreenState extends State<ProfileScreen> {
             const SizedBox(height: 10),
 
             /// NAME
-            const Text(
-              "Guest User",
-              style: TextStyle(
+            Text(
+              "guest_user".tr(),
+              style: const TextStyle(
                 fontSize: 22,
                 fontWeight: FontWeight.bold,
               ),
@@ -39,9 +40,10 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
             const SizedBox(height: 5),
 
-            const Text(
-              "You are browsing as a guest",
-              style: TextStyle(color: Colors.grey),
+            /// MESSAGE
+            Text(
+              "guest_message".tr(),
+              style: const TextStyle(color: Colors.grey),
             ),
 
             const SizedBox(height: 30),
@@ -74,7 +76,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       child: ListTile(
                         leading: const Icon(Icons.language),
 
-                        title: const Text("Language"),
+                        title: Text("language".tr()),
 
                         trailing: DropdownButton<String>(
                           value: selectedLanguage,
@@ -86,7 +88,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               value: "English",
                               child: Text("English"),
                             ),
-
                             DropdownMenuItem(
                               value: "Vietnamese",
                               child: Text("Tiếng Việt"),
@@ -97,18 +98,29 @@ class _ProfileScreenState extends State<ProfileScreen> {
                             setState(() {
                               selectedLanguage = value!;
                             });
+
+                            if (value == "English") {
+                              context.setLocale(
+                                const Locale('en'),
+                              );
+                            } else {
+                              context.setLocale(
+                                const Locale('vi'),
+                              );
+                            }
                           },
                         ),
                       ),
                     ),
 
-                    const _MenuItem(
+                    /// MENU ITEMS
+                    _MenuItem(
                       Icons.favorite,
-                      "Saved Places",
+                      "saved_places".tr(),
                     ),
-                    const _MenuItem(Icons.group, "About Group"),
-                    const _MenuItem(Icons.settings, "Settings"),
-                    const _MenuItem(Icons.info, "About App"),
+                    _MenuItem(Icons.group, "about_group".tr()),
+                    _MenuItem(Icons.settings, "settings".tr()),
+                    _MenuItem(Icons.info, "about_app".tr()),
                   ],
                 ),
               ),

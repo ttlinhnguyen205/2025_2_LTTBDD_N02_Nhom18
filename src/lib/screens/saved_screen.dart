@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../models/destination.dart';
 import '../data/destination_data.dart';
 import '../services/favorite_service.dart';
@@ -44,9 +45,10 @@ class _SavedScreenState extends State<SavedScreen> {
           children: [
             const SizedBox(height: 10),
 
-            const Text(
-              "Favorite Places",
-              style: TextStyle(
+            /// TITLE
+            Text(
+              "favorite_places".tr(),
+              style: const TextStyle(
                 fontSize: 26,
                 fontWeight: FontWeight.bold,
               ),
@@ -54,8 +56,13 @@ class _SavedScreenState extends State<SavedScreen> {
 
             const SizedBox(height: 5),
 
+            /// SUBTITLE
             Text(
-              "You saved ${favoriteList.length} destinations",
+              "saved_destinations".tr(
+                namedArgs: {
+                  "count": favoriteList.length.toString(),
+                },
+              ),
               style: const TextStyle(
                 color: Colors.grey,
                 fontSize: 14,
@@ -64,11 +71,12 @@ class _SavedScreenState extends State<SavedScreen> {
 
             const SizedBox(height: 20),
 
+            /// FILTER CHIPS
             Row(
               children: [
-                _chip("All", true),
-                _chip("Beach", false),
-                _chip("Mountain", false),
+                _chip("all".tr(), true),
+                _chip("beach".tr(), false),
+                _chip("mountain".tr(), false),
               ],
             ),
 
@@ -77,20 +85,20 @@ class _SavedScreenState extends State<SavedScreen> {
             /// GRID
             Expanded(
               child: favoriteList.isEmpty
-                  ? const Center(
+                  ? Center(
                       child: Column(
                         mainAxisAlignment:
                             MainAxisAlignment.center,
                         children: [
-                          Icon(
+                          const Icon(
                             Icons.favorite_border,
                             size: 60,
                             color: Colors.grey,
                           ),
-                          SizedBox(height: 10),
+                          const SizedBox(height: 10),
                           Text(
-                            "No favorites yet",
-                            style: TextStyle(
+                            "no_favorites".tr(),
+                            style: const TextStyle(
                               fontSize: 16,
                               color: Colors.grey,
                             ),
@@ -118,8 +126,8 @@ class _SavedScreenState extends State<SavedScreen> {
                             ),
                             boxShadow: [
                               BoxShadow(
-                                color: Colors.black.withOpacity(
-                                  0.05,
+                                color: Colors.black.withValues(
+                                  alpha: 0.5,
                                 ),
                                 blurRadius: 10,
                                 offset: const Offset(0, 5),

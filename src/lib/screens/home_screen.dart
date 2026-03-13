@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import '../models/destination.dart';
 import '../data/destination_data.dart';
 import '../services/favorite_service.dart';
@@ -25,7 +26,7 @@ class HomeScreen extends StatelessWidget {
 
                 Row(
                   children: [
-                    const Text("Guest"),
+                    Text("guest".tr()),
 
                     const SizedBox(width: 10),
 
@@ -47,21 +48,21 @@ class HomeScreen extends StatelessWidget {
             const SizedBox(height: 15),
 
             /// GREETING
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Hi Guest,",
-                style: TextStyle(color: Colors.black),
+                "hi_guest".tr(),
+                style: const TextStyle(color: Colors.black),
               ),
             ),
 
             const SizedBox(height: 5),
 
-            const Align(
+            Align(
               alignment: Alignment.centerLeft,
               child: Text(
-                "Where do you wanna go?",
-                style: TextStyle(
+                "where_go".tr(),
+                style: const TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   height: 1.1,
@@ -100,13 +101,18 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
 
-                      child: const Row(
+                      child: Row(
                         children: [
-                          Icon(Icons.search, color: Colors.grey),
-                          SizedBox(width: 10),
+                          const Icon(
+                            Icons.search,
+                            color: Colors.grey,
+                          ),
+                          const SizedBox(width: 10),
                           Text(
-                            "Search",
-                            style: TextStyle(color: Colors.grey),
+                            "search".tr(),
+                            style: const TextStyle(
+                              color: Colors.grey,
+                            ),
                           ),
                         ],
                       ),
@@ -137,10 +143,10 @@ class HomeScreen extends StatelessWidget {
             /// CATEGORY
             Row(
               children: [
-                _chip("Popular", true),
-                _chip("Lake", false),
-                _chip("Beach", false),
-                _chip("Mountain", false),
+                _chip("popular".tr(), true),
+                _chip("lake".tr(), false),
+                _chip("beach".tr(), false),
+                _chip("mountain".tr(), false),
               ],
             ),
 

@@ -1,0 +1,27 @@
+{
+  "guest_user": "Guest User",
+  "guest_message": "You are browsing as a guest",
+  "language": "Language",
+  "saved_places": "Saved Places",
+  "about_group": "About Group",
+  "settings": "Settings",
+  "about_app": "About App",
+  "intro_title_1": "Life is short and the\nworld is ",
+  "intro_title_2": "wide",
+  "intro_desc": "At Friends tours and travel, we customize reliable and trustworthy educational tours to destinations all over the world",
+  "get_started": "Get Started",
+  "skip": "Skip",
+  "guest": "Guest",
+  "hi_guest": "Hi Guest,",
+  "where_go": "Where do you wanna go?",
+  "search": "Search",
+  "popular": "Popular",
+  "lake": "Lake",
+  "beach": "Beach",
+  "mountain": "Mountain",
+  "favorite_places": "Favorite Places",
+  "saved_destinations": "You saved {count} destinations",
+  "all": "All",
+  "no_favorites": "No favorites yet"
+  
+}

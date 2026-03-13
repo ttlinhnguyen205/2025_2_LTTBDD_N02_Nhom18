@@ -15,7 +15,6 @@ class _MainNavigationState extends State<MainNavigation> {
   /// APP COLORS
   static const Color primary = Color(0xff1F1A8A);
   static const Color subtitle = Color(0xff888888);
-  static const Color border = Color(0xffEAEAEA);
 
   int _currentIndex = 0;
 
