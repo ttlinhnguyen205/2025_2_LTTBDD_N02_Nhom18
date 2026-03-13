@@ -37,231 +37,242 @@ class _SavedScreenState extends State<SavedScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 20),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: 10),
+    return Scaffold(
+      backgroundColor: Colors.grey.shade100, // nền xám nhạt
 
-            /// TITLE
-            Text(
-              "favorite_places".tr(),
-              style: const TextStyle(
-                fontSize: 26,
-                fontWeight: FontWeight.bold,
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 20),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              const SizedBox(height: 10),
+
+              /// TITLE
+              Text(
+                "favorite_places".tr(),
+                style: const TextStyle(
+                  fontSize: 26,
+                  fontWeight: FontWeight.bold,
+                ),
               ),
-            ),
 
-            const SizedBox(height: 5),
+              const SizedBox(height: 5),
 
-            /// SUBTITLE
-            Text(
-              "saved_destinations".tr(
-                namedArgs: {
-                  "count": favoriteList.length.toString(),
-                },
+              /// SUBTITLE
+              Text(
+                "saved_destinations".tr(
+                  namedArgs: {
+                    "count": favoriteList.length.toString(),
+                  },
+                ),
+                style: const TextStyle(
+                  color: Colors.grey,
+                  fontSize: 14,
+                ),
               ),
-              style: const TextStyle(
-                color: Colors.grey,
-                fontSize: 14,
+
+              const SizedBox(height: 20),
+
+              /// FILTER CHIPS
+              Row(
+                children: [
+                  _chip("all".tr(), true),
+                  _chip("beach".tr(), false),
+                  _chip("mountain".tr(), false),
+                ],
               ),
-            ),
 
-            const SizedBox(height: 20),
+              const SizedBox(height: 20),
 
-            /// FILTER CHIPS
-            Row(
-              children: [
-                _chip("all".tr(), true),
-                _chip("beach".tr(), false),
-                _chip("mountain".tr(), false),
-              ],
-            ),
-
-            const SizedBox(height: 20),
-
-            /// GRID
-            Expanded(
-              child: favoriteList.isEmpty
-                  ? Center(
-                      child: Column(
-                        mainAxisAlignment:
-                            MainAxisAlignment.center,
-                        children: [
-                          const Icon(
-                            Icons.favorite_border,
-                            size: 60,
-                            color: Colors.grey,
-                          ),
-                          const SizedBox(height: 10),
-                          Text(
-                            "no_favorites".tr(),
-                            style: const TextStyle(
-                              fontSize: 16,
+              /// GRID
+              Expanded(
+                child: favoriteList.isEmpty
+                    ? Center(
+                        child: Column(
+                          mainAxisAlignment:
+                              MainAxisAlignment.center,
+                          children: [
+                            const Icon(
+                              Icons.favorite_border,
+                              size: 60,
                               color: Colors.grey,
                             ),
-                          ),
-                        ],
-                      ),
-                    )
-                  : GridView.builder(
-                      itemCount: favoriteList.length,
-                      gridDelegate:
-                          const SliverGridDelegateWithFixedCrossAxisCount(
-                            crossAxisCount: 2,
-                            crossAxisSpacing: 15,
-                            mainAxisSpacing: 20,
-                            childAspectRatio: 0.95,
-                          ),
-                      itemBuilder: (context, index) {
-                        final item = favoriteList[index];
-
-                        return Container(
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(
-                              25,
+                            const SizedBox(height: 10),
+                            Text(
+                              "no_favorites".tr(),
+                              style: const TextStyle(
+                                fontSize: 16,
+                                color: Colors.grey,
+                              ),
                             ),
-                            boxShadow: [
-                              BoxShadow(
-                                color: Colors.black.withValues(
-                                  alpha: 0.5,
-                                ),
-                                blurRadius: 10,
-                                offset: const Offset(0, 5),
-                              ),
-                            ],
-                          ),
-                          child: Column(
-                            crossAxisAlignment:
-                                CrossAxisAlignment.start,
-                            children: [
-                              /// IMAGE
-                              Stack(
-                                children: [
-                                  ClipRRect(
-                                    borderRadius:
-                                        const BorderRadius.vertical(
-                                          top: Radius.circular(
-                                            25,
-                                          ),
-                                        ),
-                                    child: Image.asset(
-                                      item.image,
-                                      height: 170,
-                                      width: double.infinity,
-                                      fit: BoxFit.cover,
-                                    ),
-                                  ),
+                          ],
+                        ),
+                      )
+                    : GridView.builder(
+                        padding: const EdgeInsets.only(
+                          bottom: 20,
+                        ),
+                        itemCount: favoriteList.length,
+                        gridDelegate:
+                            const SliverGridDelegateWithFixedCrossAxisCount(
+                              crossAxisCount: 2,
+                              crossAxisSpacing: 15,
+                              mainAxisSpacing: 20,
+                              childAspectRatio: 0.95,
+                            ),
+                        itemBuilder: (context, index) {
+                          final item = favoriteList[index];
 
-                                  /// HEART
-                                  Positioned(
-                                    top: 10,
-                                    right: 10,
-                                    child: GestureDetector(
-                                      onTap: () =>
-                                          _removeFavorite(
-                                            item.id,
-                                          ),
-                                      child: Container(
-                                        padding:
-                                            const EdgeInsets.all(
-                                              6,
-                                            ),
-                                        decoration:
-                                            const BoxDecoration(
-                                              shape: BoxShape
-                                                  .circle,
-                                              color:
-                                                  Colors.white,
-                                            ),
-                                        child: const Icon(
-                                          Icons.favorite,
-                                          color: Colors.red,
-                                          size: 18,
-                                        ),
-                                      ),
-                                    ),
-                                  ),
-                                ],
-                              ),
-
-                              /// INFO
-                              Padding(
-                                padding: const EdgeInsets.all(
-                                  12,
+                          return Container(
+                            decoration: BoxDecoration(
+                              color: Colors.white,
+                              borderRadius:
+                                  BorderRadius.circular(25),
+                              boxShadow: [
+                                BoxShadow(
+                                  color: Colors.black
+                                      .withOpacity(0.1),
+                                  blurRadius: 10,
+                                  offset: const Offset(0, 5),
                                 ),
-                                child: Column(
-                                  crossAxisAlignment:
-                                      CrossAxisAlignment.start,
+                              ],
+                            ),
+                            child: Column(
+                              crossAxisAlignment:
+                                  CrossAxisAlignment.start,
+                              children: [
+                                /// IMAGE
+                                Stack(
                                   children: [
-                                    Text(
-                                      item.title,
-                                      style: const TextStyle(
-                                        fontWeight:
-                                            FontWeight.bold,
+                                    ClipRRect(
+                                      borderRadius:
+                                          const BorderRadius.vertical(
+                                            top: Radius.circular(
+                                              25,
+                                            ),
+                                          ),
+                                      child: Image.asset(
+                                        item.image,
+                                        height: 170,
+                                        width: double.infinity,
+                                        fit: BoxFit.cover,
                                       ),
                                     ),
 
-                                    const SizedBox(height: 6),
-
-                                    Row(
-                                      children: [
-                                        const Icon(
-                                          Icons.location_on,
-                                          size: 14,
-                                          color: Colors.grey,
-                                        ),
-                                        const SizedBox(width: 4),
-                                        Expanded(
-                                          child: Text(
-                                            item.location,
-                                            style:
-                                                const TextStyle(
-                                                  fontSize: 12,
-                                                  color: Colors
-                                                      .grey,
-                                                ),
-                                            overflow:
-                                                TextOverflow
-                                                    .ellipsis,
+                                    /// HEART
+                                    Positioned(
+                                      top: 10,
+                                      right: 10,
+                                      child: GestureDetector(
+                                        onTap: () =>
+                                            _removeFavorite(
+                                              item.id,
+                                            ),
+                                        child: Container(
+                                          padding:
+                                              const EdgeInsets.all(
+                                                6,
+                                              ),
+                                          decoration:
+                                              const BoxDecoration(
+                                                shape: BoxShape
+                                                    .circle,
+                                                color:
+                                                    Colors.white,
+                                              ),
+                                          child: const Icon(
+                                            Icons.favorite,
+                                            color: Colors.red,
+                                            size: 18,
                                           ),
                                         ),
-                                      ],
-                                    ),
-
-                                    const SizedBox(height: 4),
-
-                                    Row(
-                                      children: [
-                                        const Icon(
-                                          Icons.star,
-                                          size: 12,
-                                          color: Colors.orange,
-                                        ),
-                                        const SizedBox(width: 4),
-                                        Text(
-                                          item.rating,
-                                          style: const TextStyle(
-                                            fontSize: 12,
-                                            fontWeight:
-                                                FontWeight.w600,
-                                          ),
-                                        ),
-                                      ],
+                                      ),
                                     ),
                                   ],
                                 ),
-                              ),
-                            ],
-                          ),
-                        );
-                      },
-                    ),
-            ),
-          ],
+
+                                /// INFO
+                                Padding(
+                                  padding: const EdgeInsets.all(
+                                    12,
+                                  ),
+                                  child: Column(
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.start,
+                                    children: [
+                                      Text(
+                                        item.title.tr(),
+                                        style: const TextStyle(
+                                          fontWeight:
+                                              FontWeight.bold,
+                                        ),
+                                      ),
+
+                                      const SizedBox(height: 6),
+
+                                      Row(
+                                        children: [
+                                          const Icon(
+                                            Icons.location_on,
+                                            size: 14,
+                                            color: Colors.grey,
+                                          ),
+                                          const SizedBox(
+                                            width: 4,
+                                          ),
+                                          Expanded(
+                                            child: Text(
+                                              item.location.tr(),
+                                              style:
+                                                  const TextStyle(
+                                                    fontSize: 12,
+                                                    color: Colors
+                                                        .grey,
+                                                  ),
+                                              overflow:
+                                                  TextOverflow
+                                                      .ellipsis,
+                                            ),
+                                          ),
+                                        ],
+                                      ),
+
+                                      const SizedBox(height: 4),
+
+                                      Row(
+                                        children: [
+                                          const Icon(
+                                            Icons.star,
+                                            size: 12,
+                                            color: Colors.orange,
+                                          ),
+                                          const SizedBox(
+                                            width: 4,
+                                          ),
+                                          Text(
+                                            item.rating,
+                                            style:
+                                                const TextStyle(
+                                                  fontSize: 12,
+                                                  fontWeight:
+                                                      FontWeight
+                                                          .w600,
+                                                ),
+                                          ),
+                                        ],
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ],
+                            ),
+                          );
+                        },
+                      ),
+              ),
+            ],
+          ),
         ),
       ),
     );

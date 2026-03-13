@@ -90,7 +90,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 15),
 
-            /// SEARCH BAR
             Row(
               children: [
                 Expanded(
@@ -157,9 +156,8 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            /// CATEGORY SCROLL
             SizedBox(
-              height: 70,
+              height: 50,
 
               child: ListView(
                 scrollDirection: Axis.horizontal,
@@ -214,7 +212,6 @@ class _HomeScreenState extends State<HomeScreen> {
 
             const SizedBox(height: 20),
 
-            /// DESTINATION LIST
             Expanded(
               child: ListView.builder(
                 itemCount: filteredDestinations.length,
@@ -432,55 +429,67 @@ Widget _categoryItem(
   VoidCallback onTap,
 ) {
   return Padding(
-    padding: const EdgeInsets.only(right: 15),
+    padding: const EdgeInsets.only(right: 12),
 
     child: GestureDetector(
       onTap: onTap,
 
-      child: Column(
-        children: [
-          AnimatedContainer(
-            duration: const Duration(milliseconds: 250),
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
 
-            width: 50,
-            height: 50,
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 10,
+        ),
 
-            decoration: BoxDecoration(
-              color: selected
-                  ? const Color(0xff1F1A8A)
-                  : Colors.white,
+        decoration: BoxDecoration(
+          color: selected
+              ? const Color.fromARGB(255, 0, 0, 0)
+              : Colors.white,
 
-              shape: BoxShape.circle,
+          borderRadius: BorderRadius.circular(30),
 
-              boxShadow: [
-                BoxShadow(
-                  color: Colors.black.withValues(alpha: 0.15),
-                  blurRadius: 6,
-                  offset: const Offset(0, 3),
-                ),
-              ],
-            ),
+          border: Border.all(
+            color: selected
+                ? const Color.fromARGB(255, 0, 0, 0)
+                : Colors.grey.shade300,
+          ),
 
-            child: Icon(
+          boxShadow: [
+            if (selected)
+              BoxShadow(
+                color: const Color(
+                  0xff1F1A8A,
+                ).withValues(alpha: 0.25),
+                blurRadius: 10,
+                offset: const Offset(0, 4),
+              ),
+          ],
+        ),
+
+        child: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(
               icon,
+              size: 18,
               color: selected ? Colors.white : Colors.grey,
             ),
-          ),
 
-          const SizedBox(height: 6),
+            const SizedBox(width: 6),
 
-          Text(
-            text,
-
-            style: TextStyle(
-              fontSize: 12,
-              fontWeight: FontWeight.w500,
-              color: selected
-                  ? const Color(0xff1F1A8A)
-                  : Colors.grey,
+            Text(
+              text,
+              style: TextStyle(
+                fontSize: 13,
+                fontWeight: FontWeight.w600,
+                color: selected
+                    ? Colors.white
+                    : Colors.grey.shade700,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     ),
   );
