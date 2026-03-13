@@ -43,8 +43,7 @@ class _SavedScreenState extends State<SavedScreen> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             const SizedBox(height: 10),
-
-            /// HEADER
+            
             const Text(
               "Favorite Places",
               style: TextStyle(
@@ -65,13 +64,11 @@ class _SavedScreenState extends State<SavedScreen> {
 
             const SizedBox(height: 20),
 
-            /// FILTER CHIP
             Row(
               children: [
                 _chip("All", true),
                 _chip("Beach", false),
                 _chip("Mountain", false),
-                _chip("City", false),
               ],
             ),
 
@@ -108,7 +105,7 @@ class _SavedScreenState extends State<SavedScreen> {
                             crossAxisCount: 2,
                             crossAxisSpacing: 15,
                             mainAxisSpacing: 20,
-                            childAspectRatio: 0.9,
+                            childAspectRatio: 0.85,
                           ),
                       itemBuilder: (context, index) {
                         final item = favoriteList[index];
@@ -145,7 +142,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                         ),
                                     child: Image.asset(
                                       item.image,
-                                      height: 140,
+                                      height: 170,
                                       width: double.infinity,
                                       fit: BoxFit.cover,
                                     ),
