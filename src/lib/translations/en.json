@@ -42,9 +42,115 @@
   "popular_destinations": "Popular destinations",
   "no_results": "No results found",
   "no_favorites": "No favorites yet",
+
   "hoi_an_title": "Hoi An Ancient Town",
   "hoi_an_location": "Quang Nam, Vietnam",
   "hoi_an_description": "Hoi An Ancient Town is a UNESCO World Heritage site famous for its preserved architecture and colorful lantern streets.",
-  "hoi_an_review": "Beautiful lantern streets and peaceful river views."
+  "hoi_an_review": "Beautiful lantern streets and peaceful river views.",
+
+  "bay_mau_forest_title": "Bay Mau Coconut Forest",
+  "bay_mau_forest_location": "Hoi An, Quang Nam, Vietnam",
+  "bay_mau_forest_description": "Bay Mau Coconut Forest, also known as the Seven-acre Coconut Forest, is a famous eco-tourism destination near Hoi An. Visitors can ride basket boats through the lush coconut palm forest, watch traditional performances, and experience the unique river culture of central Vietnam.",
+  "bay_mau_forest_review": "A fun and unique experience! Riding the basket boat through the coconut forest and watching the local performances was unforgettable.",
+
+  "ba_na_hills_title": "Ba Na Hills",
+  "ba_na_hills_location": "Da Nang, Vietnam",
+  "ba_na_hills_description": "Ba Na Hills is one of the most famous tourist destinations in Vietnam. It is known for the Golden Bridge held by giant stone hands and the world-class cable car system.",
+  "ba_na_hills_review": "Ba Na Hills is a magical place with stunning views. The Golden Bridge and cable car ride are unforgettable.",
+
+  "lo_lo_chai_title": "Lo Lo Chai Village",
+  "lo_lo_chai_location": "Ha Giang, Vietnam",
+  "lo_lo_chai_description": "Lo Lo Chai Village is a beautiful traditional village near Lung Cu Flag Tower. It is home to the Lo Lo ethnic group with unique earthen houses and peaceful scenery.",
+  "lo_lo_chai_review": "A peaceful and charming village with beautiful mountain scenery.",
+
+  "sapa_title": "Sa Pa",
+  "sapa_location": "Lao Cai, Vietnam",
+  "sapa_description": "Sa Pa is a famous mountain town in northern Vietnam known for breathtaking rice terraces and rich ethnic culture.",
+  "sapa_review": "Sa Pa is a stunning destination with beautiful landscapes and friendly local people.",
+
+  "my_khe_title": "My Khe Beach",
+  "my_khe_location": "Da Nang, Vietnam",
+  "my_khe_description": "My Khe Beach is one of the most famous beaches in Da Nang, known for its long white sand and clear blue water.",
+  "my_khe_review": "Clean beach with soft sand and amazing sunrise views.",
+
+  "ta_xua_title": "Ta Xua",
+  "ta_xua_location": "Son La, Vietnam",
+  "ta_xua_description": "Ta Xua is a famous mountain destination known for its sea of clouds and breathtaking landscapes.",
+  "ta_xua_review": "An amazing place to see the sea of clouds.",
+
+  "son_tra_title": "Son Tra Peninsula",
+  "son_tra_location": "Da Nang, Vietnam",
+  "son_tra_description": "Son Tra Peninsula is a beautiful natural area with forests, mountains, and ocean views.",
+  "son_tra_review": "A peaceful place with breathtaking views.",
+
+  "tam_dao_title": "Tam Dao",
+  "tam_dao_location": "Vinh Phuc, Vietnam",
+  "tam_dao_description": "Tam Dao is a mountain town famous for cool weather and misty landscapes.",
+  "tam_dao_review": "A perfect getaway from the busy city.",
+
+  "bali_title": "Bali",
+  "bali_location": "Bali, Indonesia",
+  "bali_description": "Bali is a world-famous island known for beaches, temples, and culture.",
+  "bali_review": "Amazing island with beautiful beaches.",
+
+  "gardens_title": "Gardens By The Bay",
+  "gardens_location": "Singapore",
+  "gardens_description": "Gardens By The Bay is a famous nature park with futuristic Supertree structures.",
+  "gardens_review": "Incredible garden with stunning night light shows.",
+
+  "night_safari_title": "Night Safari",
+  "night_safari_location": "Singapore",
+  "night_safari_description": "Night Safari is the world's first nocturnal zoo where visitors can see animals active at night.",
+  "night_safari_review": "A unique experience to see wild animals at night.",
+
+  "river_wonders_title": "River Wonders",
+  "river_wonders_location": "Singapore",
+  "river_wonders_description": "River Wonders is a river-themed wildlife park featuring animals from famous rivers around the world.",
+  "river_wonders_review": "Interesting park with many rare animals including giant pandas.",
+
+  "pulau_ubin_title": "Pulau Ubin",
+  "pulau_ubin_location": "Singapore",
+  "pulau_ubin_description": "Pulau Ubin preserves traditional village life and natural landscapes.",
+  "pulau_ubin_review": "A peaceful escape from the busy city.",
+
+  "merlion_title": "Merlion Park",
+  "merlion_location": "Singapore",
+  "merlion_description": "Merlion Park is home to Singapore’s iconic Merlion statue.",
+  "merlion_review": "Great place for photos with fantastic views.",
+
+  "namsan_title": "N Seoul Tower",
+  "namsan_location": "Seoul, South Korea",
+  "namsan_description": "N Seoul Tower offers panoramic views of the city from Namsan Mountain.",
+  "namsan_review": "A romantic spot with amazing views of Seoul.",
+
+  "cheonggyecheon_title": "Cheonggyecheon Stream",
+  "cheonggyecheon_location": "Seoul, South Korea",
+  "cheonggyecheon_description": "A modern urban stream running through downtown Seoul.",
+  "cheonggyecheon_review": "A peaceful walking path with beautiful lights at night.",
+
+  "haeundae_title": "Haeundae Beach",
+  "haeundae_location": "Busan, South Korea",
+  "haeundae_description": "The most famous beach in Busan with a wide sandy shore.",
+  "haeundae_review": "Beautiful beach perfect for summer vacation.",
   
+  "bukchon_title": "Bukchon Hanok Village",
+  "bukchon_location": "Seoul, South Korea",
+  "bukchon_description": "Bukchon Hanok Village is a traditional Korean village in Seoul with hundreds of preserved hanok houses. It offers a glimpse into Korea’s historical architecture and culture.",
+  "bukchon_review": "A charming village with beautiful traditional houses. Great place to experience Korean culture.",
+
+  "fuji_title": "Mount Fuji",
+  "fuji_location": "Honshu, Japan",
+  "fuji_description": "Mount Fuji is the highest mountain in Japan and a famous symbol of the country. It attracts visitors with its perfect cone shape and breathtaking scenery.",
+  "fuji_review": "Magnificent mountain with stunning views. One of the most iconic places in Japan.",
+
+  "tokyo_tower_title": "Tokyo Tower",
+  "tokyo_tower_location": "Tokyo, Japan",
+  "tokyo_tower_description": "Tokyo Tower is a famous landmark inspired by the Eiffel Tower. It offers observation decks with amazing views of Tokyo city.",
+  "tokyo_tower_review": "A classic Tokyo attraction with great city views, especially beautiful at night.",
+
+  "kinkakuji_title": "Kinkaku-ji (Golden Pavilion)",
+  "kinkakuji_location": "Kyoto, Japan",
+  "kinkakuji_description": "Kinkaku-ji, also known as the Golden Pavilion, is a famous Zen temple in Kyoto covered in gold leaf. It reflects beautifully on the surrounding pond.",
+  "kinkakuji_review": "Absolutely stunning temple with a golden exterior. A must-see spot in Kyoto."
+
 }

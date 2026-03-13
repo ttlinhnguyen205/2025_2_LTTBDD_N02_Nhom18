@@ -42,8 +42,116 @@
   "popular_destinations": "Địa điểm phổ biến",
   "no_results": "Không tìm thấy kết quả",
   "no_favorites": "Chưa có địa điểm yêu thích",
+
   "hoi_an_title": "Phố cổ Hội An",
   "hoi_an_location": "Quảng Nam, Việt Nam",
   "hoi_an_description": "Phố cổ Hội An là di sản thế giới UNESCO nổi tiếng với kiến trúc cổ và đèn lồng rực rỡ.",
-  "hoi_an_review": "Con phố đèn lồng đẹp và khung cảnh yên bình."
+  "hoi_an_review": "Con phố đèn lồng đẹp và khung cảnh yên bình.",
+  
+  "bay_mau_forest_title": "Rừng Dừa Bảy Mẫu",
+  "bay_mau_forest_location": "Hội An, Quảng Nam, Việt Nam",
+  "bay_mau_forest_description": "Rừng Dừa Bảy Mẫu là điểm du lịch sinh thái nổi tiếng gần Hội An. Du khách có thể đi thuyền thúng xuyên qua rừng dừa, xem biểu diễn truyền thống và trải nghiệm văn hóa sông nước miền Trung.",
+  "bay_mau_forest_review": "Một trải nghiệm rất thú vị! Đi thuyền thúng qua rừng dừa và xem biểu diễn của người dân địa phương thật đáng nhớ.",
+
+  "ba_na_hills_title": "Bà Nà Hills",
+  "ba_na_hills_location": "Đà Nẵng, Việt Nam",
+  "ba_na_hills_description": "Bà Nà Hills là một trong những điểm du lịch nổi tiếng nhất Việt Nam, nổi bật với Cầu Vàng và hệ thống cáp treo hiện đại.",
+  "ba_na_hills_review": "Một nơi tuyệt đẹp với khung cảnh ngoạn mục. Cầu Vàng và cáp treo là trải nghiệm khó quên.",
+
+  "lo_lo_chai_title": "Làng Lô Lô Chải",
+  "lo_lo_chai_location": "Hà Giang, Việt Nam",
+  "lo_lo_chai_description": "Làng Lô Lô Chải nằm gần cột cờ Lũng Cú, nổi tiếng với những ngôi nhà trình tường độc đáo và cảnh núi non hùng vĩ.",
+  "lo_lo_chai_review": "Ngôi làng yên bình với kiến trúc truyền thống và phong cảnh núi rất đẹp.",
+
+  "sapa_title": "Sa Pa",
+  "sapa_location": "Lào Cai, Việt Nam",
+  "sapa_description": "Sa Pa là thị trấn vùng núi nổi tiếng ở miền Bắc Việt Nam với ruộng bậc thang tuyệt đẹp và văn hóa dân tộc phong phú.",
+  "sapa_review": "Phong cảnh tuyệt đẹp và con người thân thiện. Ruộng bậc thang rất ấn tượng.",
+
+  "my_khe_title": "Biển Mỹ Khê",
+  "my_khe_location": "Đà Nẵng, Việt Nam",
+  "my_khe_description": "Biển Mỹ Khê là một trong những bãi biển nổi tiếng nhất Đà Nẵng với cát trắng và nước biển trong xanh.",
+  "my_khe_review": "Bãi biển sạch với cát mịn và bình minh tuyệt đẹp.",
+
+  "ta_xua_title": "Tà Xùa",
+  "ta_xua_location": "Sơn La, Việt Nam",
+  "ta_xua_description": "Tà Xùa nổi tiếng với biển mây và phong cảnh núi non hùng vĩ.",
+  "ta_xua_review": "Nơi tuyệt vời để săn mây.",
+
+  "son_tra_title": "Bán đảo Sơn Trà",
+  "son_tra_location": "Đà Nẵng, Việt Nam",
+  "son_tra_description": "Sơn Trà là khu thiên nhiên tuyệt đẹp với rừng, núi và biển.",
+  "son_tra_review": "Không gian yên bình với cảnh biển tuyệt đẹp.",
+
+  "tam_dao_title": "Tam Đảo",
+  "tam_dao_location": "Vĩnh Phúc, Việt Nam",
+  "tam_dao_description": "Tam Đảo nổi tiếng với khí hậu mát mẻ và cảnh núi sương mù.",
+  "tam_dao_review": "Nơi nghỉ dưỡng tuyệt vời gần Hà Nội.",
+
+  "bali_title": "Bali",
+  "bali_location": "Bali, Indonesia",
+  "bali_description": "Bali là hòn đảo du lịch nổi tiếng với biển và văn hóa đặc sắc.",
+  "bali_review": "Hòn đảo tuyệt đẹp cho kỳ nghỉ.",
+
+  "gardens_title": "Gardens By The Bay",
+  "gardens_location": "Singapore",
+  "gardens_description": "Công viên thiên nhiên nổi tiếng với các Supertree khổng lồ.",
+  "gardens_review": "Khu vườn tuyệt đẹp với ánh sáng ban đêm.",
+
+  "night_safari_title": "Night Safari",
+  "night_safari_location": "Singapore",
+  "night_safari_description": "Night Safari là sở thú về đêm đầu tiên trên thế giới.",
+  "night_safari_review": "Trải nghiệm độc đáo khi xem động vật hoạt động ban đêm.",
+
+  "river_wonders_title": "River Wonders",
+  "river_wonders_location": "Singapore",
+  "river_wonders_description": "River Wonders là công viên động vật theo chủ đề các con sông nổi tiếng.",
+  "river_wonders_review": "Nơi thú vị với nhiều loài động vật hiếm.",
+
+  "pulau_ubin_title": "Pulau Ubin",
+  "pulau_ubin_location": "Singapore",
+  "pulau_ubin_description": "Hòn đảo nhỏ giữ lại nét làng quê truyền thống.",
+  "pulau_ubin_review": "Nơi yên bình để đạp xe và khám phá thiên nhiên.",
+
+  "merlion_title": "Công viên Merlion",
+  "merlion_location": "Singapore",
+  "merlion_description": "Nơi đặt tượng Merlion – biểu tượng của Singapore.",
+  "merlion_review": "Địa điểm chụp ảnh nổi tiếng với view Marina Bay.",
+
+  "namsan_title": "Tháp N Seoul",
+  "namsan_location": "Seoul, Hàn Quốc",
+  "namsan_description": "Tháp N Seoul nằm trên núi Namsan với tầm nhìn toàn cảnh thành phố.",
+  "namsan_review": "Nơi lãng mạn với view Seoul tuyệt đẹp.",
+
+  "cheonggyecheon_title": "Suối Cheonggyecheon",
+  "cheonggyecheon_location": "Seoul, Hàn Quốc",
+  "cheonggyecheon_description": "Con suối hiện đại chạy qua trung tâm Seoul.",
+  "cheonggyecheon_review": "Lối đi bộ thư giãn với ánh đèn đẹp vào ban đêm.",
+
+  "haeundae_title": "Biển Haeundae",
+  "haeundae_location": "Busan, Hàn Quốc",
+  "haeundae_description": "Bãi biển nổi tiếng nhất Busan với bãi cát rộng.",
+  "haeundae_review": "Bãi biển đẹp và sôi động vào mùa hè.",
+
+  "bukchon_title": "Làng cổ Bukchon Hanok",
+  "bukchon_location": "Seoul, Hàn Quốc",
+  "bukchon_description": "Bukchon Hanok Village là một ngôi làng truyền thống tại Seoul với hàng trăm ngôi nhà hanok được bảo tồn. Nơi đây mang đến cái nhìn về kiến trúc và văn hóa lịch sử của Hàn Quốc.",
+  "bukchon_review": "Một ngôi làng quyến rũ với những ngôi nhà truyền thống tuyệt đẹp. Nơi tuyệt vời để trải nghiệm văn hóa Hàn Quốc.",
+
+  "fuji_title": "Núi Phú Sĩ",
+  "fuji_location": "Honshu, Nhật Bản",
+  "fuji_description": "Núi Phú Sĩ là ngọn núi cao nhất Nhật Bản và là biểu tượng nổi tiếng của đất nước. Ngọn núi thu hút du khách với hình nón hoàn hảo và cảnh quan tuyệt đẹp.",
+  "fuji_review": "Ngọn núi hùng vĩ với khung cảnh tuyệt đẹp. Một trong những địa điểm mang tính biểu tượng nhất của Nhật Bản.",
+
+  "tokyo_tower_title": "Tháp Tokyo",
+  "tokyo_tower_location": "Tokyo, Nhật Bản",
+  "tokyo_tower_description": "Tokyo Tower là một công trình nổi tiếng lấy cảm hứng từ tháp Eiffel. Từ đài quan sát có thể ngắm toàn cảnh thành phố Tokyo.",
+  "tokyo_tower_review": "Một điểm tham quan nổi tiếng của Tokyo với tầm nhìn thành phố tuyệt đẹp, đặc biệt vào ban đêm.",
+
+  "kinkakuji_title": "Chùa Vàng Kinkaku-ji",
+  "kinkakuji_location": "Kyoto, Nhật Bản",
+  "kinkakuji_description": "Kinkaku-ji hay còn gọi là Chùa Vàng là một ngôi chùa Thiền nổi tiếng ở Kyoto được phủ vàng lá. Ngôi chùa phản chiếu tuyệt đẹp trên mặt hồ xung quanh.",
+  "kinkakuji_review": "Ngôi chùa với lớp vàng rực rỡ vô cùng ấn tượng. Một địa điểm không thể bỏ lỡ khi đến Kyoto."
+
+
 }

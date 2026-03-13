@@ -19,14 +19,11 @@ final List<Destination> destinations = [
   Destination(
     id: "20",
     image: "imgs/rung_dua_7_mau.jpg",
-    title: "Bay Mau Coconut Forest",
+    title: "bay_mau_forest_title",
     rating: "4.6",
-    location: "Hoi An, Quang Nam, Vietnam",
-    description:
-        "Bay Mau Coconut Forest, also known as the Seven-acre Coconut Forest, is a famous eco-tourism destination near Hoi An. Visitors can ride basket boats through the lush coconut palm forest, watch traditional performances, and experience the unique river culture of central Vietnam.",
-
-    review:
-        "A fun and unique experience! Riding the basket boat through the coconut forest and watching the local performances was unforgettable.",
+    location: "bay_mau_forest_location",
+    description: "bay_mau_forest_description",
+    review: "bay_mau_forest_review",
     gallery: [
       "imgs/rung_dua_7_mau1.jpg",
       "imgs/rung_dua_7_mau2.jpg",
@@ -34,17 +31,15 @@ final List<Destination> destinations = [
       "imgs/rung_dua_7_mau4.jpg",
     ],
   ),
+
   Destination(
     id: "21",
     image: "imgs/ba_na_hills.jpg",
-    title: "Ba Na Hills",
+    title: "ba_na_hills_title",
     rating: "4.7",
-    location: "Da Nang, Vietnam",
-    description:
-        "Ba Na Hills is one of the most famous tourist destinations in Vietnam. Located on the Ba Na mountain range near Da Nang, it is known for its cool climate, the Golden Bridge held by giant stone hands, and the world-class cable car system. Visitors can also explore the French Village and enjoy beautiful mountain scenery.",
-
-    review:
-        "Ba Na Hills is a magical place with stunning views. The Golden Bridge and the cable car ride are unforgettable experiences.",
+    location: "ba_na_hills_location",
+    description: "ba_na_hills_description",
+    review: "ba_na_hills_review",
     gallery: [
       "imgs/ba_na_hills1.jpg",
       "imgs/ba_na_hills2.jpg",
@@ -52,17 +47,15 @@ final List<Destination> destinations = [
       "imgs/ba_na_hills4.jpg",
     ],
   ),
+
   Destination(
     id: "22",
     image: "imgs/lo_lo_chai.jpg",
-    title: "Lo Lo Chai Village",
+    title: "lo_lo_chai_title",
     rating: "4.7",
-    location: "Ha Giang, Vietnam",
-    description:
-        "Lo Lo Chai Village is a beautiful traditional village located near the Lung Cu Flag Tower in Ha Giang. The village is home to the Lo Lo ethnic group and is known for its unique earthen houses, peaceful atmosphere, and stunning mountain scenery.",
-
-    review:
-        "Lo Lo Chai is a peaceful and charming village. The traditional houses and the surrounding mountains make it a wonderful cultural experience.",
+    location: "lo_lo_chai_location",
+    description: "lo_lo_chai_description",
+    review: "lo_lo_chai_review",
     gallery: [
       "imgs/lo_lo_chai1.jpg",
       "imgs/lo_lo_chai2.jpg",
@@ -70,17 +63,15 @@ final List<Destination> destinations = [
       "imgs/lo_lo_chai4.jpg",
     ],
   ),
+
   Destination(
     id: "17",
     image: "imgs/sapa.jpg",
-    title: "Sa Pa",
+    title: "sapa_title",
     rating: "4.7",
-    location: "Lao Cai, Vietnam",
-    description:
-        "Sa Pa is a famous mountain town in northern Vietnam known for its breathtaking rice terraces, cool climate, and rich ethnic culture. Visitors can enjoy trekking through villages, exploring Fansipan Mountain – the highest peak in Indochina, and experiencing the unique traditions of local ethnic groups.",
-
-    review:
-        "Sa Pa is a stunning destination with beautiful landscapes and friendly local people. The rice terraces and mountain views are unforgettable.",
+    location: "sapa_location",
+    description: "sapa_description",
+    review: "sapa_review",
     gallery: [
       "imgs/sapa1.png",
       "imgs/sapa2.jpg",
@@ -91,14 +82,11 @@ final List<Destination> destinations = [
   Destination(
     id: "2",
     image: "imgs/my_khe_beach.jpg",
-    title: "My Khe Beach",
+    title: "my_khe_title",
     rating: "4.9",
-    location: "Da Nang, Viet Nam",
-    description:
-        "My Khe Beach is one of the most famous beaches in Da Nang, known for its long white sand and clear blue water. It is an ideal place for swimming, relaxing, and enjoying fresh seafood.",
-
-    review:
-        "Clean beach with soft sand and amazing sunrise views. Great place to relax and enjoy the sea.",
+    location: "my_khe_location",
+    description: "my_khe_description",
+    review: "my_khe_review",
     gallery: [
       "imgs/my_khe_beach1.jpg",
       "imgs/my_khe_beach2.jpg",
@@ -106,17 +94,15 @@ final List<Destination> destinations = [
       "imgs/my_khe_beach4.jpg",
     ],
   ),
+
   Destination(
     id: "19",
     image: "imgs/ta_xua.jpg",
-    title: "Ta Xua",
+    title: "ta_xua_title",
     rating: "4.6",
-    location: "Son La, Vietnam",
-    description:
-        "Ta Xua is a famous mountain destination in northern Vietnam known for its sea of clouds and breathtaking mountain landscapes. It is a popular place for trekking, cloud hunting, and enjoying the peaceful nature of the highlands.",
-
-    review:
-        "Ta Xua is an amazing place to see the sea of clouds. The scenery is magical and perfect for adventure lovers.",
+    location: "ta_xua_location",
+    description: "ta_xua_description",
+    review: "ta_xua_review",
     gallery: [
       "imgs/ta_xua1.jpg",
       "imgs/ta_xua2.jpg",
@@ -124,17 +110,15 @@ final List<Destination> destinations = [
       "imgs/ta_xua4.jpeg",
     ],
   ),
+
   Destination(
     id: "3",
     image: "imgs/son_tra.jpg",
-    title: "Son Tra Peninsula",
+    title: "son_tra_title",
     rating: "4.9",
-    location: "Da Nang, Viet Nam",
-    description:
-        "Son Tra Peninsula is a beautiful natural area in Da Nang with mountains, forests, and stunning ocean views. It is home to the famous Linh Ung Pagoda and the giant Lady Buddha statue.",
-
-    review:
-        "A peaceful place with breathtaking views of the sea and mountains. Perfect for nature lovers and photographers.",
+    location: "son_tra_location",
+    description: "son_tra_description",
+    review: "son_tra_review",
     gallery: [
       "imgs/son_tra1.jpg",
       "imgs/son_tra2.jpg",
@@ -142,17 +126,15 @@ final List<Destination> destinations = [
       "imgs/son_tra4.jpg",
     ],
   ),
+
   Destination(
     id: "18",
     image: "imgs/tam_dao.jpg",
-    title: "Tam Dao",
+    title: "tam_dao_title",
     rating: "4.5",
-    location: "Vinh Phuc, Vietnam",
-    description:
-        "Tam Dao is a beautiful mountain town located about 80 km from Hanoi. It is famous for its cool climate, misty landscapes, and scenic views. Visitors can explore attractions such as Tam Dao Church, Silver Waterfall, and enjoy the peaceful atmosphere of the mountains.",
-
-    review:
-        "Tam Dao is a perfect getaway from the busy city. The cool weather and mountain scenery make it a relaxing place to visit.",
+    location: "tam_dao_location",
+    description: "tam_dao_description",
+    review: "tam_dao_review",
     gallery: [
       "imgs/tam_dao1.jpg",
       "imgs/tam_dao2.jpg",
@@ -160,17 +142,15 @@ final List<Destination> destinations = [
       "imgs/tam_dao4.jpg",
     ],
   ),
+
   Destination(
     id: "4",
     image: "imgs/bali.jpg",
-    title: "Bali",
+    title: "bali_title",
     rating: "4.9",
-    location: "Bali, Indonesia",
-    description:
-        "Bali is a world-famous island in Indonesia known for its tropical beaches, temples, and rich culture. It attracts travelers with beautiful landscapes and relaxing resorts.",
-
-    review:
-        "Amazing island with beautiful beaches and friendly people. Great destination for vacation and cultural experiences.",
+    location: "bali_location",
+    description: "bali_description",
+    review: "bali_review",
     gallery: [
       "imgs/bali1.jpg",
       "imgs/bali2.jpg",
@@ -178,17 +158,15 @@ final List<Destination> destinations = [
       "imgs/bali4.jpg",
     ],
   ),
+
   Destination(
     id: "5",
     image: "imgs/gardens_by_the_bay.jpg",
-    title: "Gardens By The Bay",
+    title: "gardens_title",
     rating: "4.8",
-    location: "Singapore",
-    description:
-        "Gardens By The Bay is a famous nature park in Singapore featuring futuristic Supertree structures and beautiful gardens. It is one of the most iconic attractions in the city.",
-
-    review:
-        "Incredible garden with unique architecture and stunning night light shows. A must-visit place in Singapore.",
+    location: "gardens_location",
+    description: "gardens_description",
+    review: "gardens_review",
     gallery: [
       "imgs/gardens_by_the_bay1.jpg",
       "imgs/gardens_by_the_bay2.jpg",
@@ -199,14 +177,11 @@ final List<Destination> destinations = [
   Destination(
     id: "6",
     image: "imgs/night_safari.jpg",
-    title: "Night Safari",
+    title: "night_safari_title",
     rating: "4.7",
-    location: "Singapore",
-    description:
-        "Night Safari in Singapore is the world’s first nocturnal zoo where visitors can see animals active at night. The park offers tram rides and walking trails through natural habitats.",
-
-    review:
-        "A unique experience to see wild animals at night. Fun and educational for families and travelers.",
+    location: "night_safari_location",
+    description: "night_safari_description",
+    review: "night_safari_review",
     gallery: [
       "imgs/night_safari1.jpg",
       "imgs/night_safari2.jpg",
@@ -214,17 +189,15 @@ final List<Destination> destinations = [
       "imgs/night_safari4.jpg",
     ],
   ),
+
   Destination(
     id: "7",
     image: "imgs/river_wonders.jpg",
-    title: "River Wonders",
+    title: "river_wonders_title",
     rating: "4.6",
-    location: "Singapore",
-    description:
-        "River Wonders is a river-themed wildlife park in Singapore featuring animals from famous rivers around the world such as the Amazon and the Nile.",
-
-    review:
-        "Interesting park with many rare animals including giant pandas. Great place for families.",
+    location: "river_wonders_location",
+    description: "river_wonders_description",
+    review: "river_wonders_review",
     gallery: [
       "imgs/river_wonders1.jpg",
       "imgs/river_wonders2.jpg",
@@ -232,17 +205,15 @@ final List<Destination> destinations = [
       "imgs/river_wonders4.jpg",
     ],
   ),
+
   Destination(
     id: "8",
     image: "imgs/pulau_ubin.jpg",
-    title: "Pulau Ubin",
+    title: "pulau_ubin_title",
     rating: "4.6",
-    location: "Singapore",
-    description:
-        "Pulau Ubin is a small island near Singapore that preserves traditional village life and natural landscapes. It is popular for cycling and exploring nature.",
-
-    review:
-        "A peaceful escape from the busy city. Perfect for cycling and enjoying nature.",
+    location: "pulau_ubin_location",
+    description: "pulau_ubin_description",
+    review: "pulau_ubin_review",
     gallery: [
       "imgs/pulau_ubin1.jpg",
       "imgs/pulau_ubin2.jpg",
@@ -254,14 +225,11 @@ final List<Destination> destinations = [
   Destination(
     id: "9",
     image: "imgs/merlion_park.jpg",
-    title: "Merlion Park",
+    title: "merlion_title",
     rating: "4.7",
-    location: "Singapore",
-    description:
-        "Merlion Park is home to Singapore’s iconic Merlion statue, a symbol of the city with a lion head and fish body. The park offers beautiful views of Marina Bay.",
-
-    review:
-        "Great place for photos and sightseeing. The view of Marina Bay is fantastic.",
+    location: "merlion_location",
+    description: "merlion_description",
+    review: "merlion_review",
     gallery: [
       "imgs/merlion_park1.jpg",
       "imgs/merlion_park2.jpg",
@@ -273,14 +241,11 @@ final List<Destination> destinations = [
   Destination(
     id: "10",
     image: "imgs/namsan_tower.jpg",
-    title: "N Seoul Tower (Namsan Tower)",
+    title: "namsan_title",
     rating: "4.7",
-    location: "Seoul, South Korea",
-    description:
-        "N Seoul Tower is one of the most famous landmarks in Seoul, located on Namsan Mountain. Visitors can enjoy panoramic views of the city from the observation deck.",
-
-    review:
-        "A romantic spot with amazing views of Seoul, especially beautiful at night.",
+    location: "namsan_location",
+    description: "namsan_description",
+    review: "namsan_review",
     gallery: [
       "imgs/namsan_tower1.jpg",
       "imgs/namsan_tower2.jpg",
@@ -292,14 +257,11 @@ final List<Destination> destinations = [
   Destination(
     id: "11",
     image: "imgs/cheonggyecheon.jpg",
-    title: "Cheonggyecheon Stream",
+    title: "cheonggyecheon_title",
     rating: "4.6",
-    location: "Seoul, South Korea",
-    description:
-        "Cheonggyecheon Stream is a modern urban stream running through downtown Seoul. It is a relaxing place for walking and enjoying nature in the middle of the city.",
-
-    review:
-        "A peaceful walking path with beautiful lights at night. Great place to relax in Seoul.",
+    location: "cheonggyecheon_location",
+    description: "cheonggyecheon_description",
+    review: "cheonggyecheon_review",
     gallery: [
       "imgs/cheonggyecheon1.jpg",
       "imgs/cheonggyecheon2.jpg",
@@ -311,14 +273,11 @@ final List<Destination> destinations = [
   Destination(
     id: "12",
     image: "imgs/haeundae_beach.jpg",
-    title: "Haeundae Beach",
+    title: "haeundae_title",
     rating: "4.7",
-    location: "Busan, South Korea",
-    description:
-        "Haeundae Beach is the most famous beach in Busan, known for its wide sandy shore and lively atmosphere. It is a popular destination during summer.",
-
-    review:
-        "Beautiful beach with clear water and vibrant surroundings. Perfect for summer vacation.",
+    location: "haeundae_location",
+    description: "haeundae_description",
+    review: "haeundae_review",
     gallery: [
       "imgs/haeundae_beach1.jpg",
       "imgs/haeundae_beach2.jpg",
@@ -330,14 +289,11 @@ final List<Destination> destinations = [
   Destination(
     id: "13",
     image: "imgs/bukchon_hanok.jpg",
-    title: "Bukchon Hanok Village",
+    title: "bukchon_title",
     rating: "4.6",
-    location: "Seoul, South Korea",
-    description:
-        "Bukchon Hanok Village is a traditional Korean village in Seoul with hundreds of preserved hanok houses. It offers a glimpse into Korea’s historical architecture and culture.",
-
-    review:
-        "A charming village with beautiful traditional houses. Great place to experience Korean culture.",
+    location: "bukchon_location",
+    description: "bukchon_description",
+    review: "bukchon_review",
     gallery: [
       "imgs/bukchon_hanok1.jpg",
       "imgs/bukchon_hanok2.jpg",
@@ -349,14 +305,11 @@ final List<Destination> destinations = [
   Destination(
     id: "14",
     image: "imgs/nui_phu_si.jpg",
-    title: "Mount Fuji",
+    title: "fuji_title",
     rating: "4.8",
-    location: "Honshu, Japan",
-    description:
-        "Mount Fuji is the highest mountain in Japan and a famous symbol of the country. It attracts visitors with its perfect cone shape and breathtaking scenery.",
-
-    review:
-        "Magnificent mountain with stunning views. One of the most iconic places in Japan.",
+    location: "fuji_location",
+    description: "fuji_description",
+    review: "fuji_review",
     gallery: [
       "imgs/nui_phu_si1.jpg",
       "imgs/nui_phu_si2.jpg",
@@ -368,14 +321,11 @@ final List<Destination> destinations = [
   Destination(
     id: "15",
     image: "imgs/tokyo_tower.jpg",
-    title: "Tokyo Tower",
+    title: "tokyo_tower_title",
     rating: "4.6",
-    location: "Tokyo, Japan",
-    description:
-        "Tokyo Tower is a famous landmark inspired by the Eiffel Tower. It offers observation decks with amazing views of Tokyo city.",
-
-    review:
-        "A classic Tokyo attraction with great city views, especially beautiful at night.",
+    location: "tokyo_tower_location",
+    description: "tokyo_tower_description",
+    review: "tokyo_tower_review",
     gallery: [
       "imgs/tokyo_tower1.jpeg",
       "imgs/tokyo_tower2.jpg",
@@ -386,16 +336,12 @@ final List<Destination> destinations = [
 
   Destination(
     id: "16",
-
     image: "imgs/kinkakuji.jpg",
-    title: "Kinkaku-ji (Golden Pavilion)",
+    title: "kinkakuji_title",
     rating: "4.8",
-    location: "Kyoto, Japan",
-    description:
-        "Kinkaku-ji, also known as the Golden Pavilion, is a famous Zen temple in Kyoto covered in gold leaf. It reflects beautifully on the surrounding pond.",
-
-    review:
-        "Absolutely stunning temple with a golden exterior. A must-see spot in Kyoto.",
+    location: "kinkakuji_location",
+    description: "kinkakuji_description",
+    review: "kinkakuji_review",
     gallery: [
       "imgs/kinkakuji1.jpg",
       "imgs/kinkakuji2.jpg",
