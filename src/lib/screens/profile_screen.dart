@@ -12,6 +12,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
   String selectedLanguage = "English";
 
   @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+
+    /// Lấy ngôn ngữ hiện tại của app
+    if (context.locale.languageCode == 'vi') {
+      selectedLanguage = "Vietnamese";
+    } else {
+      selectedLanguage = "English";
+    }
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffEEF1FF),

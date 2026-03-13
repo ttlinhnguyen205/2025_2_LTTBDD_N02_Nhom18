@@ -11,6 +11,11 @@ void main() async {
       supportedLocales: const [Locale('en'), Locale('vi')],
       path: 'lib/translations',
       fallbackLocale: const Locale('en'),
+
+      /// thêm 2 dòng này
+      saveLocale: true,
+      startLocale: const Locale('en'),
+
       child: const MyApp(),
     ),
   );
@@ -47,7 +52,6 @@ class ManHinh1 extends StatelessWidget {
           /// CONTENT
           Align(
             alignment: Alignment.bottomCenter,
-
             child: Padding(
               padding: const EdgeInsets.fromLTRB(
                 25,
@@ -55,22 +59,18 @@ class ManHinh1 extends StatelessWidget {
                 25,
                 40,
               ),
-
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
-
                 children: [
                   /// TITLE
                   RichText(
                     textAlign: TextAlign.center,
-
                     text: TextSpan(
                       style: const TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Colors.black,
                       ),
-
                       children: [
                         TextSpan(text: "intro_title_1".tr()),
                         TextSpan(
@@ -142,7 +142,6 @@ class ManHinh1 extends StatelessWidget {
                   SizedBox(
                     width: double.infinity,
                     height: 55,
-
                     child: ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         backgroundColor: const Color(0xff160F7D),
@@ -152,7 +151,6 @@ class ManHinh1 extends StatelessWidget {
                           ),
                         ),
                       ),
-
                       onPressed: () {
                         Navigator.pushReplacement(
                           context,
@@ -162,7 +160,6 @@ class ManHinh1 extends StatelessWidget {
                           ),
                         );
                       },
-
                       child: Text(
                         "get_started".tr(),
                         style: const TextStyle(
@@ -182,13 +179,11 @@ class ManHinh1 extends StatelessWidget {
             top: 0,
             left: 0,
             right: 0,
-
             child: ClipRRect(
               borderRadius: const BorderRadius.only(
                 bottomLeft: Radius.circular(40),
                 bottomRight: Radius.circular(40),
               ),
-
               child: Image.asset(
                 'imgs/login3.png',
                 height: 500,
@@ -201,7 +196,6 @@ class ManHinh1 extends StatelessWidget {
           Positioned(
             top: 50,
             right: 20,
-
             child: Text(
               "skip".tr(),
               style: TextStyle(
