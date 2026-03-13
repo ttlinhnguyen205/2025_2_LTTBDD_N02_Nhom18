@@ -56,6 +56,24 @@ final List<Destination> destinations = [
     ],
   ),
   Destination(
+    id: "22",
+    image: "imgs/lo_lo_chai.jpg",
+    title: "Lo Lo Chai Village",
+    rating: "4.7",
+    location: "Ha Giang, Vietnam",
+    description:
+        "Lo Lo Chai Village is a beautiful traditional village located near the Lung Cu Flag Tower in Ha Giang. The village is home to the Lo Lo ethnic group and is known for its unique earthen houses, peaceful atmosphere, and stunning mountain scenery.",
+
+    review:
+        "Lo Lo Chai is a peaceful and charming village. The traditional houses and the surrounding mountains make it a wonderful cultural experience.",
+    gallery: [
+      "imgs/lo_lo_chai1.jpg",
+      "imgs/lo_lo_chai2.jpg",
+      "imgs/lo_lo_chai3.jpg",
+      "imgs/lo_lo_chai4.jpg",
+    ],
+  ),
+  Destination(
     id: "17",
     image: "imgs/sapa.jpg",
     title: "Sa Pa",

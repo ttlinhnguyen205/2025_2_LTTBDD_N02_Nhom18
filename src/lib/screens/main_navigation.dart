@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'home_screen.dart';
 import 'saved_screen.dart';
 import 'group_screen.dart';
+import 'profile_screen.dart';
 
 class MainNavigation extends StatefulWidget {
   const MainNavigation({super.key});
@@ -22,7 +23,7 @@ class _MainNavigationState extends State<MainNavigation> {
     HomeScreen(),
     SavedScreen(),
     GroupScreen(),
-    Center(child: Text("Profile")),
+    ProfileScreen(),
   ];
 
   @override

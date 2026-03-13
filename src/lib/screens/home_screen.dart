@@ -19,16 +19,21 @@ class HomeScreen extends StatelessWidget {
 
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: const [
-                Icon(Icons.menu, size: 28),
+              children: [
+                const Icon(Icons.menu, size: 28),
+
                 Row(
                   children: [
-                    Text("Guest"),
-                    SizedBox(width: 10),
+                    const Text("Guest"),
+                    const SizedBox(width: 10),
+
                     CircleAvatar(
                       radius: 18,
-                      backgroundImage: AssetImage(
-                        "imgs/guest.jpg",
+                      backgroundColor: Colors.grey.shade200,
+                      child: const Icon(
+                        Icons.person,
+                        size: 20,
+                        color: Colors.grey,
                       ),
                     ),
                   ],
