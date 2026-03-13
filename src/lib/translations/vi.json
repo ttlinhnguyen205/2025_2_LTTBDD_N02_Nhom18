@@ -29,7 +29,7 @@
   "description": "Mô tả",
   "review": "Đánh giá",
   "group_name": "Nhóm 18",
-  "project_title": "Dự án Lập trình Mobile",
+  "project_title": "Dự án Lập trình thiết bị di động",
   "member_count": "2 Thành viên",
   "team_members": "Thành viên nhóm",
   "about_project":"Tổng quan dự án",
@@ -42,6 +42,7 @@
   "popular_destinations": "Địa điểm phổ biến",
   "no_results": "Không tìm thấy kết quả",
   "no_favorites": "Chưa có địa điểm yêu thích",
+  "instructor_role": "Giảng viên môn Lập trình thiết bị di động",
 
   "hoi_an_title": "Phố cổ Hội An",
   "hoi_an_location": "Quảng Nam, Việt Nam",

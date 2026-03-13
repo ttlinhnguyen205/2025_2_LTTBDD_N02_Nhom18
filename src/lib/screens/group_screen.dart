@@ -193,7 +193,7 @@ class GroupScreen extends StatelessWidget {
                   border: Border.all(color: border),
                 ),
 
-                child: const Row(
+                child: Row(
                   children: [
                     CircleAvatar(
                       radius: 26,
@@ -208,7 +208,7 @@ class GroupScreen extends StatelessWidget {
                           CrossAxisAlignment.start,
                       children: [
                         Text(
-                          "Dr. Nguyễn Xuân Quế",
+                          "ThS. NCS. Nguyễn Xuân Quế",
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             fontSize: 16,
@@ -219,8 +219,8 @@ class GroupScreen extends StatelessWidget {
                         SizedBox(height: 4),
 
                         Text(
-                          "Mobile Programming Lecturer",
-                          style: TextStyle(
+                          "instructor_role".tr(),
+                          style: const TextStyle(
                             color: subtitle,
                             fontSize: 13,
                           ),
