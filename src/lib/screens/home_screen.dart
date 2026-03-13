@@ -17,6 +17,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             const SizedBox(height: 10),
 
+            /// HEADER
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -25,8 +26,10 @@ class HomeScreen extends StatelessWidget {
                 Row(
                   children: [
                     const Text("Guest"),
+
                     const SizedBox(width: 10),
 
+                    /// AVATAR ICON
                     CircleAvatar(
                       radius: 18,
                       backgroundColor: Colors.grey.shade200,
@@ -41,8 +44,9 @@ class HomeScreen extends StatelessWidget {
               ],
             ),
 
-            const SizedBox(height: 10),
+            const SizedBox(height: 15),
 
+            /// GREETING
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -50,7 +54,9 @@ class HomeScreen extends StatelessWidget {
                 style: TextStyle(color: Colors.black),
               ),
             ),
+
             const SizedBox(height: 5),
+
             const Align(
               alignment: Alignment.centerLeft,
               child: Text(
@@ -59,12 +65,14 @@ class HomeScreen extends StatelessWidget {
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
                   height: 1.1,
-                  color: Color.fromARGB(255, 12, 3, 134),
+                  color: Color(0xff1F1A8A),
                 ),
               ),
             ),
-            const SizedBox(height: 10),
 
+            const SizedBox(height: 15),
+
+            /// SEARCH BAR
             Row(
               children: [
                 Expanded(
@@ -78,15 +86,20 @@ class HomeScreen extends StatelessWidget {
                         ),
                       );
                     },
+
                     child: Container(
                       height: 50,
                       padding: const EdgeInsets.symmetric(
                         horizontal: 15,
                       ),
+
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(30),
-                        border: Border.all(color: Colors.grey),
+                        border: Border.all(
+                          color: Colors.grey.shade300,
+                        ),
                       ),
+
                       child: const Row(
                         children: [
                           Icon(Icons.search, color: Colors.grey),
@@ -100,14 +113,20 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                 ),
+
                 const SizedBox(width: 10),
+
                 Container(
                   height: 50,
                   width: 50,
+
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(25),
-                    border: Border.all(color: Colors.grey),
+                    border: Border.all(
+                      color: Colors.grey.shade300,
+                    ),
                   ),
+
                   child: const Icon(Icons.tune),
                 ),
               ],
@@ -115,6 +134,7 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
+            /// CATEGORY
             Row(
               children: [
                 _chip("Popular", true),
@@ -126,9 +146,11 @@ class HomeScreen extends StatelessWidget {
 
             const SizedBox(height: 20),
 
+            /// DESTINATION LIST
             Expanded(
               child: ListView.builder(
                 itemCount: destinations.length,
+
                 itemBuilder: (context, index) {
                   final destination = destinations[index];
 
@@ -206,17 +228,22 @@ class _DestinationCardState extends State<DestinationCard> {
 
     return Container(
       height: 220,
+
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(25),
+
         image: DecorationImage(
           image: AssetImage(item.image),
           fit: BoxFit.cover,
         ),
       ),
+
       child: Container(
         padding: const EdgeInsets.all(20),
+
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
+
           gradient: LinearGradient(
             begin: Alignment.bottomCenter,
             end: Alignment.topCenter,
@@ -227,19 +254,25 @@ class _DestinationCardState extends State<DestinationCard> {
             ],
           ),
         ),
+
         child: Stack(
           children: [
+            /// FAVORITE BUTTON
             Positioned(
               top: 0,
               right: 0,
+
               child: GestureDetector(
                 onTap: _toggleFavorite,
+
                 child: Container(
                   padding: const EdgeInsets.all(8),
+
                   decoration: BoxDecoration(
                     color: Colors.black.withValues(alpha: 0.4),
                     shape: BoxShape.circle,
                   ),
+
                   child: Icon(
                     isFavorite
                         ? Icons.favorite
@@ -252,6 +285,7 @@ class _DestinationCardState extends State<DestinationCard> {
               ),
             ),
 
+            /// TEXT INFO
             Column(
               mainAxisAlignment: MainAxisAlignment.end,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -264,7 +298,9 @@ class _DestinationCardState extends State<DestinationCard> {
                     fontWeight: FontWeight.bold,
                   ),
                 ),
+
                 const SizedBox(height: 8),
+
                 Row(
                   children: [
                     const Icon(
@@ -272,7 +308,9 @@ class _DestinationCardState extends State<DestinationCard> {
                       color: Colors.red,
                       size: 14,
                     ),
+
                     const SizedBox(width: 4),
+
                     Expanded(
                       child: Text(
                         item.location,
@@ -283,13 +321,17 @@ class _DestinationCardState extends State<DestinationCard> {
                         overflow: TextOverflow.ellipsis,
                       ),
                     ),
+
                     const SizedBox(width: 8),
+
                     const Icon(
                       Icons.star,
                       color: Colors.orange,
                       size: 16,
                     ),
+
                     const SizedBox(width: 4),
+
                     Text(
                       item.rating,
                       style: const TextStyle(
@@ -311,14 +353,17 @@ class _DestinationCardState extends State<DestinationCard> {
 Widget _chip(String text, bool selected) {
   return Padding(
     padding: const EdgeInsets.only(right: 10),
+
     child: Container(
       padding: const EdgeInsets.symmetric(
         horizontal: 18,
         vertical: 10,
       ),
+
       decoration: BoxDecoration(
         color: selected ? Colors.black : Colors.white,
         borderRadius: BorderRadius.circular(25),
+
         boxShadow: [
           if (selected)
             const BoxShadow(
@@ -327,6 +372,7 @@ Widget _chip(String text, bool selected) {
             ),
         ],
       ),
+
       child: Text(
         text,
         style: TextStyle(
