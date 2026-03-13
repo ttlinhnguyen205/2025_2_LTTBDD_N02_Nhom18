@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../models/destination.dart';
 import '../data/destination_data.dart';
 import 'home_screen.dart';
+import 'destination_detail_screen.dart';
 
 class SearchScreen extends StatefulWidget {
   const SearchScreen({super.key});
@@ -95,8 +96,22 @@ class _SearchScreenState extends State<SearchScreen> {
                           padding: const EdgeInsets.only(
                             bottom: 20,
                           ),
-                          child: DestinationCard(
-                            destination: filteredList[index],
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      DestinationDetailScreen(
+                                        destination:
+                                            filteredList[index],
+                                      ),
+                                ),
+                              );
+                            },
+                            child: DestinationCard(
+                              destination: filteredList[index],
+                            ),
                           ),
                         );
                       },
