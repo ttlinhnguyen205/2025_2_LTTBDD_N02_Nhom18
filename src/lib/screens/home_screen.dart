@@ -297,7 +297,7 @@ class _DestinationCardState extends State<DestinationCard> {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  item.title,
+                  item.title.tr(),
                   style: const TextStyle(
                     color: Colors.white,
                     fontSize: 20,
@@ -319,7 +319,7 @@ class _DestinationCardState extends State<DestinationCard> {
 
                     Expanded(
                       child: Text(
-                        item.location,
+                        item.location.tr(),
                         style: const TextStyle(
                           color: Colors.white70,
                           fontSize: 12,

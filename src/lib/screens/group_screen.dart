@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class GroupScreen extends StatelessWidget {
   const GroupScreen({super.key});
@@ -32,40 +33,40 @@ class GroupScreen extends StatelessWidget {
                   color: primary,
                 ),
 
-                child: const Column(
+                child: Column(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.groups_rounded,
                       color: Colors.white,
                       size: 40,
                     ),
 
-                    SizedBox(height: 10),
+                    const SizedBox(height: 10),
 
                     Text(
-                      "Group 18",
-                      style: TextStyle(
+                      "group_name".tr(),
+                      style: const TextStyle(
                         fontSize: 26,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
                       ),
                     ),
 
-                    SizedBox(height: 6),
+                    const SizedBox(height: 6),
 
                     Text(
-                      "Mobile Programming Project",
-                      style: TextStyle(
+                      "project_title".tr(),
+                      style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 14,
                       ),
                     ),
 
-                    SizedBox(height: 6),
+                    const SizedBox(height: 6),
 
                     Text(
-                      "2 Members",
-                      style: TextStyle(
+                      "member_count".tr(),
+                      style: const TextStyle(
                         color: Colors.white70,
                         fontSize: 12,
                       ),
@@ -77,14 +78,18 @@ class GroupScreen extends StatelessWidget {
               const SizedBox(height: 30),
 
               /// TEAM TITLE
-              const Row(
+              Row(
                 children: [
-                  Icon(Icons.people, size: 22, color: primary),
-                  SizedBox(width: 8),
+                  const Icon(
+                    Icons.people,
+                    size: 22,
+                    color: primary,
+                  ),
+                  const SizedBox(width: 8),
 
                   Text(
-                    "Team Members",
-                    style: TextStyle(
+                    "team_members".tr(),
+                    style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: text,
@@ -121,14 +126,14 @@ class GroupScreen extends StatelessWidget {
               const SizedBox(height: 30),
 
               /// ABOUT PROJECT
-              const Row(
+              Row(
                 children: [
-                  Icon(Icons.info_outline, color: primary),
-                  SizedBox(width: 8),
+                  const Icon(Icons.info_outline, color: primary),
+                  const SizedBox(width: 8),
 
                   Text(
-                    "About Project",
-                    style: TextStyle(
+                    "about_project".tr(),
+                    style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: text,
@@ -148,12 +153,9 @@ class GroupScreen extends StatelessWidget {
                   border: Border.all(color: border),
                 ),
 
-                child: const Text(
-                  "This project is a mobile application built using Flutter. "
-                  "It demonstrates UI design, navigation, and mobile app "
-                  "development concepts learned in the Mobile Programming course.",
-
-                  style: TextStyle(
+                child: Text(
+                  "project_description".tr(),
+                  style: const TextStyle(
                     fontSize: 14,
                     height: 1.5,
                     color: text,
@@ -164,14 +166,14 @@ class GroupScreen extends StatelessWidget {
               const SizedBox(height: 30),
 
               /// INSTRUCTOR
-              const Row(
+              Row(
                 children: [
-                  Icon(Icons.school, color: primary),
-                  SizedBox(width: 8),
+                  const Icon(Icons.school, color: primary),
+                  const SizedBox(width: 8),
 
                   Text(
-                    "Instructor",
-                    style: TextStyle(
+                    "instructor".tr(),
+                    style: const TextStyle(
                       fontSize: 22,
                       fontWeight: FontWeight.bold,
                       color: text,
@@ -196,7 +198,6 @@ class GroupScreen extends StatelessWidget {
                     CircleAvatar(
                       radius: 26,
                       backgroundColor: lightBlue,
-
                       child: Icon(Icons.school, color: primary),
                     ),
 
@@ -273,7 +274,6 @@ class GroupScreen extends StatelessWidget {
           Text(
             name,
             textAlign: TextAlign.center,
-
             style: const TextStyle(
               fontWeight: FontWeight.bold,
               fontSize: 14,
@@ -285,7 +285,6 @@ class GroupScreen extends StatelessWidget {
 
           Text(
             id,
-
             style: const TextStyle(
               color: subtitle,
               fontSize: 13,
@@ -305,10 +304,12 @@ class GroupScreen extends StatelessWidget {
               borderRadius: BorderRadius.circular(20),
             ),
 
-            child: const Text(
-              "UI Design & Flutter Developer",
-
-              style: TextStyle(fontSize: 11, color: primary),
+            child: Text(
+              "role".tr(),
+              style: const TextStyle(
+                fontSize: 11,
+                color: primary,
+              ),
             ),
           ),
         ],

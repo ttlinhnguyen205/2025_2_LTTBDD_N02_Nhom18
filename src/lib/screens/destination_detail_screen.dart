@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../models/destination.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class DestinationDetailScreen extends StatefulWidget {
   final Destination destination;
@@ -100,7 +101,7 @@ class _DestinationDetailScreenState
                 children: [
                   /// TITLE
                   Text(
-                    widget.destination.title,
+                    widget.destination.title.tr(),
                     style: const TextStyle(
                       fontSize: 26,
                       fontWeight: FontWeight.bold,
@@ -119,7 +120,7 @@ class _DestinationDetailScreenState
 
                       const SizedBox(width: 4),
 
-                      Text(widget.destination.location),
+                      Text(widget.destination.location.tr()),
 
                       const Spacer(),
 
@@ -173,8 +174,8 @@ class _DestinationDetailScreenState
                   const SizedBox(height: 25),
 
                   /// DESCRIPTION
-                  const Text(
-                    "Description",
+                  Text(
+                    "description".tr(),
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -184,7 +185,7 @@ class _DestinationDetailScreenState
                   const SizedBox(height: 8),
 
                   Text(
-                    widget.destination.description,
+                    widget.destination.description.tr(),
                     style: const TextStyle(
                       color: Colors.grey,
                       height: 1.5,
@@ -194,8 +195,8 @@ class _DestinationDetailScreenState
                   const SizedBox(height: 20),
 
                   /// REVIEW
-                  const Text(
-                    "Review",
+                  Text(
+                    "review".tr(),
                     style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
@@ -205,7 +206,7 @@ class _DestinationDetailScreenState
                   const SizedBox(height: 8),
 
                   Text(
-                    widget.destination.review,
+                    widget.destination.review.tr(),
                     style: const TextStyle(
                       color: Colors.grey,
                       height: 1.5,

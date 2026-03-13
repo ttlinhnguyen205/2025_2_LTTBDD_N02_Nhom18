@@ -4,14 +4,11 @@ final List<Destination> destinations = [
   Destination(
     id: "1",
     image: "imgs/pho_co_hoi_an.jpg",
-    title: "Hoi An Ancient Town",
+    title: "hoi_an_title",
     rating: "4.9",
-    location: "Quang Nam, Viet Nam",
-    description:
-        "Hoi An Ancient Town is a UNESCO World Heritage site known for its well-preserved architecture, colorful lanterns, and peaceful riverside atmosphere. Visitors can walk through old streets, enjoy local food, and experience traditional Vietnamese culture.",
-
-    review:
-        "Beautiful ancient town with charming lantern streets and delicious food. Perfect place for walking at night and taking photos.",
+    location: "hoi_an_location",
+    description: "hoi_an_description",
+    review: "hoi_an_review",
     gallery: [
       "imgs/pho_co_hoi_an.jpg",
       "imgs/hoian2.png",

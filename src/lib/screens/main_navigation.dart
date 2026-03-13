@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
 import 'home_screen.dart';
 import 'saved_screen.dart';
 import 'group_screen.dart';
@@ -34,18 +35,12 @@ class _MainNavigationState extends State<MainNavigation> {
 
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-
         backgroundColor: Colors.white,
-
         currentIndex: _currentIndex,
-
         selectedItemColor: primary,
-
         unselectedItemColor: subtitle,
-
         selectedFontSize: 12,
         unselectedFontSize: 12,
-
         elevation: 8,
 
         onTap: (index) {
@@ -54,25 +49,25 @@ class _MainNavigationState extends State<MainNavigation> {
           });
         },
 
-        items: const [
+        items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
-            label: "Home",
+            icon: const Icon(Icons.home),
+            label: "home".tr(),
           ),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.favorite),
-            label: "Saved",
+            icon: const Icon(Icons.favorite),
+            label: "saved".tr(),
           ),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.groups),
-            label: "Group 18",
+            icon: const Icon(Icons.groups),
+            label: "group".tr(),
           ),
 
           BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: "Profile",
+            icon: const Icon(Icons.person),
+            label: "profile".tr(),
           ),
         ],
       ),
