@@ -19,8 +19,9 @@ final List<Destination> destinations = [
     travelTip: "hoi_an_tip",
     openTime: "8:00 - 22:00",
     distance: "5 km",
-    type: "Heritage",
+    type: "heritage_type",
   ),
+
   Destination(
     id: "20",
     image: "imgs/rung_dua_7_mau.jpg",
@@ -39,7 +40,7 @@ final List<Destination> destinations = [
     travelTip: "bay_mau_forest_tip",
     openTime: "7:00 - 17:30",
     distance: "5 km",
-    type: "Nature",
+    type: "nature_type",
   ),
 
   Destination(
@@ -60,7 +61,7 @@ final List<Destination> destinations = [
     travelTip: "ba_na_hills_tip",
     openTime: "8:00 - 17:00",
     distance: "25 km",
-    type: "Mountain Resort",
+    type: "mountain_resort_type",
   ),
 
   Destination(
@@ -79,9 +80,9 @@ final List<Destination> destinations = [
       "imgs/lo_lo_chai4.jpg",
     ],
     travelTip: "lo_lo_chai_tip",
-    openTime: "All Day",
+    openTime: "all_day",
     distance: "3 km",
-    type: "Village",
+    type: "village_type",
   ),
 
   Destination(
@@ -100,9 +101,9 @@ final List<Destination> destinations = [
       "imgs/sapa4.jpg",
     ],
     travelTip: "sapa_tip",
-    openTime: "All Day",
+    openTime: "all_day",
     distance: "320 km",
-    type: "Mountain Town",
+    type: "mountain_town_type",
   ),
 
   Destination(
@@ -121,9 +122,9 @@ final List<Destination> destinations = [
       "imgs/my_khe_beach4.jpg",
     ],
     travelTip: "my_khe_tip",
-    openTime: "All Day",
+    openTime: "all_day",
     distance: "3 km",
-    type: "Beach",
+    type: "beach_type",
   ),
 
   Destination(
@@ -142,9 +143,9 @@ final List<Destination> destinations = [
       "imgs/ta_xua4.jpeg",
     ],
     travelTip: "ta_xua_tip",
-    openTime: "All Day",
+    openTime: "all_day",
     distance: "240 km",
-    type: "Mountain",
+    type: "mountain_type",
   ),
 
   Destination(
@@ -165,7 +166,7 @@ final List<Destination> destinations = [
     travelTip: "son_tra_tip",
     openTime: "6:00 - 18:00",
     distance: "10 km",
-    type: "Nature Reserve",
+    type: "nature_reserve_type",
   ),
 
   Destination(
@@ -184,9 +185,9 @@ final List<Destination> destinations = [
       "imgs/tam_dao4.jpg",
     ],
     travelTip: "tam_dao_tip",
-    openTime: "All Day",
+    openTime: "all_day",
     distance: "80 km",
-    type: "Mountain Town",
+    type: "mountain_town_type",
   ),
 
   Destination(
@@ -205,9 +206,9 @@ final List<Destination> destinations = [
       "imgs/bali4.jpg",
     ],
     travelTip: "bali_tip",
-    openTime: "All Day",
-    distance: "International",
-    type: "Island",
+    openTime: "all_day",
+    distance: "international_distance",
+    type: "island_type",
   ),
 
   Destination(
@@ -227,8 +228,8 @@ final List<Destination> destinations = [
     ],
     travelTip: "gardens_tip",
     openTime: "9:00 - 21:00",
-    distance: "Marina Bay",
-    type: "Park",
+    distance: "marina_bay_distance",
+    type: "park_type",
   ),
 
   Destination(
@@ -248,9 +249,10 @@ final List<Destination> destinations = [
     ],
     travelTip: "night_safari_tip",
     openTime: "18:30 - 24:00",
-    distance: "Singapore",
-    type: "Zoo",
+    distance: "singapore_distance",
+    type: "zoo_type",
   ),
+
   Destination(
     id: "7",
     image: "imgs/river_wonders.jpg",
@@ -269,7 +271,7 @@ final List<Destination> destinations = [
     travelTip: "river_wonders_tip",
     openTime: "09:00 - 18:00",
     distance: "15 km",
-    type: "Zoo",
+    type: "zoo_type",
   ),
 
   Destination(
@@ -288,9 +290,9 @@ final List<Destination> destinations = [
       "imgs/pulau_ubin4.jpg",
     ],
     travelTip: "pulau_ubin_tip",
-    openTime: "All day",
+    openTime: "all_day",
     distance: "10 km",
-    type: "Island",
+    type: "island_type",
   ),
 
   Destination(
@@ -309,9 +311,9 @@ final List<Destination> destinations = [
       "imgs/merlion_park4.jpg",
     ],
     travelTip: "merlion_tip",
-    openTime: "All day",
+    openTime: "all_day",
     distance: "2 km",
-    type: "Landmark",
+    type: "landmark_type",
   ),
 
   Destination(
@@ -332,7 +334,7 @@ final List<Destination> destinations = [
     travelTip: "namsan_tip",
     openTime: "10:00 - 23:00",
     distance: "5 km",
-    type: "Tower",
+    type: "tower_type",
   ),
 
   Destination(
@@ -351,9 +353,9 @@ final List<Destination> destinations = [
       "imgs/cheonggyecheon4.png",
     ],
     travelTip: "cheonggyecheon_tip",
-    openTime: "All day",
+    openTime: "all_day",
     distance: "3 km",
-    type: "River Walk",
+    type: "river_walk_type",
   ),
 
   Destination(
@@ -372,9 +374,9 @@ final List<Destination> destinations = [
       "imgs/haeundae_beach4.jpg",
     ],
     travelTip: "haeundae_tip",
-    openTime: "All day",
+    openTime: "all_day",
     distance: "8 km",
-    type: "Beach",
+    type: "beach_type",
   ),
 
   Destination(
@@ -395,7 +397,7 @@ final List<Destination> destinations = [
     travelTip: "bukchon_tip",
     openTime: "09:00 - 18:00",
     distance: "4 km",
-    type: "Village",
+    type: "village_type",
   ),
 
   Destination(
@@ -414,9 +416,9 @@ final List<Destination> destinations = [
       "imgs/nui_phu_si4.jpg",
     ],
     travelTip: "fuji_tip",
-    openTime: "All day",
+    openTime: "all_day",
     distance: "100 km",
-    type: "Mountain",
+    type: "mountain_type",
   ),
 
   Destination(
@@ -437,7 +439,7 @@ final List<Destination> destinations = [
     travelTip: "tokyo_tower_tip",
     openTime: "09:00 - 22:30",
     distance: "6 km",
-    type: "Tower",
+    type: "tower_type",
   ),
 
   Destination(
@@ -458,6 +460,6 @@ final List<Destination> destinations = [
     travelTip: "kinkakuji_tip",
     openTime: "09:00 - 17:00",
     distance: "7 km",
-    type: "Temple",
+    type: "temple_type",
   ),
 ];

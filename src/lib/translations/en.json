@@ -45,7 +45,7 @@
   "instructor_role": "Mobile Programming Lecturer",
   "open_time": "Open",
   "distance": "Distance",
- "type": "Type",
+  "type": "Type",
 
   "hoi_an_title": "Hoi An Ancient Town",
   "hoi_an_location": "Quang Nam, Vietnam",
@@ -180,7 +180,27 @@
   "bukchon_tip": "Visit early morning to avoid crowds.",
   "fuji_tip": "Visit during autumn for clear views.",
   "tokyo_tower_tip": "Visit at sunset for best view.",
-  "kinkakuji_tip": "Visit early morning for fewer tourists."
+  "kinkakuji_tip": "Visit early morning for fewer tourists.",
+
+  "all_day": "All Day",
+  "heritage_type": "Heritage",
+  "nature_type": "Nature",
+  "mountain_resort_type": "Mountain Resort",
+  "village_type": "Village",
+  "mountain_town_type": "Mountain Town",
+  "beach_type": "Beach",
+  "mountain_type": "Mountain",
+  "nature_reserve_type": "Nature Reserve",
+  "international_distance": "International",
+  "marina_bay_distance": "Marina Bay",
+  "singapore_distance": "Singapore",
+  "island_type": "Island",
+  "park_type": "Park",
+  "zoo_type": "Zoo",
+  "landmark_type": "Landmark",
+  "tower_type": "Tower",
+  "river_walk_type": "River Walk",
+  "temple_type": "Temple"
 
 
 }

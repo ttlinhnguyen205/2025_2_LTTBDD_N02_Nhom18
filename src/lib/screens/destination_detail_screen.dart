@@ -198,7 +198,7 @@ class _DestinationDetailScreenState
                       _infoItem(
                         Icons.access_time,
                         "open_time".tr(),
-                        widget.destination.openTime,
+                        widget.destination.openTime.tr(),
                       ),
 
                       _infoItem(
@@ -210,14 +210,13 @@ class _DestinationDetailScreenState
                       _infoItem(
                         Icons.park,
                         "type".tr(),
-                        widget.destination.type,
+                        widget.destination.type.tr(),
                       ),
                     ],
                   ),
 
                   const SizedBox(height: 25),
 
-                  /// DESCRIPTION
                   Text(
                     "description".tr(),
                     style: const TextStyle(

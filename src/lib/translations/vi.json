@@ -180,6 +180,26 @@
   "bukchon_tip": "Nên đi vào sáng sớm để tránh đông khách.",
   "fuji_tip": "Nên ghé thăm vào mùa thu để có tầm nhìn rõ nhất.",
   "tokyo_tower_tip": "Hãy đến vào lúc hoàng hôn để có góc nhìn đẹp nhất.",
-  "kinkakuji_tip": "Nên đi vào sáng sớm để tránh đông du khách."
+  "kinkakuji_tip": "Nên đi vào sáng sớm để tránh đông du khách.",
+
+  "all_day": "Cả ngày",
+  "heritage_type": "Di sản",
+  "nature_type": "Thiên nhiên",
+  "mountain_resort_type": "Khu nghỉ dưỡng núi",
+  "village_type": "Làng",
+  "mountain_town_type": "Thị trấn miền núi",
+  "beach_type": "Bãi biển",
+  "mountain_type": "Núi",
+  "nature_reserve_type": "Khu bảo tồn thiên nhiên",
+   "international_distance": "Quốc tế",
+  "marina_bay_distance": "Vịnh Marina",
+  "singapore_distance": "Singapore",
+  "island_type": "Đảo",
+  "park_type": "Công viên",
+  "zoo_type": "Vườn thú",
+  "landmark_type": "Biểu tượng",
+  "tower_type": "Tháp",
+  "river_walk_type": "Đường dạo ven sông",
+   "temple_type": "Đền chùa"
 
 }
