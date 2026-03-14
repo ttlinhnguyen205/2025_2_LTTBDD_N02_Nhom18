@@ -26,17 +26,47 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffEEF1FF),
-      
 
       body: SafeArea(
         child: Column(
           children: [
-            const SizedBox(height: 30),
+            SizedBox(
+              height: 230,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  /// ẢNH NỀN
+                  Container(
+                    height: 230,
+                    width: double.infinity,
+                    decoration: const BoxDecoration(
+                      image: DecorationImage(
+                        image: AssetImage("imgs/profile_bg.png"),
+                        fit: BoxFit.cover,
+                      ),
+                    ),
+                  ),
 
-            /// AVATAR
-            const CircleAvatar(
-              radius: 45,
-              child: Icon(Icons.person, size: 45),
+                  /// AVATAR
+                  Positioned(
+                    bottom: 0,
+                    child: Container(
+                      padding: const EdgeInsets.all(4),
+                      decoration: const BoxDecoration(
+                        shape: BoxShape.circle,
+                        color: Colors.white,
+                      ),
+
+                      child: const CircleAvatar(
+                        radius: 55,
+                        backgroundImage: AssetImage(
+                          "imgs/profile.png",
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
 
             const SizedBox(height: 10),
