@@ -31,23 +31,27 @@ class _ProfileScreenState extends State<ProfileScreen> {
         child: Column(
           children: [
             SizedBox(
-              height: 230,
+              height: 300,
               child: Stack(
                 alignment: Alignment.center,
                 children: [
-                  /// ẢNH NỀN
-                  Container(
-                    height: 230,
-                    width: double.infinity,
-                    decoration: const BoxDecoration(
-                      image: DecorationImage(
-                        image: AssetImage("imgs/profile_bg.png"),
-                        fit: BoxFit.cover,
+                  Positioned(
+                    top: -40,
+                    left: 0,
+                    right: 0,
+                    child: Container(
+                      height: 300,
+                      decoration: const BoxDecoration(
+                        image: DecorationImage(
+                          image: AssetImage(
+                            "imgs/profile_bg.png",
+                          ),
+                          fit: BoxFit.cover,
+                        ),
                       ),
                     ),
                   ),
 
-                  /// AVATAR
                   Positioned(
                     bottom: 0,
                     child: Container(
