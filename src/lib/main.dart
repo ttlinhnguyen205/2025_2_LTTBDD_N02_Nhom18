@@ -12,7 +12,6 @@ void main() async {
       path: 'lib/translations',
       fallbackLocale: const Locale('en'),
 
-      /// thêm 2 dòng này
       saveLocale: true,
       startLocale: const Locale('en'),
 
@@ -29,7 +28,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
 
-      /// localization
       locale: context.locale,
       supportedLocales: context.supportedLocales,
       localizationsDelegates: context.localizationDelegates,
@@ -85,7 +83,6 @@ class ManHinh1 extends StatelessWidget {
 
                   const SizedBox(height: 15),
 
-                  /// DESCRIPTION
                   Text(
                     "intro_desc".tr(),
                     textAlign: TextAlign.center,
@@ -97,7 +94,6 @@ class ManHinh1 extends StatelessWidget {
 
                   const SizedBox(height: 20),
 
-                  /// DOT INDICATOR
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -138,7 +134,6 @@ class ManHinh1 extends StatelessWidget {
 
                   const SizedBox(height: 30),
 
-                  /// BUTTON
                   SizedBox(
                     width: double.infinity,
                     height: 55,

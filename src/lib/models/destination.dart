@@ -8,6 +8,10 @@ class Destination {
   final String review;
   final List<String> gallery;
   final String category;
+  final String travelTip;
+  final String openTime;
+  final String distance;
+  final String type;
 
   Destination({
     required this.id,
@@ -19,5 +23,9 @@ class Destination {
     required this.review,
     required this.gallery,
     required this.category,
+    required this.travelTip,
+    required this.openTime,
+    required this.distance,
+    required this.type,
   });
 }

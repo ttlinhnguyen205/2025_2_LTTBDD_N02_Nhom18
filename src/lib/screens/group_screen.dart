@@ -14,7 +14,7 @@ class GroupScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
+      backgroundColor: const Color(0xffEEF1FF),
 
       body: SingleChildScrollView(
         child: Padding(

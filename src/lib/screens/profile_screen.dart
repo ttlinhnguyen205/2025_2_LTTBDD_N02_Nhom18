@@ -15,7 +15,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
   void didChangeDependencies() {
     super.didChangeDependencies();
 
-    /// Lấy ngôn ngữ hiện tại của app
     if (context.locale.languageCode == 'vi') {
       selectedLanguage = "Vietnamese";
     } else {
@@ -27,6 +26,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color(0xffEEF1FF),
+      
 
       body: SafeArea(
         child: Column(
@@ -72,29 +72,22 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                 child: ListView(
                   padding: const EdgeInsets.all(20),
-
                   children: [
                     /// LANGUAGE SWITCH
                     Container(
                       margin: const EdgeInsets.only(bottom: 15),
-
                       decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(15),
                         border: Border.all(
                           color: const Color(0xffEAEAEA),
                         ),
                       ),
-
                       child: ListTile(
                         leading: const Icon(Icons.language),
-
                         title: Text("language".tr()),
-
                         trailing: DropdownButton<String>(
                           value: selectedLanguage,
-
                           underline: const SizedBox(),
-
                           items: const [
                             DropdownMenuItem(
                               value: "English",
@@ -105,7 +98,6 @@ class _ProfileScreenState extends State<ProfileScreen> {
                               child: Text("Tiếng Việt"),
                             ),
                           ],
-
                           onChanged: (value) {
                             setState(() {
                               selectedLanguage = value!;
@@ -125,13 +117,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       ),
                     ),
 
-                    /// MENU ITEMS
                     _MenuItem(
                       Icons.favorite,
                       "saved_places".tr(),
                     ),
+
                     _MenuItem(Icons.group, "about_group".tr()),
+
                     _MenuItem(Icons.settings, "settings".tr()),
+
                     _MenuItem(Icons.info, "about_app".tr()),
                   ],
                 ),
@@ -154,12 +148,10 @@ class _MenuItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(bottom: 15),
-
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(15),
         border: Border.all(color: const Color(0xffEAEAEA)),
       ),
-
       child: ListTile(
         leading: Icon(icon),
         title: Text(title),

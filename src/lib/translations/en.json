@@ -43,11 +43,17 @@
   "no_results": "No results found",
   "no_favorites": "No favorites yet",
   "instructor_role": "Mobile Programming Lecturer",
+  "open_time": "Open",
+  "distance": "Distance",
+ "type": "Type",
 
   "hoi_an_title": "Hoi An Ancient Town",
   "hoi_an_location": "Quang Nam, Vietnam",
   "hoi_an_description": "Hoi An Ancient Town is a UNESCO World Heritage site famous for its preserved architecture and colorful lantern streets.",
   "hoi_an_review": "Beautiful lantern streets and peaceful river views.",
+  "hoi_an_tip": "Best time to visit is evening when lanterns light up the river.",
+  "travel_info": "Travel Info",
+  "travel_tip": "Travel Tip",
 
   "bay_mau_forest_title": "Bay Mau Coconut Forest",
   "bay_mau_forest_location": "Hoi An, Quang Nam, Vietnam",
@@ -152,6 +158,29 @@
   "kinkakuji_title": "Kinkaku-ji (Golden Pavilion)",
   "kinkakuji_location": "Kyoto, Japan",
   "kinkakuji_description": "Kinkaku-ji, also known as the Golden Pavilion, is a famous Zen temple in Kyoto covered in gold leaf. It reflects beautifully on the surrounding pond.",
-  "kinkakuji_review": "Absolutely stunning temple with a golden exterior. A must-see spot in Kyoto."
+  "kinkakuji_review": "Absolutely stunning temple with a golden exterior. A must-see spot in Kyoto.",
+
+  "bay_mau_forest_tip": "Take a basket boat ride through the coconut forest.",
+  "ba_na_hills_tip": "Visit early morning to avoid crowds.",
+  "lo_lo_chai_tip": "Explore the traditional houses of the Lo Lo ethnic group.",
+  "sapa_tip": "Best season is September during rice harvest.",
+  "my_khe_tip": "Sunrise is the best time to enjoy the beach.",
+  "ta_xua_tip": "Come early morning to see the sea of clouds.",
+  "son_tra_tip": "Ride motorbike to enjoy coastal mountain views.",
+  "tam_dao_tip": "Perfect place to escape summer heat.",
+  "bali_tip": "Visit temples during sunset for amazing views.",
+  "gardens_tip": "Stay until night to see the light show.",
+  "night_safari_tip": "Take the tram ride to explore the park at night.",
+  "river_wonders_tip": "Visit in the morning to avoid crowds.",
+  "pulau_ubin_tip": "Rent a bicycle to explore the island.",
+  "merlion_tip": "Visit at sunset for the best photos.",
+  "namsan_tip": "Visit at night for city lights.",
+  "cheonggyecheon_tip": "Best time is evening when lights turn on.",
+  "haeundae_tip": "Visit during summer festivals.",
+  "bukchon_tip": "Visit early morning to avoid crowds.",
+  "fuji_tip": "Visit during autumn for clear views.",
+  "tokyo_tower_tip": "Visit at sunset for best view.",
+  "kinkakuji_tip": "Visit early morning for fewer tourists."
+
 
 }

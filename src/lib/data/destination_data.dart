@@ -16,6 +16,10 @@ final List<Destination> destinations = [
       "imgs/hoian3.png",
       "imgs/hoian4.png",
     ],
+    travelTip: "hoi_an_tip",
+    openTime: "8:00 - 22:00",
+    distance: "5 km",
+    type: "Heritage",
   ),
   Destination(
     id: "20",
@@ -32,6 +36,10 @@ final List<Destination> destinations = [
       "imgs/rung_dua_7_mau3.jpg",
       "imgs/rung_dua_7_mau4.jpg",
     ],
+    travelTip: "bay_mau_forest_tip",
+    openTime: "7:00 - 17:30",
+    distance: "5 km",
+    type: "Nature",
   ),
 
   Destination(
@@ -49,6 +57,10 @@ final List<Destination> destinations = [
       "imgs/ba_na_hills3.jpg",
       "imgs/ba_na_hills4.jpg",
     ],
+    travelTip: "ba_na_hills_tip",
+    openTime: "8:00 - 17:00",
+    distance: "25 km",
+    type: "Mountain Resort",
   ),
 
   Destination(
@@ -66,6 +78,10 @@ final List<Destination> destinations = [
       "imgs/lo_lo_chai3.jpg",
       "imgs/lo_lo_chai4.jpg",
     ],
+    travelTip: "lo_lo_chai_tip",
+    openTime: "All Day",
+    distance: "3 km",
+    type: "Village",
   ),
 
   Destination(
@@ -83,7 +99,12 @@ final List<Destination> destinations = [
       "imgs/sapa3.jpg",
       "imgs/sapa4.jpg",
     ],
+    travelTip: "sapa_tip",
+    openTime: "All Day",
+    distance: "320 km",
+    type: "Mountain Town",
   ),
+
   Destination(
     id: "2",
     image: "imgs/my_khe_beach.jpg",
@@ -99,6 +120,10 @@ final List<Destination> destinations = [
       "imgs/my_khe_beach3.jpg",
       "imgs/my_khe_beach4.jpg",
     ],
+    travelTip: "my_khe_tip",
+    openTime: "All Day",
+    distance: "3 km",
+    type: "Beach",
   ),
 
   Destination(
@@ -116,6 +141,10 @@ final List<Destination> destinations = [
       "imgs/ta_xua3.jpg",
       "imgs/ta_xua4.jpeg",
     ],
+    travelTip: "ta_xua_tip",
+    openTime: "All Day",
+    distance: "240 km",
+    type: "Mountain",
   ),
 
   Destination(
@@ -133,6 +162,10 @@ final List<Destination> destinations = [
       "imgs/son_tra3.jpg",
       "imgs/son_tra4.jpg",
     ],
+    travelTip: "son_tra_tip",
+    openTime: "6:00 - 18:00",
+    distance: "10 km",
+    type: "Nature Reserve",
   ),
 
   Destination(
@@ -150,6 +183,10 @@ final List<Destination> destinations = [
       "imgs/tam_dao3.jpg",
       "imgs/tam_dao4.jpg",
     ],
+    travelTip: "tam_dao_tip",
+    openTime: "All Day",
+    distance: "80 km",
+    type: "Mountain Town",
   ),
 
   Destination(
@@ -167,6 +204,10 @@ final List<Destination> destinations = [
       "imgs/bali3.jpg",
       "imgs/bali4.jpg",
     ],
+    travelTip: "bali_tip",
+    openTime: "All Day",
+    distance: "International",
+    type: "Island",
   ),
 
   Destination(
@@ -184,7 +225,12 @@ final List<Destination> destinations = [
       "imgs/gardens_by_the_bay3.jpg",
       "imgs/gardens_by_the_bay4.jpg",
     ],
+    travelTip: "gardens_tip",
+    openTime: "9:00 - 21:00",
+    distance: "Marina Bay",
+    type: "Park",
   ),
+
   Destination(
     id: "6",
     image: "imgs/night_safari.jpg",
@@ -200,8 +246,11 @@ final List<Destination> destinations = [
       "imgs/night_safari3.jpg",
       "imgs/night_safari4.jpg",
     ],
+    travelTip: "night_safari_tip",
+    openTime: "18:30 - 24:00",
+    distance: "Singapore",
+    type: "Zoo",
   ),
-
   Destination(
     id: "7",
     image: "imgs/river_wonders.jpg",
@@ -217,6 +266,10 @@ final List<Destination> destinations = [
       "imgs/river_wonders3.jpg",
       "imgs/river_wonders4.jpg",
     ],
+    travelTip: "river_wonders_tip",
+    openTime: "09:00 - 18:00",
+    distance: "15 km",
+    type: "Zoo",
   ),
 
   Destination(
@@ -227,13 +280,17 @@ final List<Destination> destinations = [
     location: "pulau_ubin_location",
     description: "pulau_ubin_description",
     review: "pulau_ubin_review",
-    category: "popular",
+    category: "island",
     gallery: [
       "imgs/pulau_ubin1.jpg",
       "imgs/pulau_ubin2.jpg",
       "imgs/pulau_ubin3.jpg",
       "imgs/pulau_ubin4.jpg",
     ],
+    travelTip: "pulau_ubin_tip",
+    openTime: "All day",
+    distance: "10 km",
+    type: "Island",
   ),
 
   Destination(
@@ -251,6 +308,10 @@ final List<Destination> destinations = [
       "imgs/merlion_park3.jpeg",
       "imgs/merlion_park4.jpg",
     ],
+    travelTip: "merlion_tip",
+    openTime: "All day",
+    distance: "2 km",
+    type: "Landmark",
   ),
 
   Destination(
@@ -268,6 +329,10 @@ final List<Destination> destinations = [
       "imgs/namsan_tower3.jpg",
       "imgs/namsan_tower4.jpg",
     ],
+    travelTip: "namsan_tip",
+    openTime: "10:00 - 23:00",
+    distance: "5 km",
+    type: "Tower",
   ),
 
   Destination(
@@ -278,13 +343,17 @@ final List<Destination> destinations = [
     location: "cheonggyecheon_location",
     description: "cheonggyecheon_description",
     review: "cheonggyecheon_review",
-    category: "popular",
+    category: "river",
     gallery: [
       "imgs/cheonggyecheon1.jpg",
       "imgs/cheonggyecheon2.jpg",
       "imgs/cheonggyecheon3.jpg",
       "imgs/cheonggyecheon4.png",
     ],
+    travelTip: "cheonggyecheon_tip",
+    openTime: "All day",
+    distance: "3 km",
+    type: "River Walk",
   ),
 
   Destination(
@@ -295,13 +364,17 @@ final List<Destination> destinations = [
     location: "haeundae_location",
     description: "haeundae_description",
     review: "haeundae_review",
-    category: "popular",
+    category: "beach",
     gallery: [
       "imgs/haeundae_beach1.jpg",
       "imgs/haeundae_beach2.jpg",
       "imgs/haeundae_beach3.jpg",
       "imgs/haeundae_beach4.jpg",
     ],
+    travelTip: "haeundae_tip",
+    openTime: "All day",
+    distance: "8 km",
+    type: "Beach",
   ),
 
   Destination(
@@ -312,13 +385,17 @@ final List<Destination> destinations = [
     location: "bukchon_location",
     description: "bukchon_description",
     review: "bukchon_review",
-    category: "popular",
+    category: "heritage",
     gallery: [
       "imgs/bukchon_hanok1.jpg",
       "imgs/bukchon_hanok2.jpg",
       "imgs/bukchon_hanok3.jpg",
       "imgs/bukchon_hanok4.jpg",
     ],
+    travelTip: "bukchon_tip",
+    openTime: "09:00 - 18:00",
+    distance: "4 km",
+    type: "Village",
   ),
 
   Destination(
@@ -329,13 +406,17 @@ final List<Destination> destinations = [
     location: "fuji_location",
     description: "fuji_description",
     review: "fuji_review",
-    category: "popular",
+    category: "mountain",
     gallery: [
       "imgs/nui_phu_si1.jpg",
       "imgs/nui_phu_si2.jpg",
       "imgs/nui_phu_si3.jpg",
       "imgs/nui_phu_si4.jpg",
     ],
+    travelTip: "fuji_tip",
+    openTime: "All day",
+    distance: "100 km",
+    type: "Mountain",
   ),
 
   Destination(
@@ -353,6 +434,10 @@ final List<Destination> destinations = [
       "imgs/tokyo_tower3.jpg",
       "imgs/tokyo_tower4.jpg",
     ],
+    travelTip: "tokyo_tower_tip",
+    openTime: "09:00 - 22:30",
+    distance: "6 km",
+    type: "Tower",
   ),
 
   Destination(
@@ -363,12 +448,16 @@ final List<Destination> destinations = [
     location: "kinkakuji_location",
     description: "kinkakuji_description",
     review: "kinkakuji_review",
-    category: "popular",
+    category: "temple",
     gallery: [
       "imgs/kinkakuji1.jpg",
       "imgs/kinkakuji2.jpg",
       "imgs/kinkakuji3.jpeg",
       "imgs/kinkakuji4.jpg",
     ],
+    travelTip: "kinkakuji_tip",
+    openTime: "09:00 - 17:00",
+    distance: "7 km",
+    type: "Temple",
   ),
 ];

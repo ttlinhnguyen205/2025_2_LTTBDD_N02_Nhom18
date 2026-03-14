@@ -43,11 +43,17 @@
   "no_results": "Không tìm thấy kết quả",
   "no_favorites": "Chưa có địa điểm yêu thích",
   "instructor_role": "Giảng viên môn Lập trình thiết bị di động",
+  "open_time": "Giờ mở cửa",
+  "distance": "Khoảng cách",
+  "travel_tip": "Mẹo du lịch",
+  "travel_info": "Thông tin tham quan",
+ "type": "Loại",
 
   "hoi_an_title": "Phố cổ Hội An",
   "hoi_an_location": "Quảng Nam, Việt Nam",
   "hoi_an_description": "Phố cổ Hội An là di sản thế giới UNESCO nổi tiếng với kiến trúc cổ và đèn lồng rực rỡ.",
   "hoi_an_review": "Con phố đèn lồng đẹp và khung cảnh yên bình.",
+  "hoi_an_tip": "Thời gian đẹp nhất để tham quan là buổi tối khi đèn lồng thắp sáng.",
   
   "bay_mau_forest_title": "Rừng Dừa Bảy Mẫu",
   "bay_mau_forest_location": "Hội An, Quảng Nam, Việt Nam",
@@ -152,7 +158,28 @@
   "kinkakuji_title": "Chùa Vàng Kinkaku-ji",
   "kinkakuji_location": "Kyoto, Nhật Bản",
   "kinkakuji_description": "Kinkaku-ji hay còn gọi là Chùa Vàng là một ngôi chùa Thiền nổi tiếng ở Kyoto được phủ vàng lá. Ngôi chùa phản chiếu tuyệt đẹp trên mặt hồ xung quanh.",
-  "kinkakuji_review": "Ngôi chùa với lớp vàng rực rỡ vô cùng ấn tượng. Một địa điểm không thể bỏ lỡ khi đến Kyoto."
+  "kinkakuji_review": "Ngôi chùa với lớp vàng rực rỡ vô cùng ấn tượng. Một địa điểm không thể bỏ lỡ khi đến Kyoto.",
 
+  "bay_mau_forest_tip": "Trải nghiệm chèo thuyền thúng trong rừng dừa Bảy Mẫu.",
+  "ba_na_hills_tip": "Nên đi vào sáng sớm để tránh đông khách.",
+  "lo_lo_chai_tip": "Khám phá những ngôi nhà truyền thống của người Lô Lô.",
+  "sapa_tip": "Thời điểm đẹp nhất là tháng 9 khi mùa lúa chín.",
+  "my_khe_tip": "Bình minh là thời điểm đẹp nhất để tận hưởng bãi biển.",
+  "ta_xua_tip": "Hãy đến sáng sớm để săn biển mây.",
+  "son_tra_tip": "Đi xe máy để ngắm cảnh núi và biển tuyệt đẹp.",
+  "tam_dao_tip": "Địa điểm lý tưởng để tránh nóng mùa hè.",
+  "bali_tip": "Hãy ghé thăm các ngôi đền vào lúc hoàng hôn để có khung cảnh đẹp.",
+  "gardens_tip": "Ở lại đến buổi tối để xem màn trình diễn ánh sáng.",
+  "night_safari_tip": "Đi tàu điện trong công viên để khám phá vào ban đêm.",
+   "river_wonders_tip": "Nên đi vào buổi sáng để tránh đông người.",
+  "pulau_ubin_tip": "Thuê xe đạp để khám phá hòn đảo.",
+  "merlion_tip": "Hãy đến vào lúc hoàng hôn để chụp ảnh đẹp nhất.",
+  "namsan_tip": "Nên đến vào buổi tối để ngắm ánh đèn thành phố.",
+  "cheonggyecheon_tip": "Thời điểm đẹp nhất là buổi tối khi đèn được bật.",
+  "haeundae_tip": "Nên đến vào các lễ hội mùa hè.",
+  "bukchon_tip": "Nên đi vào sáng sớm để tránh đông khách.",
+  "fuji_tip": "Nên ghé thăm vào mùa thu để có tầm nhìn rõ nhất.",
+  "tokyo_tower_tip": "Hãy đến vào lúc hoàng hôn để có góc nhìn đẹp nhất.",
+  "kinkakuji_tip": "Nên đi vào sáng sớm để tránh đông du khách."
 
 }

@@ -50,7 +50,7 @@ class _SavedScreenState extends State<SavedScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100,
+      backgroundColor: const Color(0xffEEF1FF),
 
       body: SafeArea(
         child: Padding(
