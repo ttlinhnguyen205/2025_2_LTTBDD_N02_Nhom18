@@ -312,7 +312,7 @@ class _DestinationDetailScreenState
 Widget _smallImage(String img) {
   return Container(
     height: 70,
-    width: 90,
+    width: 120,
     margin: const EdgeInsets.symmetric(vertical: 5),
     child: ClipRRect(
       borderRadius: BorderRadius.circular(12),

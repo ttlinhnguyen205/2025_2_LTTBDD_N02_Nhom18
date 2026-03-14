@@ -20,12 +20,12 @@ class _SearchScreenState extends State<SearchScreen> {
   void search(String keyword) {
     setState(() {
       filteredList = destinations.where((item) {
-        return item.title
-                .toLowerCase()
-                .contains(keyword.toLowerCase()) ||
-            item.location
-                .toLowerCase()
-                .contains(keyword.toLowerCase());
+        return item.title.toLowerCase().contains(
+              keyword.toLowerCase(),
+            ) ||
+            item.location.toLowerCase().contains(
+              keyword.toLowerCase(),
+            );
       }).toList();
     });
   }
@@ -33,12 +33,11 @@ class _SearchScreenState extends State<SearchScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffF5F6FA),
+      backgroundColor: const Color(0xffEEF1FF),
       appBar: AppBar(
         backgroundColor: Colors.white,
         elevation: 0,
-        iconTheme:
-            const IconThemeData(color: Colors.black),
+        iconTheme: const IconThemeData(color: Colors.black),
         title: Text(
           "search_destination".tr(),
           style: const TextStyle(
@@ -48,32 +47,35 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
       ),
       body: Padding(
-        padding: const EdgeInsets.all(20),
+        padding: const EdgeInsets.symmetric(vertical: 20),
         child: Column(
           children: [
-            Container(
-              decoration: BoxDecoration(
-                color: Colors.white,
-                borderRadius:
-                    BorderRadius.circular(15),
-                boxShadow: const [
-                  BoxShadow(
-                    color: Colors.black12,
-                    blurRadius: 10,
-                  ),
-                ],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
               ),
-              child: TextField(
-                controller: controller,
-                onChanged: search,
-                decoration: InputDecoration(
-                  hintText:
-                      "search_destination_hint".tr(),
-                  prefixIcon: const Icon(Icons.search),
-                  border: InputBorder.none,
-                  contentPadding:
-                      const EdgeInsets.symmetric(
-                    vertical: 15,
+              child: Container(
+                height: 50,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: 15,
+                ),
+                decoration: BoxDecoration(
+                  color: Colors.white,
+                  borderRadius: BorderRadius.circular(30),
+                ),
+                child: TextField(
+                  controller: controller,
+                  onChanged: search,
+                  decoration: InputDecoration(
+                    hintText: "search".tr(),
+                    prefixIcon: const Icon(
+                      Icons.search,
+                      color: Colors.grey,
+                    ),
+                    border: InputBorder.none,
+                    contentPadding: const EdgeInsets.symmetric(
+                      vertical: 15,
+                    ),
                   ),
                 ),
               ),
@@ -81,14 +83,19 @@ class _SearchScreenState extends State<SearchScreen> {
 
             const SizedBox(height: 20),
 
-            Align(
-              alignment: Alignment.centerLeft,
-              child: Text(
-                "popular_destinations".tr(),
-                style: TextStyle(
-                  fontSize: 18,
-                  fontWeight: FontWeight.bold,
-                  color: Colors.grey[800],
+            Padding(
+              padding: const EdgeInsets.symmetric(
+                horizontal: 20,
+              ),
+              child: Align(
+                alignment: Alignment.centerLeft,
+                child: Text(
+                  "popular_destinations".tr(),
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Color(0xff1F1A8A),
+                  ),
                 ),
               ),
             ),
@@ -97,39 +104,30 @@ class _SearchScreenState extends State<SearchScreen> {
 
             Expanded(
               child: filteredList.isEmpty
-                  ? Center(
-                      child: Text(
-                        "no_results".tr(),
-                      ),
-                    )
+                  ? Center(child: Text("no_results".tr()))
                   : ListView.builder(
                       itemCount: filteredList.length,
-                      itemBuilder:
-                          (context, index) {
+                      itemBuilder: (context, index) {
                         return Padding(
-                          padding:
-                              const EdgeInsets.only(
-                            bottom: 20,
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: 20,
+                            vertical: 8,
                           ),
                           child: GestureDetector(
                             onTap: () {
                               Navigator.push(
                                 context,
                                 MaterialPageRoute(
-                                  builder:
-                                      (context) =>
-                                          DestinationDetailScreen(
-                                    destination:
-                                        filteredList[
-                                            index],
-                                  ),
+                                  builder: (context) =>
+                                      DestinationDetailScreen(
+                                        destination:
+                                            filteredList[index],
+                                      ),
                                 ),
                               );
                             },
                             child: DestinationCard(
-                              destination:
-                                  filteredList[
-                                      index],
+                              destination: filteredList[index],
                             ),
                           ),
                         );
@@ -142,4 +140,3 @@ class _SearchScreenState extends State<SearchScreen> {
     );
   }
 }
-
