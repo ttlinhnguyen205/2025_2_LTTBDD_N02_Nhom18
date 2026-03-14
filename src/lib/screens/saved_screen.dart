@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import '../models/destination.dart';
 import '../data/destination_data.dart';
 import '../services/favorite_service.dart';
+import 'destination_detail_screen.dart';
 
 class SavedScreen extends StatefulWidget {
   const SavedScreen({super.key});
@@ -168,166 +169,186 @@ class _SavedScreenState extends State<SavedScreen> {
                         itemBuilder: (context, index) {
                           final item = filteredFavorites[index];
 
-                          return Container(
-                            decoration: BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                                  BorderRadius.circular(25),
-
-                              boxShadow: [
-                                BoxShadow(
-                                  color: Colors.black.withValues(
-                                    alpha: 0.1,
-                                  ),
-                                  blurRadius: 10,
-                                  offset: const Offset(0, 5),
-                                ),
-                              ],
-                            ),
-
-                            child: Column(
-                              crossAxisAlignment:
-                                  CrossAxisAlignment.start,
-
-                              children: [
-                                /// IMAGE
-                                Stack(
-                                  children: [
-                                    ClipRRect(
-                                      borderRadius:
-                                          const BorderRadius.vertical(
-                                            top: Radius.circular(
-                                              25,
-                                            ),
-                                          ),
-
-                                      child: Image.asset(
-                                        item.image,
-                                        height: 170,
-                                        width: double.infinity,
-                                        fit: BoxFit.cover,
+                          return GestureDetector(
+                            onTap: () {
+                              Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                  builder: (context) =>
+                                      DestinationDetailScreen(
+                                        destination: item,
                                       ),
-                                    ),
-
-                                    /// HEART
-                                    Positioned(
-                                      top: 10,
-                                      right: 10,
-
-                                      child: GestureDetector(
-                                        onTap: () =>
-                                            _removeFavorite(
-                                              item.id,
-                                            ),
-
-                                        child: Container(
-                                          padding:
-                                              const EdgeInsets.all(
-                                                6,
-                                              ),
-
-                                          decoration:
-                                              const BoxDecoration(
-                                                shape: BoxShape
-                                                    .circle,
-                                                color:
-                                                    Colors.white,
-                                              ),
-
-                                          child: const Icon(
-                                            Icons.favorite,
-                                            color: Colors.red,
-                                            size: 18,
-                                          ),
-                                        ),
-                                      ),
-                                    ),
-                                  ],
                                 ),
+                              );
+                            },
+                            child: Container(
+                              decoration: BoxDecoration(
+                                color: Colors.white,
+                                borderRadius:
+                                    BorderRadius.circular(25),
 
-                                /// INFO
-                                Padding(
-                                  padding: const EdgeInsets.all(
-                                    12,
+                                boxShadow: [
+                                  BoxShadow(
+                                    color: Colors.black
+                                        .withValues(alpha: 0.1),
+                                    blurRadius: 10,
+                                    offset: const Offset(0, 5),
                                   ),
+                                ],
+                              ),
 
-                                  child: Column(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.start,
+                              child: Column(
+                                crossAxisAlignment:
+                                    CrossAxisAlignment.start,
 
+                                children: [
+                                  /// IMAGE
+                                  Stack(
                                     children: [
-                                      Text(
-                                        item.title.tr(),
-                                        style: const TextStyle(
-                                          fontWeight:
-                                              FontWeight.bold,
+                                      ClipRRect(
+                                        borderRadius:
+                                            const BorderRadius.vertical(
+                                              top:
+                                                  Radius.circular(
+                                                    25,
+                                                  ),
+                                            ),
+
+                                        child: Image.asset(
+                                          item.image,
+                                          height: 170,
+                                          width: double.infinity,
+                                          fit: BoxFit.cover,
                                         ),
                                       ),
 
-                                      const SizedBox(height: 6),
+                                      /// HEART
+                                      Positioned(
+                                        top: 10,
+                                        right: 10,
 
-                                      Row(
-                                        children: [
-                                          const Icon(
-                                            Icons.location_on,
-                                            size: 14,
-                                            color: Colors.grey,
+                                        child: GestureDetector(
+                                          onTap: () =>
+                                              _removeFavorite(
+                                                item.id,
+                                              ),
+
+                                          child: Container(
+                                            padding:
+                                                const EdgeInsets.all(
+                                                  6,
+                                                ),
+
+                                            decoration:
+                                                const BoxDecoration(
+                                                  shape: BoxShape
+                                                      .circle,
+                                                  color: Colors
+                                                      .white,
+                                                ),
+
+                                            child: const Icon(
+                                              Icons.favorite,
+                                              color: Colors.red,
+                                              size: 18,
+                                            ),
                                           ),
+                                        ),
+                                      ),
+                                    ],
+                                  ),
 
-                                          const SizedBox(
-                                            width: 4,
+                                  /// INFO
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.all(12),
+
+                                    child: Column(
+                                      crossAxisAlignment:
+                                          CrossAxisAlignment
+                                              .start,
+
+                                      children: [
+                                        Text(
+                                          item.title.tr(),
+                                          style: const TextStyle(
+                                            fontWeight:
+                                                FontWeight.bold,
                                           ),
+                                        ),
 
-                                          Expanded(
-                                            child: Text(
-                                              item.location.tr(),
+                                        const SizedBox(
+                                          height: 6,
+                                        ),
+
+                                        Row(
+                                          children: [
+                                            const Icon(
+                                              Icons.location_on,
+                                              size: 14,
+                                              color: Colors.grey,
+                                            ),
+
+                                            const SizedBox(
+                                              width: 4,
+                                            ),
+
+                                            Expanded(
+                                              child: Text(
+                                                item.location
+                                                    .tr(),
+
+                                                style:
+                                                    const TextStyle(
+                                                      fontSize:
+                                                          12,
+                                                      color: Colors
+                                                          .grey,
+                                                    ),
+
+                                                overflow:
+                                                    TextOverflow
+                                                        .ellipsis,
+                                              ),
+                                            ),
+                                          ],
+                                        ),
+
+                                        const SizedBox(
+                                          height: 4,
+                                        ),
+
+                                        Row(
+                                          children: [
+                                            const Icon(
+                                              Icons.star,
+                                              size: 12,
+                                              color:
+                                                  Colors.orange,
+                                            ),
+
+                                            const SizedBox(
+                                              width: 4,
+                                            ),
+
+                                            Text(
+                                              item.rating,
 
                                               style:
                                                   const TextStyle(
                                                     fontSize: 12,
-                                                    color: Colors
-                                                        .grey,
+                                                    fontWeight:
+                                                        FontWeight
+                                                            .w600,
                                                   ),
-
-                                              overflow:
-                                                  TextOverflow
-                                                      .ellipsis,
                                             ),
-                                          ),
-                                        ],
-                                      ),
-
-                                      const SizedBox(height: 4),
-
-                                      Row(
-                                        children: [
-                                          const Icon(
-                                            Icons.star,
-                                            size: 12,
-                                            color: Colors.orange,
-                                          ),
-
-                                          const SizedBox(
-                                            width: 4,
-                                          ),
-
-                                          Text(
-                                            item.rating,
-
-                                            style:
-                                                const TextStyle(
-                                                  fontSize: 12,
-                                                  fontWeight:
-                                                      FontWeight
-                                                          .w600,
-                                                ),
-                                          ),
-                                        ],
-                                      ),
-                                    ],
+                                          ],
+                                        ),
+                                      ],
+                                    ),
                                   ),
-                                ),
-                              ],
+                                ],
+                              ),
                             ),
                           );
                         },
