@@ -14,6 +14,8 @@ class SavedScreen extends StatefulWidget {
 class _SavedScreenState extends State<SavedScreen> {
   List<Destination> favoriteList = [];
 
+  String selectedCategory = "all";
+
   @override
   void initState() {
     super.initState();
@@ -35,14 +37,25 @@ class _SavedScreenState extends State<SavedScreen> {
     _loadFavorites();
   }
 
+  List<Destination> get filteredFavorites {
+    if (selectedCategory == "all") {
+      return favoriteList;
+    }
+
+    return favoriteList
+        .where((e) => e.category == selectedCategory)
+        .toList();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey.shade100, // nền xám nhạt
+      backgroundColor: Colors.grey.shade100,
 
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 20),
+
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
@@ -74,12 +87,38 @@ class _SavedScreenState extends State<SavedScreen> {
 
               const SizedBox(height: 20),
 
-              /// FILTER CHIPS
+              /// FILTER
               Row(
                 children: [
-                  _chip("all".tr(), true),
-                  _chip("beach".tr(), false),
-                  _chip("mountain".tr(), false),
+                  _chip(
+                    "all".tr(),
+                    selectedCategory == "all",
+                    () {
+                      setState(() {
+                        selectedCategory = "all";
+                      });
+                    },
+                  ),
+
+                  _chip(
+                    "beach".tr(),
+                    selectedCategory == "beach",
+                    () {
+                      setState(() {
+                        selectedCategory = "beach";
+                      });
+                    },
+                  ),
+
+                  _chip(
+                    "mountain".tr(),
+                    selectedCategory == "mountain",
+                    () {
+                      setState(() {
+                        selectedCategory = "mountain";
+                      });
+                    },
+                  ),
                 ],
               ),
 
@@ -87,7 +126,7 @@ class _SavedScreenState extends State<SavedScreen> {
 
               /// GRID
               Expanded(
-                child: favoriteList.isEmpty
+                child: filteredFavorites.isEmpty
                     ? Center(
                         child: Column(
                           mainAxisAlignment:
@@ -98,7 +137,9 @@ class _SavedScreenState extends State<SavedScreen> {
                               size: 60,
                               color: Colors.grey,
                             ),
+
                             const SizedBox(height: 10),
+
                             Text(
                               "no_favorites".tr(),
                               style: const TextStyle(
@@ -113,7 +154,9 @@ class _SavedScreenState extends State<SavedScreen> {
                         padding: const EdgeInsets.only(
                           bottom: 20,
                         ),
-                        itemCount: favoriteList.length,
+
+                        itemCount: filteredFavorites.length,
+
                         gridDelegate:
                             const SliverGridDelegateWithFixedCrossAxisCount(
                               crossAxisCount: 2,
@@ -121,14 +164,16 @@ class _SavedScreenState extends State<SavedScreen> {
                               mainAxisSpacing: 20,
                               childAspectRatio: 0.95,
                             ),
+
                         itemBuilder: (context, index) {
-                          final item = favoriteList[index];
+                          final item = filteredFavorites[index];
 
                           return Container(
                             decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius:
                                   BorderRadius.circular(25),
+
                               boxShadow: [
                                 BoxShadow(
                                   color: Colors.black.withValues(
@@ -139,9 +184,11 @@ class _SavedScreenState extends State<SavedScreen> {
                                 ),
                               ],
                             ),
+
                             child: Column(
                               crossAxisAlignment:
                                   CrossAxisAlignment.start,
+
                               children: [
                                 /// IMAGE
                                 Stack(
@@ -153,6 +200,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                               25,
                                             ),
                                           ),
+
                                       child: Image.asset(
                                         item.image,
                                         height: 170,
@@ -165,16 +213,19 @@ class _SavedScreenState extends State<SavedScreen> {
                                     Positioned(
                                       top: 10,
                                       right: 10,
+
                                       child: GestureDetector(
                                         onTap: () =>
                                             _removeFavorite(
                                               item.id,
                                             ),
+
                                         child: Container(
                                           padding:
                                               const EdgeInsets.all(
                                                 6,
                                               ),
+
                                           decoration:
                                               const BoxDecoration(
                                                 shape: BoxShape
@@ -182,6 +233,7 @@ class _SavedScreenState extends State<SavedScreen> {
                                                 color:
                                                     Colors.white,
                                               ),
+
                                           child: const Icon(
                                             Icons.favorite,
                                             color: Colors.red,
@@ -198,9 +250,11 @@ class _SavedScreenState extends State<SavedScreen> {
                                   padding: const EdgeInsets.all(
                                     12,
                                   ),
+
                                   child: Column(
                                     crossAxisAlignment:
                                         CrossAxisAlignment.start,
+
                                     children: [
                                       Text(
                                         item.title.tr(),
@@ -219,18 +273,22 @@ class _SavedScreenState extends State<SavedScreen> {
                                             size: 14,
                                             color: Colors.grey,
                                           ),
+
                                           const SizedBox(
                                             width: 4,
                                           ),
+
                                           Expanded(
                                             child: Text(
                                               item.location.tr(),
+
                                               style:
                                                   const TextStyle(
                                                     fontSize: 12,
                                                     color: Colors
                                                         .grey,
                                                   ),
+
                                               overflow:
                                                   TextOverflow
                                                       .ellipsis,
@@ -248,11 +306,14 @@ class _SavedScreenState extends State<SavedScreen> {
                                             size: 12,
                                             color: Colors.orange,
                                           ),
+
                                           const SizedBox(
                                             width: 4,
                                           ),
+
                                           Text(
                                             item.rating,
+
                                             style:
                                                 const TextStyle(
                                                   fontSize: 12,
@@ -280,23 +341,42 @@ class _SavedScreenState extends State<SavedScreen> {
   }
 }
 
-Widget _chip(String text, bool selected) {
+Widget _chip(String text, bool selected, VoidCallback onTap) {
   return Padding(
     padding: const EdgeInsets.only(right: 10),
-    child: Container(
-      padding: const EdgeInsets.symmetric(
-        horizontal: 16,
-        vertical: 8,
-      ),
-      decoration: BoxDecoration(
-        color: selected ? Colors.black : Colors.white,
-        borderRadius: BorderRadius.circular(20),
-        border: Border.all(color: Colors.grey.shade300),
-      ),
-      child: Text(
-        text,
-        style: TextStyle(
-          color: selected ? Colors.white : Colors.grey,
+
+    child: GestureDetector(
+      onTap: onTap,
+
+      child: AnimatedContainer(
+        duration: const Duration(milliseconds: 250),
+
+        padding: const EdgeInsets.symmetric(
+          horizontal: 16,
+          vertical: 8,
+        ),
+
+        decoration: BoxDecoration(
+          color: selected ? Colors.black : Colors.white,
+
+          borderRadius: BorderRadius.circular(20),
+
+          border: Border.all(
+            color: selected
+                ? Colors.black
+                : Colors.grey.shade300,
+          ),
+        ),
+
+        child: Text(
+          text,
+
+          style: TextStyle(
+            fontWeight: FontWeight.w600,
+            color: selected
+                ? Colors.white
+                : Colors.grey.shade700,
+          ),
         ),
       ),
     ),
